@@ -102,7 +102,7 @@ const App = () => {
                 <Route path="/store_id/:store_id" element={<ViewStorePage />} />
 
 
-                <Route path="/analytics" element={<Analytics />} />
+                <Route path="/analytics/*" element={<Analytics />} />
                 <Route
                   path="/products"
                   element={

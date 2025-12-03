@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const tabConfig = [
   { label: "Bot Effectiveness", path: "../Analytics/BotEffectiveness.js" },
   { label: "Training & Performance", path: "../Analytics/Training&Performance.js" },
-  { label: "Data Health & Reliability", path: "../Analytics/Data Health&Reliability.js" },
+  { label: "Data Health & Reliability", path: "../Analytics/DataHealth&Reliability.js" },
   { label: "Feature Performance", path: "../Analytics/FeaturePerformance.js" },
 ];
 

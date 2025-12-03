@@ -13,7 +13,7 @@ const creditsSpent = [4500, 3200, 4800, 2900, 3800];
 const conversionRate = [12, 8, 15, 5, 9];
 const fallbackRate = [30, 55, 20, 90, 45];
 
-export default function ClientAnalyticsCharts() {
+export default function BotEffectiveness() {
   return (
     <Box sx={{ mt: 3 }}>
       
