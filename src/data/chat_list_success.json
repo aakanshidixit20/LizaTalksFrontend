@@ -1,0 +1,50 @@
+{
+  "success": true,
+  "message": "Chat transcripts fetched successfully",
+  "data": [
+    {
+      "session_id": "S-20250701-001",
+      "client_name": "Ritika Sharma",
+      "customer_name": "Sarah Jones",
+      "customer_id": "2002",
+      "store_name": "Green Haven Dispensary",
+      "client_store_id": "ST-001",
+      "last_visit": "2025-07-01",
+      "purchased_product": "Dreamland Gummies",
+      "top_mood": ["Anxious", "Tired"],
+      "active_time": "20 mins",
+      "chat_overview": "For relaxation, these might help."
+    },
+    {
+      "session_id": "S-20250705-002",
+      "client_name": "Aarav Mehta",
+      "customer_name": "Miguel Alvarez",
+      "customer_id": "2003",
+      "store_name": "ChillTree Canna Co.",
+      "client_store_id": "ST-002",
+      "last_visit": "2025-07-05",
+      "purchased_product": "MellowMint Tea",
+      "top_mood": ["Sleepy"],
+      "active_time": "25 mins",
+      "chat_overview": "Here are a few sleep-supportive picks."
+    },
+    {
+      "session_id": "S-20250710-003",
+      "client_name": "Sonal Verma",
+      "customer_name": "Ava Thompson",
+      "customer_id": "2004",
+      "store_name": "Herbal Bliss Collective",
+      "client_store_id": "ST-003",
+      "last_visit": "2025-07-10",
+      "purchased_product": "CalmBreeze Oil",
+      "top_mood": ["Stressed", "Overworked"],
+      "active_time": "15 mins",
+      "chat_overview": "These calming options could ease your day."
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

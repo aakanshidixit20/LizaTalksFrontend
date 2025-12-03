@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "POS sync completed successfully.",
+  "data": {
+    "products_updated": 204,
+    "timestamp": "2025-07-29T12:03:45Z"
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

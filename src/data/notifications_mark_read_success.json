@@ -1,0 +1,10 @@
+{
+  "status": "success",
+  "message": "Notifications marked as read successfully",
+  "data": {},
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

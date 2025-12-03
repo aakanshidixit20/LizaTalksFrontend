@@ -1,0 +1,754 @@
+.with-horizontal-navbar .top-navbar {
+  position: fixed;
+  left: 0 !important;
+  right: 0 !important;
+  border-radius: 0 0 7px 7px !important;
+  display: block;
+}
+.with-horizontal-navbar .top-navbar::before {
+  left: 0;
+  right: 0;
+  top: 70px;
+  content: "";
+  height: 1px;
+  position: absolute;
+  background: var(--borderColor);
+}
+.with-horizontal-navbar .top-navbar .top-navbar-content {
+  max-width: 1345px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.with-horizontal-navbar .top-navbar .logos {
+  display: block !important;
+}
+
+.horizontal-navbar-area {
+  max-width: 1295px;
+  margin-top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 11px;
+  padding-top: 10px;
+  position: relative;
+  display: none;
+}
+.horizontal-navbar-area .accordion {
+  gap: 6px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.horizontal-navbar-area .accordion .accordion-item {
+  background-color: transparent;
+  color: var(--blackColor);
+  white-space: nowrap;
+  position: relative;
+  border-radius: 7px;
+  border: none;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button {
+  display: flex;
+  align-items: center;
+  color: var(--blackColor);
+  font-size: 14px;
+  background-color: transparent;
+  padding-bottom: 9px;
+  padding-right: 33px;
+  padding-left: 14px;
+  padding-top: 9px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  border-radius: 7px;
+  box-shadow: none;
+  position: relative;
+  text-transform: capitalize;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button i {
+  transition: var(--transition);
+  color: var(--bodyColor);
+  margin-right: 7px;
+  font-size: 22px;
+  line-height: 1;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button .trezo-badge {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  line-height: 20px;
+  color: var(--dangerColor);
+  background-color: #fff5ed;
+  margin-left: 11px;
+  margin-right: 0;
+  border-radius: 50%;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button .trezo-badge.style-two {
+  color: #00b69b;
+  background: rgba(0, 182, 155, 0.07);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button .trezo-badge.style-three {
+  color: #ee368c;
+  background: rgba(238, 54, 140, 0.1);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button::after {
+  display: none;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button::before {
+  top: 50%;
+  right: 8px;
+  margin-top: 1px;
+  content: "\ea4e";
+  position: absolute;
+  color: var(--bodyColor);
+  transform: translateY(-50%);
+  transition: var(--transition);
+  font-size: 19px;
+  font-family: remixicon;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button:hover {
+  color: var(--blackColor);
+  background-color: #f6f7f9;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button:hover i {
+  color: var(--blackColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-button:hover::before {
+  color: var(--blackColor);
+}
+.horizontal-navbar-area .accordion .accordion-item:has(.active) .accordion-button {
+  color: var(--blackColor);
+  background-color: #f6f7f9;
+}
+.horizontal-navbar-area .accordion .accordion-item:has(.active) .accordion-button i {
+  color: var(--blackColor);
+}
+.horizontal-navbar-area .accordion .accordion-item:has(.active) .accordion-button::before {
+  color: var(--blackColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body {
+  left: 0;
+  top: 100%;
+  opacity: 0;
+  z-index: 1;
+  width: 270px;
+  padding: 12px 0;
+  margin-top: 13px;
+  position: absolute;
+  visibility: hidden;
+  transition: var(--transition);
+  background-color: #fff;
+  box-shadow: 0 0.25rem 1.125rem 0 rgba(47, 43, 61, 0.1);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button {
+  color: var(--bodyColor);
+  font-size: 14px;
+  background-color: transparent;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 31px;
+  padding-top: 10px;
+  justify-content: flex-start;
+  width: 100%;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button::after {
+  top: 50%;
+  left: 13px;
+  width: 10px;
+  content: "";
+  height: 10px;
+  transition: 0.3s;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  transform: translateY(-50%);
+  background: unset !important;
+  border: 1px solid var(--bodyColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button i {
+  margin-right: 0;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button:hover, .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.active {
+  background-color: #ecf0ff;
+  color: var(--primaryColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button:hover i, .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.active i {
+  color: var(--primaryColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button:hover::after, .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.active::after {
+  border-color: var(--primaryColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button:hover::before, .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.active::before {
+  color: var(--primaryColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge {
+  top: 50%;
+  padding: 0;
+  right: 34px;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  line-height: 20px;
+  position: absolute;
+  color: var(--dangerColor);
+  transform: translateY(-50%);
+  background-color: #fff5ed;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge.style-two {
+  color: #00b69b;
+  background: rgba(0, 182, 155, 0.07);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge.style-three {
+  color: #ee368c;
+  background: rgba(238, 54, 140, 0.1);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.with-icon {
+  display: flex !important;
+  align-items: center;
+  padding-left: 12px;
+  gap: 7px;
+  font-weight: 500;
+  box-shadow: none;
+  border: none;
+  transition: var(--transition);
+  width: 100%;
+  justify-content: flex-start;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.with-icon i {
+  font-size: 21px;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.with-icon::after {
+  display: none;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item {
+  position: relative;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link {
+  color: var(--bodyColor);
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  padding-right: 12px;
+  padding-left: 31px;
+  padding-top: 10px;
+  display: block;
+  position: relative;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link::after {
+  top: 50%;
+  left: 13px;
+  width: 10px;
+  content: "";
+  height: 10px;
+  transition: 0.3s;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  border: 1px solid var(--bodyColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover, .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.active {
+  background-color: #ecf0ff;
+  color: var(--primaryColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover::after, .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.active::after {
+  border-color: var(--primaryColor);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge {
+  position: relative;
+  top: -1px;
+  padding: 2px 6px;
+  margin-left: 10px;
+  border-radius: 3px;
+  line-height: initial;
+  color: var(--dangerColor);
+  background-color: #ffe8d4;
+  font-size: 10px;
+  font-weight: normal;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge::before {
+  top: 50%;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  content: "";
+  position: absolute;
+  background: #ffe8d4;
+  transform: translateY(-50%) rotate(45deg);
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-two {
+  color: var(--successColor);
+  background-color: #d8ffc8;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-two::before {
+  background: #d8ffc8;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-three {
+  color: var(--primaryColor);
+  background-color: #eae0f3;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-three::before {
+  background: #eae0f3;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.with-icon {
+  display: flex !important;
+  align-items: center;
+  padding-left: 12px;
+  gap: 7px;
+  font-weight: 500;
+  box-shadow: none;
+  border: none;
+  transition: var(--transition);
+  width: 100%;
+  justify-content: flex-start;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.with-icon i {
+  font-size: 21px;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.with-icon::after {
+  display: none;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  margin-top: 0;
+  visibility: hidden;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  opacity: 0;
+  visibility: hidden;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  opacity: 0;
+  visibility: hidden;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item:hover .accordion-body {
+  opacity: 1;
+  visibility: visible;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item:hover .accordion-body {
+  opacity: 1;
+  visibility: visible;
+}
+.horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item:hover .accordion-body {
+  opacity: 1;
+  visibility: visible;
+}
+.horizontal-navbar-area .accordion .accordion-item.megamenu {
+  position: inherit;
+}
+.horizontal-navbar-area .accordion .accordion-item.megamenu .accordion-body {
+  width: auto;
+  right: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 0;
+}
+.horizontal-navbar-area .accordion .accordion-item.megamenu .accordion-body .sidebar-sub-menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.horizontal-navbar-area .accordion .accordion-item.megamenu .accordion-body .sidebar-sub-menu .sidemenu-item {
+  flex: 0 0 auto;
+  width: 25%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.horizontal-navbar-area .accordion .accordion-item:hover .accordion-body {
+  opacity: 1;
+  visibility: visible;
+}
+.horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body {
+  left: auto;
+  right: 0;
+}
+.horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  left: -100%;
+}
+.horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  left: 100%;
+}
+.horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  left: 100%;
+}
+
+.dark-theme .with-horizontal-navbar .top-navbar::before {
+  background: #172036;
+}
+.dark-theme .with-horizontal-navbar .top-navbar .logos .logo {
+  display: none;
+}
+.dark-theme .with-horizontal-navbar .top-navbar .logos .white-logo {
+  display: block;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item {
+  color: #fff;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item > .accordion-button {
+  color: #fff;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item > .accordion-button .title {
+  color: #fff;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item > .accordion-button .trezo-badge {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item > .accordion-button .trezo-badge.style-two {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item > .accordion-button .trezo-badge.style-three {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item > .accordion-button:hover {
+  color: #fff;
+  background-color: #15203c;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item > .accordion-button:hover i {
+  color: #fff;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item > .accordion-button:hover::before {
+  color: #fff;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item:has(.active) .accordion-button {
+  color: #fff;
+  background-color: #15203c;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item:has(.active) .accordion-button i {
+  color: #fff;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item:has(.active) .accordion-button::before {
+  color: #fff;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body {
+  background-color: #0c1427;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button:hover, .dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.active {
+  background-color: #15203c;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge.style-two {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge.style-three {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link {
+  color: #8695aa;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link::after {
+  border-color: #8695aa;
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover, .dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.active {
+  background-color: #15203c;
+  color: var(--primaryColor);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link:hover::after, .dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.active::after {
+  border-color: var(--primaryColor);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-two {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-two::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-three {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark-theme .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge.style-three::before {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-button {
+  padding-right: 14px;
+  padding-left: 33px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-button i {
+  margin-right: 0;
+  margin-left: 7px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-button .trezo-badge {
+  margin-left: 0;
+  margin-right: 11px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-button::before {
+  right: auto;
+  left: 8px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body {
+  left: auto;
+  right: 0;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button {
+  padding-right: 31px;
+  padding-left: 10px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button::after {
+  left: auto;
+  right: 13px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button i {
+  margin-left: 0;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button .trezo-badge {
+  right: auto;
+  left: 34px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .accordion-button.with-icon {
+  padding-left: 0;
+  padding-right: 12px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link {
+  padding-right: 31px;
+  padding-left: 12px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link::after {
+  left: auto;
+  right: 13px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge {
+  margin-left: 0;
+  margin-right: 5px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link .trezo-badge::before {
+  left: auto;
+  right: -3px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .sidemenu-link.with-icon {
+  padding-left: 0;
+  padding-right: 12px;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  left: auto;
+  right: 100%;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item.megamenu .accordion-body {
+  left: 0;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body {
+  left: 0;
+  right: auto;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  left: auto;
+  right: -100%;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  left: auto;
+  right: 100%;
+}
+[dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+  left: auto;
+  right: 100%;
+}
+
+.main-wrapper-content.with-horizontal-navbar {
+  padding: 0;
+}
+.main-wrapper-content.with-horizontal-navbar .horizontal-navbar-area {
+  display: block;
+}
+.main-wrapper-content.with-horizontal-navbar .main-content {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 162px;
+  max-width: 1340px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Max width 599px */
+@media only screen and (max-width: 599px) {
+  .main-wrapper-content.with-horizontal-navbar .main-content {
+    padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+  .horizontal-navbar-area {
+    display: none;
+  }
+  .main-wrapper-content.with-horizontal-navbar .horizontal-navbar-area {
+    display: none;
+  }
+  .main-wrapper-content.with-horizontal-navbar .top-navbar::before {
+    display: none;
+  }
+  .main-wrapper-content.with-horizontal-navbar .top-navbar .logos {
+    display: none !important;
+  }
+}
+/* Min width 600px to Max width 767px */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .main-wrapper-content.with-horizontal-navbar .main-content {
+    padding-top: 95px;
+  }
+}
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .horizontal-navbar-area {
+    display: none;
+  }
+  .main-wrapper-content.with-horizontal-navbar .horizontal-navbar-area {
+    display: none;
+  }
+  .main-wrapper-content.with-horizontal-navbar .top-navbar::before {
+    display: none;
+  }
+  .main-wrapper-content.with-horizontal-navbar .top-navbar .logos {
+    display: none !important;
+  }
+  .main-wrapper-content.with-horizontal-navbar.with-horizontal-navbar .main-content {
+    padding-top: 95px;
+  }
+}
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .main-wrapper-content.with-horizontal-navbar .left-header-content ul li .src-form .form-control {
+    width: 215px;
+  }
+  .horizontal-navbar-area {
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .horizontal-navbar-area .accordion .accordion-item .accordion-body {
+    width: 250px;
+  }
+  .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body, .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body {
+    left: auto;
+    right: 0;
+  }
+  .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: -100%;
+  }
+  .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: -100%;
+  }
+  .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: 100%;
+  }
+  [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body, [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body {
+    left: 0;
+    right: auto;
+  }
+  [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: auto;
+    right: -100%;
+  }
+  [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: auto;
+    right: -100%;
+  }
+  [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: auto;
+    right: 100%;
+  }
+}
+/* Min width 992px */
+@media only screen and (min-width: 992px) {
+  .with-horizontal-navbar .top-navbar .top-burger {
+    display: none;
+  }
+  .with-horizontal-navbar .top-navbar .logos .white-logo {
+    display: none;
+  }
+  .main-wrapper-content.with-horizontal-navbar .hide-for-horizontal-nav {
+    display: none;
+  }
+}
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .with-horizontal-navbar .top-navbar .top-navbar-content {
+    max-width: 1345px;
+  }
+  .horizontal-navbar-area {
+    max-width: 1345px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .horizontal-navbar-area .accordion .accordion-item .accordion-body {
+    width: 250px;
+  }
+  .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body, .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body {
+    left: auto;
+    right: 0;
+  }
+  .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: -100%;
+  }
+  .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: -100%;
+  }
+  .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: 100%;
+  }
+  [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body, [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body {
+    left: 0;
+    right: auto;
+  }
+  [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: auto;
+    right: -100%;
+  }
+  [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: auto;
+    right: -100%;
+  }
+  [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:last-child .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body, [dir=rtl] .horizontal-navbar-area .accordion .accordion-item:nth-last-child(2) .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body .sidebar-sub-menu .sidemenu-item .accordion-body {
+    left: auto;
+    right: 100%;
+  }
+}
+/* Min width 1400px */
+@media only screen and (min-width: 1400px) {
+  .doctor-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: -50px;
+    position: relative;
+  }
+}
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+  .with-horizontal-navbar .top-navbar .top-navbar-content {
+    max-width: 1595px;
+  }
+  .horizontal-navbar-area {
+    max-width: 1545px;
+  }
+  .main-wrapper-content.with-horizontal-navbar .main-content {
+    max-width: 1596px;
+  }
+  .doctor-content {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}/*# sourceMappingURL=horizontal-navbar.css.map */

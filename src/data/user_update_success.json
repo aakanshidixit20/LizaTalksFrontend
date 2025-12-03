@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "User updated successfully.",
+  "data": {
+    "user_id": "u_102",
+    "updated_at": "2025-08-02T14:22:00Z"
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

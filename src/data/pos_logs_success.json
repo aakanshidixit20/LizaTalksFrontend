@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "message": "Sync logs fetched successfully.",
+  "data": [
+    {
+      "timestamp": "2025-07-29T12:03:45Z",
+      "provider": "dutchie",
+      "status": "success",
+      "products_updated": 186,
+      "sync_time_sec": 2.1,
+      "message": "POS sync successful via Dutchie."
+    },
+    {
+      "timestamp": "2025-07-28T18:19:07Z",
+      "provider": "iheart_jane",
+      "status": "partial",
+      "products_updated": 129,
+      "sync_time_sec": 3.4,
+      "message": "Sync timeout while fetching inventory."
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "total_records": 34,
+    "total_pages": 4
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

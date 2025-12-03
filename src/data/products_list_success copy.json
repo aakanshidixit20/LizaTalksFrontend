@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "message": "Products fetched successfully",
+  "data": [
+    {
+      "product_id": "a12f3e45-c67-4d89-9123-ff56aa7e8901",
+      "product_code": "PD-101",
+      "product_name": "Blue Dream Hybrid Flower",
+      "product_price": 22.5,
+      "category": "hybrid",
+      "product_image_url": "https://cdn.example.com/images/blue-dream.jpg",
+      "in_stock": true,
+      "last_sync_date": "2025-07-30"
+    },
+    {
+      "product_id": "d56c8a21-3e33-4cf6-c5-3c3dd192f33",
+      "product_code": "PD-102",
+      "product_name": "MellowMint Tea",
+      "product_price": 12.0,
+      "category": "cd-dominant",
+      "product_image_url": "https://cdn.example.com/images/mellowmint.jpg",
+      "in_stock": false,
+      "last_sync_date": "2025-07-28"
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

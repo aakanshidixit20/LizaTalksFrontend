@@ -1,0 +1,230 @@
+.c-search-box {
+  position: relative;
+
+  i {
+    top: 50%;
+    left: 13px;
+    font-size: 20px;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+  .c-input {
+    height: 40px;
+    font-size: 12px;
+    background-color: #f6f7f9;
+    border: 1px solid #f6f7f9;
+    color: var(--blackColor);
+    padding: 5px 10px 5px 38px;
+    border-radius: 7px;
+    display: block;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+/* chat-users-list */
+.chat-users-list {
+  overflow-y: scroll;
+  height: 812px;
+  padding-right: 10px;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background-color: var(--whiteColor);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #b5c3d7;
+  }
+  .single-user-item {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #eceef2;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+/* t-chat-body */
+.t-chat-body {
+  transform: rotate(180deg);
+  margin-right: -25px;
+  overflow-y: scroll;
+  direction: rtl;
+  height: 703px;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background-color: var(--whiteColor);
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #b5c3d7;
+  }
+ 
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    display: flex;
+    padding-left: 25px;
+    padding-right: 0;
+
+    li {
+      transform: rotate(180deg);
+      padding-left: 45px;
+      direction: ltr;
+      width: 100%;
+      position: relative;
+      margin-bottom: 12px;
+
+      .user {
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-radius: 100px;
+      }
+      .message {
+        text-align: start;
+
+        p {
+          padding: 10px 15px;
+          display: inline-block;
+          background-color: #f6f7f9;
+          border-radius: 0 7px 7px 7px;
+          margin-bottom: 5px;
+        }
+
+        div {
+          margin-bottom: 5px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .time {
+        font-size: 12px;
+        text-align: start;
+        display: block;
+      }
+    }
+  }
+  
+  ul {
+    li {
+      &.right {
+        text-align: end;
+        margin-left: auto;
+        padding-left: 0;
+        padding-right: 0;
+
+        .user {
+          left: auto;
+          right: 0;
+        }
+        .message {
+          text-align: end;
+
+          p {
+            color: var(--whiteColor);
+            border-radius: 7px 0 7px 7px;
+            background-color: var(--primaryColor);
+          }
+        }
+        .time {
+          text-align: end;
+        }
+      }
+    }
+  } 
+}
+
+/* dark-theme style */
+.dark-theme {
+  .c-search-box {
+    .c-input {
+      background-color: var(--darkSecondaryColor);
+      border: 1px solid var(--darkSecondaryColor);
+      color: var(--whiteColor);
+    }
+  }
+}
+
+/* dark-theme style */
+.dark-theme {
+  .chat-users-list {
+    .single-user-item {
+      border-bottom: 1px solid var(--darkSecondaryColor);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .t-chat-body {
+    ul {
+      li {
+        .message {
+          p {
+            background-color: var(--darkSecondaryColor);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* RTL Style */
+[dir="rtl"] {
+  .c-search-box {
+    i {
+      left: auto;
+      right: 13px;
+    }
+    .c-input {
+      padding: 5px 38px 5px 10px;
+    }
+  }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+  /* chat-users-list */
+  .chat-users-list {
+    height: 400px;
+  }
+}
+/* Min width 576px to Max width 767px */
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}

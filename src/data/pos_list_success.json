@@ -1,0 +1,137 @@
+{
+  "success": true,
+  "message": "POS sync statuses fetched successfully.",
+  "data": [
+    {
+      "client_store_id": "store_001",
+      "store_name": "Green Haven Dispensary",
+      "dutchie": {
+        "last_sync_date": "2025-07-01",
+        "sync_frequency": "Everyday",
+        "sync_status": "Connected"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-07-01",
+        "sync_frequency": "Everyday",
+        "sync_status": "Connected"
+      }
+    },
+    {
+      "client_store_id": "store_002",
+      "store_name": "Evergreen Wellness",
+      "dutchie": {
+        "last_sync_date": "2025-07-05",
+        "sync_frequency": "Weekly",
+        "sync_status": "Disconnected"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-07-04",
+        "sync_frequency": "Weekly",
+        "sync_status": "Pending"
+      }
+    },
+    {
+      "client_store_id": "store_003",
+      "store_name": "Herbal Horizon",
+      "dutchie": {
+        "last_sync_date": "2025-06-28",
+        "sync_frequency": "Everyday",
+        "sync_status": "Connected"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-06-30",
+        "sync_frequency": "Everyday",
+        "sync_status": "Connected"
+      }
+    },
+    {
+      "client_store_id": "store_004",
+      "store_name": "Leaf & Beyond",
+      "dutchie": {
+        "last_sync_date": "2025-07-03",
+        "sync_frequency": "Every 2 Days",
+        "sync_status": "Error"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-07-03",
+        "sync_frequency": "Every 2 Days",
+        "sync_status": "Connected"
+      }
+    },
+    {
+      "client_store_id": "store_005",
+      "store_name": "CannaCare Collective",
+      "dutchie": {
+        "last_sync_date": "2025-07-02",
+        "sync_frequency": "Weekly",
+        "sync_status": "Pending"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-07-02",
+        "sync_frequency": "Weekly",
+        "sync_status": "Disconnected"
+      }
+    },
+    {
+      "client_store_id": "store_006",
+      "store_name": "Nature’s Remedy",
+      "dutchie": {
+        "last_sync_date": "2025-06-29",
+        "sync_frequency": "Everyday",
+        "sync_status": "Connected"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-06-29",
+        "sync_frequency": "Everyday",
+        "sync_status": "Error"
+      }
+    },
+    {
+      "client_store_id": "store_007",
+      "store_name": "Bloom Botanicals",
+      "dutchie": {
+        "last_sync_date": "2025-07-06",
+        "sync_frequency": "Every 3 Days",
+        "sync_status": "Connected"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-07-06",
+        "sync_frequency": "Every 3 Days",
+        "sync_status": "Connected"
+      }
+    },
+    {
+      "client_store_id": "store_008",
+      "store_name": "Tranquil Terpenes",
+      "dutchie": {
+        "last_sync_date": "2025-07-07",
+        "sync_frequency": "Weekly",
+        "sync_status": "Pending"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-07-07",
+        "sync_frequency": "Weekly",
+        "sync_status": "Pending"
+      }
+    },
+    {
+      "client_store_id": "store_009",
+      "store_name": "Highland Harvest",
+      "dutchie": {
+        "last_sync_date": "2025-07-01",
+        "sync_frequency": "Everyday",
+        "sync_status": "Disconnected"
+      },
+      "iheart_jane": {
+        "last_sync_date": "2025-07-02",
+        "sync_frequency": "Everyday",
+        "sync_status": "Connected"
+      }
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

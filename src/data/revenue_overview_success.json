@@ -1,0 +1,83 @@
+{
+  "success": true,
+  "message": "Revenue data fetched successfully",
+  "data": [
+    {
+      "order_id": "ORD-20250728-001",
+      "client_name": "Ritika Sharma",
+      "customer_name": "Sarah Jones",
+      "product_names": ["Dreamland Gummies", "Soothing CBD Oil"],
+      "order_amount": 3505,
+      "bude_order_amount": 2980,
+      "store_name": "Green Haven Dispensary",
+      "order_date": "2025-07-28"
+    },
+    {
+      "order_id": "ORD-20250728-002",
+      "client_name": "Aarav Mehta",
+      "customer_name": "Miguel Alvarez",
+      "product_names": ["MellowMint Tea", "Relaxation Capsules"],
+      "order_amount": 1255,
+      "bude_order_amount": 1020,
+      "store_name": "ChillTree Cannabis Co.",
+      "order_date": "2025-07-05"
+    },
+    {
+      "order_id": "ORD-20250728-003",
+      "client_name": "Sonal Verma",
+      "customer_name": "Emily Carter",
+      "product_names": ["Herbal Bliss Brownies", "Tranquil Tincture"],
+      "order_amount": 2890,
+      "bude_order_amount": 2410,
+      "store_name": "Leaf & Harmony",
+      "order_date": "2025-07-12"
+    },
+    {
+      "order_id": "ORD-20250728-004",
+      "client_name": "Karan Kapoor",
+      "customer_name": "David Kim",
+      "product_names": ["Zen Vape Cartridge", "Lavender CBD Balm"],
+      "order_amount": 4120,
+      "bude_order_amount": 3565,
+      "store_name": "Cloud Nine Collective",
+      "order_date": "2025-07-18"
+    },
+    {
+      "order_id": "ORD-20250728-005",
+      "client_name": "Priya Desai",
+      "customer_name": "Priya Nair",
+      "product_names": ["CalmBrew Tea", "Healing Hemp Lotion"],
+      "order_amount": 1780,
+      "bude_order_amount": 1495,
+      "store_name": "Nature’s Touch Wellness",
+      "order_date": "2025-07-20"
+    },
+    {
+      "order_id": "ORD-20250728-006",
+      "client_name": "Vikram Iyer",
+      "customer_name": "Liam O’Connor",
+      "product_names": ["Serenity Gummies", "Mindful Drops"],
+      "order_amount": 2395,
+      "bude_order_amount": 1980,
+      "store_name": "Evergreen Remedies",
+      "order_date": "2025-07-22"
+    },
+    {
+      "order_id": "ORD-20250728-007",
+      "client_name": "Neha Reddy",
+      "customer_name": "Sophia Martinez",
+      "product_names": ["Golden Glow Capsules", "Relax+ Oil"],
+      "order_amount": 3250,
+      "bude_order_amount": 2765,
+      "store_name": "Blissful Botanics",
+      "order_date": "2025-07-25"
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}
+
+

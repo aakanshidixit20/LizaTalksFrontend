@@ -1,0 +1,45 @@
+{
+  "success": true,
+  "message": "Client feedback fetched successfully",
+  "client_id": "c123f9d8-45b6-4e23-a7d1-11e56ab9f001",
+  "data": [
+    {
+      "session_id": "s5678-9981-12ac-ff78",
+      "store_id": "store-201",
+      "customer_name": "John Doe",
+      "customer_id": "cust-101",
+      "feedback": {
+        "rating": 4,
+        "comment": "The chatbot was very helpful in identifying issues.",
+        "tags": ["helpful", "recommended_product_worked"]
+      }
+    },
+    {
+      "session_id": "s5678-9981-12ac-ff79",
+      "store_id": "store-202",
+      "customer_name": "Jane Smith",
+      "customer_id": "cust-102",
+      "feedback": {
+        "rating": 5,
+        "comment": "Excellent experience, quick responses and very clear solutions.",
+        "tags": ["excellent_support", "fast_response"]
+      }
+    },
+    {
+      "session_id": "s5678-9981-12ac-ff80",
+      "store_id": "store-203",
+      "customer_name": "Alex Johnson",
+      "customer_id": "cust-103",
+      "feedback": {
+        "rating": 3,
+        "comment": "The chatbot provided useful info but took a bit long to respond.",
+        "tags": ["useful", "slow_response"]
+      }
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

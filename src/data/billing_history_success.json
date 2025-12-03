@@ -1,0 +1,130 @@
+{
+  "status": "success",
+  "message": "Billing history fetched successfully",
+  "data": {
+    "billing_history": [
+      {
+        "client_name": "Ritika Sharma",
+        "store_name": "Green Haven Dispensary",
+        "brand": "Green Haven",
+        "invoice_number": "acbbbgh1737",
+        "billing_date": "2025-06-25",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 100,
+        "due_date": "2025-09-25"
+      },
+      {
+        "client_name": "Aarav Mehta",
+        "store_name": "ChillTree Canna Co.",
+        "brand": "ChillTree",
+        "invoice_number": "acbbbgh1738",
+        "billing_date": "2025-06-25",
+        "payment_status": "Paid",
+        "subscription": "Pro",
+        "total_amount": 300,
+        "due_date": "2025-12-25"
+      },
+      {
+        "client_name": "Priya Desai",
+        "store_name": "Nature's Touch",
+        "brand": "Nature's Touch",
+        "invoice_number": "acbbbgh1739",
+        "billing_date": "2025-07-01",
+        "payment_status": "Pending",
+        "subscription": "Pro",
+        "total_amount": 280,
+        "due_date": "2025-10-01"
+      },
+      {
+        "client_name": "Karan Kapoor",
+        "store_name": "Sunshine Organics",
+        "brand": "Sunshine Organics",
+        "invoice_number": "acbbbgh1740",
+        "billing_date": "2025-07-05",
+        "payment_status": "Overdue",
+        "subscription": "Basic",
+        "total_amount": 120,
+        "due_date": "2025-07-20"
+      },
+      {
+        "client_name": "Vikram Iyer",
+        "store_name": "Bliss Botanicals",
+        "brand": "Bliss Botanicals",
+        "invoice_number": "acbbbgh1741",
+        "billing_date": "2025-07-10",
+        "payment_status": "Paid",
+        "subscription": "Enterprise",
+        "total_amount": 500,
+        "due_date": "2025-10-10"
+      },
+      {
+        "client_name": "Sonal Verma",
+        "store_name": "Dreamland Dispensary",
+        "brand": "Dreamland",
+        "invoice_number": "acbbbgh1742",
+        "billing_date": "2025-07-15",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 100,
+        "due_date": "2025-10-15"
+      },
+      {
+        "client_name": "Neha Reddy",
+        "store_name": "GreenLeaf Wellness",
+        "brand": "GreenLeaf",
+        "invoice_number": "acbbbgh1743",
+        "billing_date": "2025-07-18",
+        "payment_status": "Pending",
+        "subscription": "Pro",
+        "total_amount": 320,
+        "due_date": "2025-10-18"
+      },
+      {
+        "client_name": "Anjali Jain",
+        "store_name": "Herbal Harmony",
+        "brand": "Herbal Harmony",
+        "invoice_number": "acbbbgh1744",
+        "billing_date": "2025-07-20",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 150,
+        "due_date": "2025-10-20"
+      },
+      {
+        "client_name": "Siddharth Rao",
+        "store_name": "Nature's Bloom",
+        "brand": "Nature's Bloom",
+        "invoice_number": "acbbbgh1745",
+        "billing_date": "2025-07-22",
+        "payment_status": "Overdue",
+        "subscription": "Enterprise",
+        "total_amount": 600,
+        "due_date": "2025-07-30"
+      },
+      {
+        "client_name": "Ritika Sharma",
+        "store_name": "Wellness Roots",
+        "brand": "Wellness Roots",
+        "invoice_number": "acbbbgh1746",
+        "billing_date": "2025-07-25",
+        "payment_status": "Paid",
+        "subscription": "Pro",
+        "total_amount": 250,
+        "due_date": "2025-10-25"
+      }
+   
+    ]
+  },
+  "meta": {
+    "page": 1,
+    "limit": 30,
+    "total_records": 30,
+    "total_pages": 1
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

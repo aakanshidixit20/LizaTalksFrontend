@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "message": "Dashboard data fetched successfully",
+  "data": {
+    "total_conversations": 1500,
+    "total_revenue": 17605,
+    "last_pos_sync": "2025-05-25",
+    "client_revenue" : 35000,
+    "top_moods": 30,
+    "daily_revenue_chart": [
+      { "date": "2025-09-01", "revenue": 500 },
+      { "date": "2025-09-02", "revenue": 620 },
+      { "date": "2025-09-03", "revenue": 450 },
+      { "date": "2025-09-04", "revenue": 700 },
+      { "date": "2025-09-05", "revenue": 800 },
+      { "date": "2025-09-06", "revenue": 400 },
+      { "date": "2025-09-07", "revenue": 750 },
+
+      { "date": "2025-09-08", "revenue": 600 },
+      { "date": "2025-09-09", "revenue": 550 },
+      { "date": "2025-09-10", "revenue": 720 },
+      { "date": "2025-09-11", "revenue": 660 },
+      { "date": "2025-09-12", "revenue": 480 },
+      { "date": "2025-09-13", "revenue": 900 },
+      { "date": "2025-09-14", "revenue": 300 },
+      { "date": "2025-09-15", "revenue": 750 },
+      { "date": "2025-09-16", "revenue": 670 },
+      { "date": "2025-09-17", "revenue": 540 },
+      { "date": "2025-09-18", "revenue": 820 },
+      { "date": "2025-09-19", "revenue": 910 },
+      { "date": "2025-09-20", "revenue": 400 },
+      { "date": "2025-09-21", "revenue": 360 },
+      { "date": "2025-09-22", "revenue": 620 },
+      { "date": "2025-09-23", "revenue": 580 },
+      { "date": "2025-09-24", "revenue": 640 },
+      { "date": "2025-09-25", "revenue": 730 },
+      { "date": "2025-09-26", "revenue": 820 },
+      { "date": "2025-09-27", "revenue": 500 },
+      { "date": "2025-09-28", "revenue": 450 },
+      { "date": "2025-09-29", "revenue": 780 },
+      { "date": "2025-09-30", "revenue": 870 },
+
+      { "date": "2025-07-05", "revenue": 420 },
+      { "date": "2025-07-12", "revenue": 390 },
+      { "date": "2025-07-19", "revenue": 460 },
+      { "date": "2025-07-26", "revenue": 510 },
+      { "date": "2025-08-02", "revenue": 700 },
+      { "date": "2025-08-10", "revenue": 640 },
+      { "date": "2025-08-18", "revenue": 580 },
+      { "date": "2025-08-25", "revenue": 720 }
+    ],
+    "monthly_conversation_chart": [
+      { "month": "Jan", "count": 300 },
+      { "month": "Feb", "count": 250 },
+      { "month": "Mar", "count": 350 },
+      { "month": "Apr", "count": 200 },
+      { "month": "May", "count": 400 }
+    ]
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

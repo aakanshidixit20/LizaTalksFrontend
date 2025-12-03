@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Document deleted successfully",
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

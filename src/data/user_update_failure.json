@@ -1,0 +1,10 @@
+{
+  "success": false,
+  "message": "Failed to fetch user update",
+  "data": null,
+  "error": {
+    "code": "SERVER_ERROR",
+    "details": "Internal server error",
+    "retryable": true
+  }
+}

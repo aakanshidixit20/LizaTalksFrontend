@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "message": "Store details fetched successfully.",
+  "data": {
+    "client_store_id": "ST-002",
+    "store_name": "ChillTree Cannabis Co.",
+    "store_type": "Medical",
+    "chatbot_name": "ChatterLeaf",
+    "timezone": "America/New_York",
+    "created_on": "2024-11-20",
+    "modified_date": "2025-07-05",
+    "subscription_id": "basic",
+    "payment_status": "Completed",
+    "chatbot_settings": {
+      "default_greeting": null,
+      "response_style": null,
+      "fallback_message": null
+    },
+    "branding": {
+      "primary_color": null,
+      "logo_url": null,
+      "welcome_banner": null
+    }
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

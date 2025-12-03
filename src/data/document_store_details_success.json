@@ -1,0 +1,47 @@
+{
+  "success": true,
+  "message": "Store document details fetched",
+  "data": [
+    {
+      "document_id": "doc_001",
+      "document_title": "Dispensary Onboarding Checklist",
+      "document_type": "PDF",
+      "category": "Product Guide",
+      "chat_enabled": true,
+      "uploaded_date": "2025-06-24",
+      "last_modified": "2025-06-24"
+    },
+    {
+      "document_id": "doc_002",
+      "document_title": "POS-Integration-Specs",
+      "document_type": "PDF",
+      "category": "Usage Instructions",
+      "chat_enabled": false,
+      "uploaded_date": "2025-06-24",
+      "last_modified": "2025-07-05"
+    },
+    {
+      "document_id": "doc_003",
+      "document_title": "Compliance Guidelines 2025",
+      "document_type": "DOCX",
+      "category": "Legal",
+      "chat_enabled": true,
+      "uploaded_date": "2025-07-01",
+      "last_modified": "2025-07-10"
+    },
+    {
+      "document_id": "doc_004",
+      "document_title": "Store Training Manual",
+      "document_type": "PDF",
+      "category": "Training",
+      "chat_enabled": true,
+      "uploaded_date": "2025-07-05",
+      "last_modified": "2025-07-12"
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

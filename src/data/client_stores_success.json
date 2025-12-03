@@ -1,0 +1,107 @@
+{
+  "success": true,
+  "message": "Client stores fetched successfully",
+  "data": [
+    {
+      "client_store_id": "ST-001",
+      "client_name": "Ritika Sharma",
+      "store_name": "Green Haven Dispensary",
+      "store_type": "Recreational",
+      "chatbot_name": "ZenBuddy",
+      "subscription": "Basic",
+      "revenue_usd": 100
+    },
+    {
+      "client_store_id": "ST-002",
+      "client_name": "Aarav Mehta",
+      "store_name": "ChillTree Cannabis Co.",
+      "store_type": "Medical",
+      "chatbot_name": "ChatterLeaf",
+      "subscription": "Premium",
+      "revenue_usd": 150
+    },
+    {
+      "client_store_id": "ST-003",
+      "client_name": "Sonal Verma",
+      "store_name": "Elevate Wellness",
+      "store_type": "Medical-only Virginia",
+      "chatbot_name": "Calmly",
+      "subscription": "Pro",
+      "revenue_usd": 250
+    },
+    {
+      "client_store_id": "ST-004",
+      "client_name": "Karan Kapoor",
+      "store_name": "Herbal Groove",
+      "store_type": "Recreational",
+      "chatbot_name": "LeafBot",
+      "subscription": "Basic",
+      "revenue_usd": 100
+    },
+    {
+      "client_store_id": "ST-005",
+      "client_name": "Priya Desai",
+      "store_name": "Moonlight Meds",
+      "store_type": "Medical",
+      "chatbot_name": "ChillMate",
+      "subscription": "Premium",
+      "revenue_usd": 150
+    },
+    {
+      "client_store_id": "ST-006",
+      "client_name": "Vikram Iyer",
+      "store_name": "Bliss Botanicals",
+      "store_type": "Medical-only Virginia",
+      "chatbot_name": "ZenBot",
+      "subscription": "Pro",
+      "revenue_usd": 250
+    },
+    {
+      "client_store_id": "ST-007",
+      "client_name": "Neha Reddy",
+      "store_name": "Zen High Collective",
+      "store_type": "Recreational",
+      "chatbot_name": "Buddy",
+      "subscription": "Basic",
+      "revenue_usd": 100
+    },
+    {
+      "client_store_id": "ST-008",
+      "client_name": "Ritika Sharma",
+      "store_name": "UrbanLeaf Dispensary",
+      "store_type": "Medical",
+      "chatbot_name": "GreenGenie",
+      "subscription": "Premium",
+      "revenue_usd": 150
+    },
+    {
+      "client_store_id": "ST-009",
+      "client_name": "Aarav Mehta",
+      "store_name": "Tranquil Treehouse",
+      "store_type": "Medical-only Virginia",
+      "chatbot_name": "MoodMapper",
+      "subscription": "Pro",
+      "revenue_usd": 250
+    },
+    {
+      "client_store_id": "ST-010",
+      "client_name": "Sonal Verma",
+      "store_name": "Evergreen Essence",
+      "store_type": "Recreational",
+      "chatbot_name": "TrippyTalk",
+      "subscription": "Premium",
+      "revenue_usd": 150
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "total_records": 10,
+    "total_pages": 1
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

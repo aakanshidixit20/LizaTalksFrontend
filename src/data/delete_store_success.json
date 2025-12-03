@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "message": "Store deleted successfully.",
+  "data": {
+    "client_store_id": "ST-002"
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

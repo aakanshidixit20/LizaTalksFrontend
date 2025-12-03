@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "message": "Stores fetched successfully.",
+  "data": [
+    {
+      "client_store_id": "ST-001",
+      "store_name": "Green Haven Dispensary",
+      "store_type": "Recreational",
+      "chatbot_name": "ZenBuddy",
+      "modified_date": "2025-07-01"
+    },
+    {
+      "client_store_id": "ST-002",
+      "store_name": "ChillTree Canna Co.",
+      "store_type": "Medical",
+      "chatbot_name": "ChatterLeaf",
+      "modified_date": "2025-07-05"
+    },
+    {
+      "client_store_id": "ST-003",
+      "store_name": "Elevate Wellness",
+      "store_type": "Medical-only Virginia",
+      "chatbot_name": "Calmly",
+      "modified_date": "2025-07-10"
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

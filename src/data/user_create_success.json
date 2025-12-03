@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "User created successfully.",
+  "data": {
+    "user_id": "u_102",
+    "created_at": "2025-08-02T14:00:00Z"
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

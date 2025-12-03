@@ -1,0 +1,528 @@
+.t-settings-btn i {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.settings-sidebar {
+  bottom: 0;
+  opacity: 0;
+  z-index: 50;
+  right: -100%;
+  width: 380px;
+  height: 100%;
+  position: fixed;
+  visibility: hidden;
+  box-shadow: 0 4px 20px rgba(47, 143, 232, 0.0705882353) !important;
+  overflow-y: auto;
+  z-index: 999;
+}
+.settings-sidebar .settings-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  position: sticky;
+  padding: 16.5px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settings-sidebar .settings-header h4 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 500;
+}
+.settings-sidebar .settings-header .close-btn {
+  top: 2.5px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.settings-sidebar .settings-header .close-btn i {
+  font-size: 20px;
+}
+.settings-sidebar .settings-body {
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+.settings-sidebar .settings-body .title {
+  margin-bottom: 15px;
+  display: block;
+  color: var(--blackColor);
+  font-weight: 600;
+}
+.settings-sidebar .settings-body .switch-btn {
+  gap: 25px;
+  display: grid;
+  color: var(--blackColor);
+  font-family: var(--fontFamily);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0;
+  cursor: pointer;
+}
+.settings-sidebar .settings-body .switch-btn .box {
+  width: 140px;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid #f1f0f3;
+  transition: var(--transition);
+  position: relative;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(1) {
+  top: 0;
+  right: 0;
+  width: 96px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border-radius: 0 5px 0 5px;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(2) {
+  right: 0;
+  bottom: 0;
+  width: 96px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border-radius: 5px 0 5px 0;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(3) {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  position: absolute;
+  background: #f1f0f3;
+  border-radius: 5px 0 0 5px;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(4) {
+  top: 14px;
+  left: 7px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background: #d6d2df;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(5) {
+  left: 7px;
+  top: 45px;
+  width: 20px;
+  height: 5px;
+  position: absolute;
+  border-radius: 30px;
+  background: #d6d2df;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(6) {
+  left: 7px;
+  top: 55px;
+  width: 20px;
+  height: 5px;
+  position: absolute;
+  border-radius: 30px;
+  background: #d6d2df;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(7) {
+  left: 7px;
+  top: 65px;
+  width: 20px;
+  height: 5px;
+  position: absolute;
+  border-radius: 30px;
+  background: #d6d2df;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(8) {
+  top: 35px;
+  left: 46px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(9) {
+  top: 35px;
+  left: 78px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(10) {
+  top: 35px;
+  left: 110px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(11) {
+  top: 55px;
+  left: 46px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(12) {
+  top: 55px;
+  left: 78px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-sidebar .settings-body .switch-btn .box span:nth-child(13) {
+  top: 55px;
+  left: 110px;
+  width: 20px;
+  height: 11px;
+  position: absolute;
+  background: #f1f0f3;
+  border: 1px solid #f1f0f3;
+}
+.settings-sidebar .settings-body .switch-btn .box:hover {
+  border-color: var(--primaryColor);
+}
+.settings-sidebar .settings-body .switch-btn .first .box {
+  border-color: var(--primaryColor);
+}
+.settings-sidebar .settings-body .switch-btn .first .sub-title {
+  display: flex;
+  align-items: center;
+}
+.settings-sidebar .settings-body .switch-btn .first .sub-title .dot-checkbox {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+  position: relative;
+}
+.settings-sidebar .settings-body .switch-btn .first .sub-title .dot-checkbox::before {
+  opacity: 1;
+  visibility: visible;
+}
+.settings-sidebar .settings-body .switch-btn .sub-title {
+  gap: 8px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.settings-sidebar .settings-body .switch-btn .sub-title .dot-checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #f1f0f3;
+  transition: var(--transition);
+  position: relative;
+}
+.settings-sidebar .settings-body .switch-btn .sub-title .dot-checkbox::before {
+  left: 0;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  content: "\eb7b";
+  visibility: hidden;
+  position: absolute;
+  font-family: remixicon;
+  color: var(--whiteColor);
+  transform: translateY(-50%);
+  transition: var(--transition);
+}
+.settings-sidebar .settings-body .switch-btn .sub-title .dot-checkbox.active {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.settings-sidebar .settings-body .switch-btn .sub-title .dot-checkbox.active::before {
+  opacity: 1;
+  visibility: visible;
+}
+.settings-sidebar .settings-body .switch-btn.ltr-rtl-btn .second span:nth-child(1), .settings-sidebar .settings-body .switch-btn.left-right-sidebar-btn .second span:nth-child(1) {
+  left: 0;
+  right: auto;
+  border-radius: 5px 0 5px 0;
+}
+.settings-sidebar .settings-body .switch-btn.ltr-rtl-btn .second span:nth-child(2), .settings-sidebar .settings-body .switch-btn.left-right-sidebar-btn .second span:nth-child(2) {
+  border-radius: 0 5px 0 5px;
+  right: auto;
+  left: 0;
+}
+.settings-sidebar .settings-body .switch-btn.ltr-rtl-btn .second span:nth-child(3), .settings-sidebar .settings-body .switch-btn.left-right-sidebar-btn .second span:nth-child(3) {
+  right: 0;
+  left: auto;
+  border-radius: 0 5px 5px 0;
+}
+.settings-sidebar .settings-body .switch-btn.ltr-rtl-btn .second span:nth-child(4), .settings-sidebar .settings-body .switch-btn.left-right-sidebar-btn .second span:nth-child(4) {
+  left: auto;
+  right: 7px;
+}
+.settings-sidebar .settings-body .switch-btn.ltr-rtl-btn .second span:nth-child(5), .settings-sidebar .settings-body .switch-btn.left-right-sidebar-btn .second span:nth-child(5) {
+  left: auto;
+  right: 7px;
+}
+.settings-sidebar .settings-body .switch-btn.ltr-rtl-btn .second span:nth-child(6), .settings-sidebar .settings-body .switch-btn.left-right-sidebar-btn .second span:nth-child(6) {
+  left: auto;
+  right: 7px;
+}
+.settings-sidebar .settings-body .switch-btn.ltr-rtl-btn .second span:nth-child(7), .settings-sidebar .settings-body .switch-btn.left-right-sidebar-btn .second span:nth-child(7) {
+  left: auto;
+  right: 7px;
+}
+.settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box {
+  background-color: #000000;
+}
+.settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box span:nth-child(1) {
+  background: rgba(255, 255, 255, 0.2);
+}
+.settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box span:nth-child(2) {
+  background: rgba(255, 255, 255, 0.2);
+}
+.settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box span:nth-child(3) {
+  background: rgba(255, 255, 255, 0.2);
+}
+.settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box span:nth-child(4) {
+  background: rgba(214, 210, 223, 0.5);
+}
+.settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box span:nth-child(5) {
+  background: rgba(214, 210, 223, 0.5);
+}
+.settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box span:nth-child(6) {
+  background: rgba(214, 210, 223, 0.5);
+}
+.settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box span:nth-child(7) {
+  background: rgba(214, 210, 223, 0.5);
+}
+.settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(8), .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(9), .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(10), .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(11), .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(12), .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(13) {
+  border-color: #d6d2df;
+}
+.settings-sidebar .settings-body .switch-btn.card-shape-btn .first .box span:nth-child(8), .settings-sidebar .settings-body .switch-btn.card-shape-btn .first .box span:nth-child(9), .settings-sidebar .settings-body .switch-btn.card-shape-btn .first .box span:nth-child(10), .settings-sidebar .settings-body .switch-btn.card-shape-btn .first .box span:nth-child(11), .settings-sidebar .settings-body .switch-btn.card-shape-btn .first .box span:nth-child(12), .settings-sidebar .settings-body .switch-btn.card-shape-btn .first .box span:nth-child(13) {
+  border-radius: 10px;
+}
+.settings-sidebar .settings-body .switch-btn.compact-sidebar-btn .second .box span:nth-child(1) {
+  width: 108px;
+}
+.settings-sidebar .settings-body .switch-btn.compact-sidebar-btn .second .box span:nth-child(2) {
+  width: 108px;
+}
+.settings-sidebar .settings-body .switch-btn.compact-sidebar-btn .second .box span:nth-child(3) {
+  width: 24px;
+}
+.settings-sidebar .settings-body .switch-btn.compact-sidebar-btn .second .box span:nth-child(4) {
+  left: 4px;
+  width: 15px;
+  height: 15px;
+}
+.settings-sidebar .settings-body .switch-btn.compact-sidebar-btn .second .box span:nth-child(5) {
+  left: 4px;
+  width: 15px;
+}
+.settings-sidebar .settings-body .switch-btn.compact-sidebar-btn .second .box span:nth-child(6) {
+  left: 4px;
+  width: 15px;
+}
+.settings-sidebar .settings-body .switch-btn.compact-sidebar-btn .second .box span:nth-child(7) {
+  left: 4px;
+  width: 15px;
+}
+.settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(8), .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(9), .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(10), .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(11), .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(12), .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(13) {
+  background: var(--whiteColor);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.settings-sidebar .settings-body .switch-btn.sidebar-btn .second span:nth-child(3) {
+  background: #000000;
+}
+.settings-sidebar .settings-body .switch-btn.sidebar-btn .second span:nth-child(4) {
+  background: rgba(214, 210, 223, 0.5);
+}
+.settings-sidebar .settings-body .switch-btn.sidebar-btn .second span:nth-child(5) {
+  background: rgba(214, 210, 223, 0.5);
+}
+.settings-sidebar .settings-body .switch-btn.sidebar-btn .second span:nth-child(6) {
+  background: rgba(214, 210, 223, 0.5);
+}
+.settings-sidebar .settings-body .switch-btn.sidebar-btn .second span:nth-child(7) {
+  background: rgba(214, 210, 223, 0.5);
+}
+.settings-sidebar .settings-body .switch-btn.header-btn .second span:nth-child(1) {
+  background: #000000;
+}
+.settings-sidebar .settings-body .switch-btn.active .first .box {
+  border-color: #f1f0f3;
+}
+.settings-sidebar .settings-body .switch-btn.active .first .box:hover {
+  border-color: var(--primaryColor);
+}
+.settings-sidebar .settings-body .switch-btn.active .first .sub-title .dot-checkbox {
+  border-color: #f1f0f3;
+  background-color: transparent;
+}
+.settings-sidebar .settings-body .switch-btn.active .first .sub-title .dot-checkbox::before {
+  opacity: 0;
+  visibility: hidden;
+}
+.settings-sidebar .settings-body .switch-btn.active .second .box {
+  border-color: var(--primaryColor);
+}
+.settings-sidebar .settings-body .switch-btn.active .second .dot-checkbox {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.settings-sidebar .settings-body .switch-btn.active .second .dot-checkbox::before {
+  opacity: 1;
+  visibility: visible;
+}
+.settings-sidebar .settings-body .mat-divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.settings-sidebar .ng-scroll-content {
+  padding-right: 0 !important;
+}
+.settings-sidebar.active {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dark-theme .settings-sidebar .settings-body .title {
+  color: var(--whiteColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn .box {
+  border-color: #172036;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(1), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(2), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(3), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(8), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(9), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(10), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(11), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(12), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(13) {
+  background: #172036;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(8), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(9), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(10), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(11), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(12), .dark-theme .settings-sidebar .settings-body .switch-btn .box span:nth-child(13) {
+  border-color: var(--borderColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn .box:hover {
+  border-color: var(--primaryColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn .first .box {
+  border-color: var(--primaryColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn .first .sub-title .dot-checkbox {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn .sub-title .dot-checkbox {
+  border-color: var(--borderColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn .sub-title span {
+  color: var(--whiteColor) !important;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(8), .dark-theme .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(9), .dark-theme .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(10), .dark-theme .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(11), .dark-theme .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(12), .dark-theme .settings-sidebar .settings-body .switch-btn.card-border-btn .second .box span:nth-child(13) {
+  border-color: #2a395d;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(8), .dark-theme .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(9), .dark-theme .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(10), .dark-theme .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(11), .dark-theme .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(12), .dark-theme .settings-sidebar .settings-body .switch-btn.card-shadow-btn .second .box span:nth-child(13) {
+  background: var(--blackColor);
+  box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.sidebar-btn .second span:nth-child(3) {
+  background: #000000;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.header-btn .second span:nth-child(1) {
+  background: #000000;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.active .first .box {
+  border-color: #172036;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.active .first .box:hover {
+  border-color: var(--primaryColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.active .first .sub-title .dot-checkbox {
+  border-color: var(--borderColor);
+  background-color: transparent;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.active .second .box {
+  border-color: var(--primaryColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.active .second .dot-checkbox {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.light-dark-btn .first .box {
+  border-color: #0C1427;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.light-dark-btn .first .sub-title .dot-checkbox {
+  border-color: var(--borderColor);
+  background-color: transparent;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.light-dark-btn .first .sub-title .dot-checkbox::before {
+  display: none;
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.light-dark-btn .second .box {
+  border-color: var(--primaryColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.light-dark-btn .second .dot-checkbox {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+}
+.dark-theme .settings-sidebar .settings-body .switch-btn.light-dark-btn .second .dot-checkbox::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+[dir=rtl] .settings-sidebar {
+  text-align: end;
+  right: auto;
+  left: -100%;
+}
+[dir=rtl] .settings-sidebar .settings-body .switch-btn {
+  margin-left: auto;
+}
+[dir=rtl] .settings-sidebar.active {
+  right: auto;
+  left: 0;
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+  .settings-sidebar {
+    width: 320px;
+  }
+  .settings-sidebar .settings-header {
+    padding: 14.5px 20px;
+  }
+  .settings-sidebar .settings-header h4 {
+    font-size: 15px;
+  }
+  .settings-sidebar .settings-header .close-btn i {
+    font-size: 18px;
+  }
+  .settings-sidebar .settings-body {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .settings-sidebar .settings-body .title {
+    margin-bottom: 13px;
+  }
+  .settings-sidebar .settings-body .switch-btn {
+    gap: 20px;
+  }
+  .settings-sidebar .settings-body .mat-divider {
+    margin-top: 17px;
+    margin-bottom: 17px;
+  }
+}
+/* Min width 576px to Max width 767px */
+/* Min width 768px to Max width 991px */
+/* Min width 992px to Max width 1199px */
+/* Min width 1200px to Max width 1399px */
+/* Min width 1600px *//*# sourceMappingURL=control-panel.css.map */

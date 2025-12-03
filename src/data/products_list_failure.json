@@ -1,0 +1,10 @@
+{
+  "success": false,
+  "message": "Failed to fetch products list",
+  "data": null,
+  "error": {
+    "code": "SERVER_ERROR",
+    "details": "Internal server error",
+    "retryable": true
+  }
+}
