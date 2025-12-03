@@ -31,23 +31,36 @@
 // export default Analytics;
 
 
+// import React from "react";
+// import { Routes, Route } from "react-router-dom";
+
+// import BotEffectiveness from "../../../components/AdminDashboard/Analytics/BotEffectiveness";
+// import TrainingAndPerformance from "../../../components/AdminDashboard/Analytics/TrainingAndPerformance";
+// import DataHealthAndReliability from "../../../components/AdminDashboard/Analytics/DataHealthAndReliability";
+// import FeaturePerformance from "../../../components/AdminDashboard/Analytics/FeaturePerformance";
+
+// const Analytics = () => {
+//   return (
+//     <Routes>
+//       <Route path="/bot-effectiveness" element={<BotEffectiveness />} />
+//       <Route path="/training-performance" element={<TrainingAndPerformance />} />
+//       <Route path="/data-health" element={<DataHealthAndReliability />} />
+//       <Route path="/feature-performance" element={<FeaturePerformance />} />
+//     </Routes>
+//   );
+// };
+
+// export default Analytics;
+
+
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import AnalyticsLayout from "../../../components/AdminDashboard/Analytics/AnalyticsLayout";
 
-import BotEffectiveness from "../../../components/AdminDashboard/Analytics/BotEffectiveness";
-import TrainingAndPerformance from "../../../components/AdminDashboard/Analytics/TrainingAndPerformance";
-import DataHealthAndReliability from "../../../components/AdminDashboard/Analytics/DataHealthAndReliability";
-import FeaturePerformance from "../../../components/AdminDashboard/Analytics/FeaturePerformance";
-
-const Analytics = () => {
+export default function Analytics() {
   return (
-    <Routes>
-      <Route path="/bot-effectiveness" element={<BotEffectiveness />} />
-      <Route path="/training-performance" element={<TrainingAndPerformance />} />
-      <Route path="/data-health" element={<DataHealthAndReliability />} />
-      <Route path="/feature-performance" element={<FeaturePerformance />} />
-    </Routes>
+    <AnalyticsLayout>
+      <Outlet />
+    </AnalyticsLayout>
   );
-};
-
-export default Analytics;
+}

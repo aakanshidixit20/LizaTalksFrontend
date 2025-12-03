@@ -9,17 +9,23 @@ import BillingHistory from "./pages/admin-dashboard/billing-history";
 import Analytics from "./pages/admin-dashboard/analytics";
 import Revenue from "./pages/admin-dashboard/revenue";
 import ChatTranscripts from "./pages/admin-dashboard/chat-transcripts";
-import ClientManagement from "./pages/admin-dashboard/client-management"
+import ClientManagement from "./pages/admin-dashboard/client-management";
 import Notifications from "./pages/admin-dashboard/notifications";
 import UserManagement from "./pages/admin-dashboard/user-management";
-import CreateClient from "./pages/admin-dashboard/client-management/create-client"
+import CreateClient from "./pages/admin-dashboard/client-management/create-client";
 import AddingNewUser from "./pages/admin-dashboard/user-management/add-user";
 import ChatWindow from "./pages/admin-dashboard/chat-transcripts/chat-window";
 import ClientStores from "./pages/admin-dashboard/client-store";
 import Products from "./pages/admin-dashboard/products";
 import ClientFeedBack from "./pages/admin-dashboard/client-feedback";
 import ReportProblem from "./pages/admin-dashboard/report-problem";
-import ViewStorePage from "./pages/admin-dashboard/client-store/view-store"
+import ViewStorePage from "./pages/admin-dashboard/client-store/view-store";
+
+// import Analytics from "./pages/admin-dashboard/analytics";
+import BotEffectiveness from "./components/AdminDashboard/Analytics/BotEffectiveness";
+import TrainingAndPerformance from "./components/AdminDashboard/Analytics/TrainingAndPerformance";
+import DataHealthAndReliability from "./components/AdminDashboard/Analytics/DataHealthAndReliability";
+import FeaturePerformance from "./components/AdminDashboard/Analytics/FeaturePerformance";
 
 const App = () => {
   const [active, setActive] = useState(false);
@@ -79,13 +85,15 @@ const App = () => {
                 />
 
                 {/* client management routes */}
-                <Route path="/client-management" element={<ClientManagement />} />
+                <Route
+                  path="/client-management"
+                  element={<ClientManagement />}
+                />
 
                 <Route
                   path="/client-management/create-client"
                   element={<CreateClient />}
                 />
-
 
                 <Route path="/revenue" element={<BillingHistory />} />
                 <Route path="/notifications" element={<Notifications />} />
@@ -101,36 +109,37 @@ const App = () => {
                 <Route path="/client-stores" element={<ClientStores />} />
                 <Route path="/store_id/:store_id" element={<ViewStorePage />} />
 
+                {/* <Route path="/analytics/*" element={<Analytics />} /> */}
+{/* ----------------------------------------------------------------------------------F */}
+                <Route path="/analytics" element={<Analytics />}>
+                  <Route index element={<BotEffectiveness />} />
+                  <Route
+                    path="bot-effectiveness"
+                    element={<BotEffectiveness />}
+                  />
+                  <Route
+                    path="training-performance"
+                    element={<TrainingAndPerformance />}
+                  />
+                  <Route
+                    path="data-health-reliability"
+                    element={<DataHealthAndReliability />}
+                  />
+                  <Route
+                    path="feature-performance"
+                    element={<FeaturePerformance />}
+                  />
+                </Route>
+                console.log("Analytics Routes Loaded");
+{/* ---------------------------------------------------------------------------------- */}
+                <Route path="/products" element={<Products />} />
 
-                <Route path="/analytics/*" element={<Analytics />} />
+                <Route path="/client-feedback" element={<ClientFeedBack />} />
+
                 <Route
-                  path="/products"
-                  element={
-
-                    <Products />
-
-                  }
-                />
-
-                <Route
-                  path="/client-feedback"
-                  element={
-
-                    <ClientFeedBack />
-
-                  }
-                />
-
-                 <Route
                   path="/chat-problems-report"
-                  element={
-
-                    <ReportProblem />
-
-                  }
+                  element={<ReportProblem />}
                 />
-
-
               </Routes>
             </div>
 
