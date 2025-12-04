@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "message": "Problem reports fetched successfully",
+  "data": [
+    {
+      "client_id": "c987f9d8-12b6-4e23-b8d1-22e56ab9f999",
+      "store_id": "store-301",
+      "customer_name": "Emily Carter",
+      "customer_id": "cust-201",
+      "issue_reported": "App kept crashing when trying to complete payment."
+    },
+    {
+      "client_id": "c987f9d8-12b6-4e23-b8d1-22e56ab9f999",
+      "store_id": "store-302",
+      "customer_name": "Michael Brown",
+      "customer_id": "cust-202",
+      "issue_reported": "Product page was not loading images."
+    },
+    {
+      "client_id": "c987f9d8-12b6-4e23-b8d1-22e56ab9f999",
+      "store_id": "store-303",
+      "customer_name": "Sophia Williams",
+      "customer_id": "cust-203",
+      "issue_reported": "Live chat disconnected multiple times during support."
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

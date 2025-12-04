@@ -1,0 +1,79 @@
+/* Container for the two-column layout */
+.pricingLayout {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Left: plans | Right: details */
+  gap: 30px;
+}
+
+/* Left column: list plans vertically */
+.plansList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Make each plan card full width in left column */
+.plansList .pricingStyle2Card {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plansList .pricingStyle2Card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight selected plan */
+.plansList .pricingStyle2Card.selected {
+  border: 2px solid var(--primaryColor);
+}
+
+/* Right column: plan details */
+.planDetails {
+  background: white;
+  padding: 35px;
+  border-radius: 10px;
+  border: 1px solid var(--borderColor);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.planDetails h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.planDetails .price {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--primaryColor);
+  margin-bottom: 20px;
+}
+
+.planDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.planDetails ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.planDetails ul li i {
+  color: var(--successColor);
+  margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .pricingLayout {
+    grid-template-columns: 1fr; /* Stack vertically */
+  }
+  
+  .planDetails {
+    margin-top: 20px;
+  }
+}

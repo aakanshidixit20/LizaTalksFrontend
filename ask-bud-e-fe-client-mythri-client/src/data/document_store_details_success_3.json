@@ -1,0 +1,74 @@
+{
+  "success": true,
+  "message": "Store document details fetched",
+  "data": [
+    {
+      "document_id": "doc_201",
+      "document_title": "Employee Onboarding Handbook",
+      "document_type": "PDF",
+      "category": "HR",
+      "chat_enabled": true,
+      "uploaded_date": "2025-06-20",
+      "last_modified": "2025-06-25"
+    },
+    {
+      "document_id": "doc_202",
+      "document_title": "Store Layout Blueprint",
+      "document_type": "PNG",
+      "category": "Design",
+      "chat_enabled": false,
+      "uploaded_date": "2025-06-22",
+      "last_modified": "2025-06-30"
+    },
+    {
+      "document_id": "doc_203",
+      "document_title": "Health & Safety Compliance",
+      "document_type": "PDF",
+      "category": "Legal",
+      "chat_enabled": true,
+      "uploaded_date": "2025-06-25",
+      "last_modified": "2025-07-02"
+    },
+    {
+      "document_id": "doc_204",
+      "document_title": "Quarterly Sales Report Q2",
+      "document_type": "XLSX",
+      "category": "Finance",
+      "chat_enabled": false,
+      "uploaded_date": "2025-07-01",
+      "last_modified": "2025-07-10"
+    },
+    {
+      "document_id": "doc_205",
+      "document_title": "Vendor Contract Template",
+      "document_type": "DOCX",
+      "category": "Contracts",
+      "chat_enabled": true,
+      "uploaded_date": "2025-07-03",
+      "last_modified": "2025-07-12"
+    },
+    {
+      "document_id": "doc_206",
+      "document_title": "Marketing Campaign Assets",
+      "document_type": "ZIP",
+      "category": "Marketing",
+      "chat_enabled": false,
+      "uploaded_date": "2025-07-05",
+      "last_modified": "2025-07-14"
+    },
+    {
+      "document_id": "doc_207",
+      "document_title": "Technical Support Manual",
+      "document_type": "PDF",
+      "category": "Support",
+      "chat_enabled": true,
+      "uploaded_date": "2025-07-07",
+      "last_modified": "2025-07-15"
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Store updated successfully.",
+  "data": {
+    "client_store_id": "ST-002",
+    "last_modified": "2025-07-30"
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "message": "Documents fetched successfully",
+  "data": [
+    {
+      "client_store_id": "store_123",
+      "store_name": "Green Haven Dispensary",
+      "total_documents": 4
+    },
+    {
+      "client_store_id": "store_456",
+      "store_name": "Elevate Wellness",
+      "total_documents": 3
+    },
+    {
+      "client_store_id": "store_789",
+      "store_name": "Bliss Botanicals",
+      "total_documents": 7
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "total_records": 20,
+    "total_pages": 2
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

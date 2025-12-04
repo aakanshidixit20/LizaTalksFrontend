@@ -1,0 +1,25 @@
+.profileNavLinks {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px;
+  text-align: center
+}
+.profileNavLinks li {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.profileNavLinks li a {
+  display: inline-block;
+  font-weight: 500;
+  border-radius: 7px;
+  padding: 7.5px 15px;
+  color: var(--primaryColor);
+  background-color: transparent;
+  border: 1px solid var(--primaryColor);
+}
+.profileNavLinks li a:hover, .profileNavLinks li a.active {
+  color: var(--whiteColor);
+  background-color: var(--primaryColor);
+}

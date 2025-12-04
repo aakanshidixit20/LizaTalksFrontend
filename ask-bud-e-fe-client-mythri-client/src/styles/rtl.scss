@@ -1,0 +1,146 @@
+[dir="rtl"] {
+   
+  table {
+    th, td {
+      text-align: right;
+    }
+  }
+
+  .MuiTimeline-root {
+    .MuiTypography-root {
+      text-align: right;
+    } 
+  }
+
+  .-mr-4 {
+    margin-right: 0;
+    margin-left: -4px;
+  } 
+ 
+  // ApexCharts
+  .apexcharts-canvas {
+    direction: ltr;
+
+    .apexcharts-tooltip {
+      direction: rtl;
+
+      .apexcharts-tooltip-marker {
+        margin: {
+          right: 0;
+          left: 6px;
+        };
+      }
+      .apexcharts-tooltip-series-group {
+        justify-content: start;
+      }
+    }
+    .apexcharts-legend-series {
+      direction: rtl;
+
+      .apexcharts-legend-marker {
+        left: auto !important;
+        right: -2px;
+        margin: {
+          right: 0;
+          left: 3px;
+        };
+      }
+      .apexcharts-legend-text {
+        padding: {
+          left: 0;
+          right: 15px;
+        };
+        margin: {
+          left: 0;
+          right: -15px;
+        };
+      }
+    }
+  }
+
+  .crm-ap, .crm-to, .crm-lc, .crm-rg {
+    right: auto;
+    left: -9px;
+  }
+
+  .MuiAvatarGroup-root {
+    .MuiAvatar-root {
+      margin-left: 0;
+      margin-right: -8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .MuiAccordion-root  {
+    .MuiAccordionSummary-expandIconWrapper {
+      margin-left: 10px;
+    }
+  }
+
+  .MuiChip-root {
+    padding: 5px 10px;
+    .MuiChip-label {
+      padding: 0;
+    }
+  }
+ 
+  .MuiAlert-root {
+    .MuiAlert-icon {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+
+  .MuiCard-root {
+    .MuiCardHeader-root {
+      margin-right: 0;
+      margin-left: 16px;
+    }
+  }
+  
+  .MuiStep-horizontal {
+    .MuiStepLabel-iconContainer {
+      padding-right: 0;
+      padding-left: 8px;
+    }
+  }
+
+  .MuiStep-vertical {
+    .MuiStepLabel-root {
+      text-align: right;
+    }
+    .MuiStepLabel-iconContainer {
+      padding-right: 0;
+      padding-left: 8px;
+    }
+  }
+  
+  // nft-slide
+  .nft-slide {
+    .swiper-button-prev {
+      left: auto;
+      right: 0;
+    }
+    .swiper-button-next {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  // tc-slide
+  .tc-slide {
+    .swiper-pagination {
+      text-align: right; 
+    }
+  }
+  // tc-slide
+  .rp-slide {
+    .swiper-pagination {
+      text-align: right; 
+    }
+  }
+}
+

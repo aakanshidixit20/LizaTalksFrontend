@@ -1,0 +1,55 @@
+.watchlist-slider .swiper-pagination {
+  position: initial;
+  margin-top: 10px;
+}
+.watchlist-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--primaryColor);
+}
+
+.statistics-buttons-list button {
+  border-radius: 0;
+  margin-left: -1px;
+  padding: 2.5px 11px;
+  min-width: auto;
+  border-color: var(--borderColor);
+  color: var(--bodyColor);
+}
+.statistics-buttons-list button:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+.statistics-buttons-list button:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.th-badge {
+  background-color: #ecf0ff;
+  color: var(--primaryColor);
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.th-badge.buy, .th-badge.Buy {
+  background-color: #d8ffc8;
+  color: var(--successColor);
+}
+.th-badge.sell, .th-badge.Sell {
+  background-color: #ffe1dd;
+  color: var(--dangerColor);
+}
+
+.dark-theme .watchlist-card {
+  background-color: var(--darkBodyBg);
+}
+.dark-theme .statistics-buttons-list button {
+  border-color: var(--darkBodyColor);
+}
+
+[dir=rtl] .statistics-buttons-list button:first-child {
+  border-radius: 0 5px 5px 0;
+}
+[dir=rtl] .statistics-buttons-list button:last-child {
+  border-radius: 5px 0 0 5px;
+}/*# sourceMappingURL=crypto-dashboard.css.map */

@@ -1,0 +1,88 @@
+{
+  "success": true,
+  "message": "Revenue data fetched successfully",
+  "data": [
+    {
+      "order_id": "ORD-20250728-001",
+      "customer_name": "Sarah Jones",
+      "product_names": ["Dreamland Gummies", "Soothing CBD Oil"],
+      "order_amount": 3505,
+      "bude_order_amount": 2980,
+      "store_name": "Green Haven Dispensary",
+      "order_date": "2025-07-28",
+      "product_category": "Edibles",
+      "brand": "CalmEssence"
+    },
+    {
+      "order_id": "ORD-20250728-002",
+      "customer_name": "Miguel Alvarez",
+      "product_names": ["MellowMint Tea", "Relaxation Capsules"],
+      "order_amount": 1255,
+      "bude_order_amount": 1020,
+      "store_name": "ChillTree Cannabis Co.",
+      "order_date": "2025-07-05",
+      "product_category": "Beverages",
+      "brand": "TranquiliLife"
+    },
+    {
+      "order_id": "ORD-20250728-003",
+      "customer_name": "Emily Carter",
+      "product_names": ["Herbal Bliss Brownies", "Tranquil Tincture"],
+      "order_amount": 2890,
+      "bude_order_amount": 2410,
+      "store_name": "Leaf & Harmony",
+      "order_date": "2025-07-12",
+      "product_category": "Tinctures",
+      "brand": "PureCalm"
+    },
+    {
+      "order_id": "ORD-20250728-004",
+      "customer_name": "David Kim",
+      "product_names": ["Zen Vape Cartridge", "Lavender CBD Balm"],
+      "order_amount": 4120,
+      "bude_order_amount": 3565,
+      "store_name": "Cloud Nine Collective",
+      "order_date": "2025-07-18",
+      "product_category": "Topicals",
+      "brand": "LavenderCare"
+    },
+    {
+      "order_id": "ORD-20250728-005",
+      "customer_name": "Priya Nair",
+      "product_names": ["CalmBrew Tea", "Healing Hemp Lotion"],
+      "order_amount": 1780,
+      "bude_order_amount": 1495,
+      "store_name": "Nature’s Touch Wellness",
+      "order_date": "2025-07-20",
+      "product_category": "Topicals",
+      "brand": "HempHeal"
+    },
+    {
+      "order_id": "ORD-20250728-006",
+      "customer_name": "Liam O’Connor",
+      "product_names": ["Serenity Gummies", "Mindful Drops"],
+      "order_amount": 2395,
+      "bude_order_amount": 1980,
+      "store_name": "Evergreen Remedies",
+      "order_date": "2025-07-22",
+      "product_category": "Oils",
+      "brand": "Mindful Naturals"
+    },
+    {
+      "order_id": "ORD-20250728-007",
+      "customer_name": "Sophia Martinez",
+      "product_names": ["Golden Glow Capsules", "Relax+ Oil"],
+      "order_amount": 3250,
+      "bude_order_amount": 2765,
+      "store_name": "Blissful Botanics",
+      "order_date": "2025-07-25",
+      "product_category": "Capsules",
+      "brand": "RelaxPlus"
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

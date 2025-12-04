@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "message": "User details fetched successfully.",
+  "data": {
+    "user_id": "u_101",
+    "username": "Ritika Sharma",
+    "email_id": "ritika.sharma@floexample.com",
+    "email_id_verified": true,
+    "phone_number": "+91-6876543210",
+    "profile_picture": "https://cdn.app.com/user/u_101.jpg",
+    "last_login": "2025-08-01",
+    "created_at": "2025-06-01",
+    "status": "active"
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

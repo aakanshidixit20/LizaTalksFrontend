@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Document uploaded successfully",
+  "document_id": "doc_001",
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

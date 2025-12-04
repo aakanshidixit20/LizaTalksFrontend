@@ -1,0 +1,180 @@
+{
+  "success": true,
+  "message": "Chat transcripts fetched successfully.",
+  "data": {
+    "customer": {
+      "customer_id": "2002",
+      "name": "Sarah Jones",
+      "last_visit": "2025-08-10T18:45:00Z",
+      "last_purchased": "Cloud Nine Cartridge",
+      "feedback_submitted": true,
+      "bot_notes": {
+        "mood_trends": {
+          "Top 3 mood tags": [
+            "Sleepy (4 times)",
+            "Anxious (3 times)",
+            "Relaxed (2 times)"
+          ],
+          "Latest mood submitted": "Calm"
+        },
+        "usage_summary": {
+          "Total credits used": 27.8,
+          "Number of sessions": 9,
+          "Average credits per session": 3.1,
+          "Longest session": "6.2 credits (Jul 14)"
+        },
+        "product_engagement": {
+          "Top clicked products": [
+            "Dreamland Gummies (3 clicks)",
+            "Calm Kush (2 clicks)",
+            "Sleepytime Tincture (1 click)"
+          ],
+          "Most viewed product type": "Gummies",
+          "Most common effect searched": "Sleep aid",
+          "Total product clicks": 9
+        }
+      }
+    },
+    "chat_sessions": [
+      {
+        "session_id": "123456",
+        "timestamp": "2025-07-12T12:20:00Z",
+        "mood_selected": "Anxious",
+        "purchased_product": "Dreamland Gummies",
+        "feedback_submitted": true,
+        "messages": [
+          {
+            "sender": "bot",
+            "message": "Hi Sarah, I\u2019m Liza, your wellness assistant at SpokesDigital.",
+            "timestamp": "2025-07-12T12:20:01Z"
+          },
+          {
+            "sender": "bot",
+            "message": "How are you feeling today?",
+            "timestamp": "2025-07-12T12:20:02Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Last time, you mentioned feeling anxious. Is that still the case?",
+            "timestamp": "2025-07-12T12:20:03Z"
+          },
+          {
+            "sender": "user",
+            "message": "Yes, I\u2019m feeling anxious again.",
+            "timestamp": "2025-07-12T12:20:04Z"
+          },
+          {
+            "sender": "bot",
+            "message": "I understand. Here are a few calming options you might like:",
+            "timestamp": "2025-07-12T12:20:05Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Dreamland Gummies",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/dreamland-gummies",
+            "timestamp": "2025-07-12T12:20:06Z"
+          },
+          {
+            "sender": "bot",
+            "message": "MellowMint Tea",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/mellowmint-tea",
+            "timestamp": "2025-07-12T12:20:07Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Cloud Nine Cartridge",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/cloud-nine-cartridge",
+            "timestamp": "2025-07-12T12:20:08Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Disclaimer: These suggestions are not medical advice. Please consult a professional if needed.",
+            "type": "disclaimer",
+            "timestamp": "2025-07-12T12:20:09Z"
+          }
+        ]
+      },
+      {
+        "session_id": "123457",
+        "timestamp": "2025-07-27T12:20:00Z",
+        "mood_selected": "Can't Sleep",
+        "purchased_product": "Calm Kush",
+        "feedback_submitted": true,
+        "messages": [
+          {
+            "sender": "bot",
+            "message": "Hey Sarah, welcome back! Having trouble sleeping again?",
+            "timestamp": "2025-07-27T12:20:01Z"
+          },
+          {
+            "sender": "user",
+            "message": "Yes, I was looking for Dreamland Gummies.",
+            "timestamp": "2025-07-27T12:20:03Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Calm Kush.",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/calm-kush",
+            "timestamp": "2025-07-27T12:20:04Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Dreamland Gummies",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/dreamland-gummies",
+            "timestamp": "2025-07-27T12:20:05Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Disclaimer: This is not medical advice. Please follow your doctor\u2019s recommendations.",
+            "type": "disclaimer",
+            "timestamp": "2025-07-27T12:20:06Z"
+          }
+        ]
+      },
+      {
+        "session_id": "123458",
+        "timestamp": "2025-07-29T15:10:00Z",
+        "mood_selected": "Stressed",
+        "purchased_product": "Zen Drops",
+        "feedback_submitted": false,
+        "messages": [
+          {
+            "sender": "bot",
+            "message": "Hi Sarah, are you feeling stressed today?",
+            "timestamp": "2025-07-29T15:10:01Z"
+          },
+          {
+            "sender": "user",
+            "message": "Yes, quite a bit. It\u2019s been a tough week.",
+            "timestamp": "2025-07-29T15:10:05Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Zen Drops",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/zen-drops",
+            "timestamp": "2025-07-29T15:10:06Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Calm Kush",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/calm-kush",
+            "timestamp": "2025-07-29T15:10:07Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Disclaimer: These are wellness products, not a substitute for professional care.",
+            "type": "disclaimer",
+            "timestamp": "2025-07-29T15:10:08Z"
+          }
+        ]
+      }
+    ]
+  }
+}

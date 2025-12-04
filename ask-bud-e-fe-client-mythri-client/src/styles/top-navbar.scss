@@ -1,0 +1,99 @@
+.top-navbar {
+    left: 285px !important;
+    right: 25px !important;
+    transition: var(--transition) !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    &.sticky {
+        box-shadow: #959da51f 0 8px 24px;
+    }
+    .logos {
+        display: none;
+    }
+}
+
+// dark-theme style
+.dark-theme {
+    .top-navbar {
+        background-color: var(--darkCardBg);
+
+        .search-form {
+            .MuiInputBase-input {
+                background-color: #15203c;
+
+                &::placeholder {
+                    color: var(--darkBodyColor);
+                    opacity: 1; /* Firefox */
+                }
+                &::-ms-input-placeholder { /* Edge 12-18 */
+                    color: var(--darkBodyColor);
+                }
+            }
+        }
+
+        .for-dark-notification {
+            color: var(--darkBodyColor);
+            
+            svg {
+                color: var(--darkBodyColor);
+            }
+        }
+    }
+}
+// RTL Style
+[dir="rtl"] {
+    .top-navbar {
+        left: 25px !important;
+        right: 285px !important; 
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Max width 1199px */
+@media (max-width: 1199px) {
+    .top-navbar {
+        left: 15px !important;
+        right: 15px !important; 
+    }
+
+    // RTL Style
+    [dir="rtl"] {
+        .top-navbar {
+            left: 15px !important;
+            right: 15px !important; 
+        }
+    }
+}
+
+/* Min width 1200px */
+@media (min-width: 1200px) {
+
+    .main-wrapper-content {
+        &.active {
+            .top-navbar {
+                left: 90px !important; 
+            }
+        }
+    }
+
+    // RTL Style
+    [dir="rtl"] {
+        .main-wrapper-content {
+            &.active {
+                .top-navbar {
+                    left: 25px !important; 
+                    right: 90px !important; 
+                }
+            }
+        }
+    }
+
+}
