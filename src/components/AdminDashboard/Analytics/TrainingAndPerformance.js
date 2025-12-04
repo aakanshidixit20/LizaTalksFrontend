@@ -136,7 +136,7 @@ export default function TrainingAndPerformance() {
 
       <Box sx={{ p: 3, border: "1px solid #E5E7EB", borderRadius: "10px", background: "#fff" }}>
         <Typography sx={{ fontWeight: 500, mb: 2 }}>Latency by Client</Typography>
-        <BarChart   labels={labels} latency={latency} title="Avg Latency (ms)" />
+        <BarChart   labels={labels} data={latency} title="Avg Latency (ms)" />
       </Box>
     </>
   );

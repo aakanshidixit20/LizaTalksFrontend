@@ -75,7 +75,7 @@
 
 import React from "react";
 import AnalyticsLayout from "./AnalyticsLayout";
-import LineChart from "./Charts/LineChartOne";
+import LineChartOne from "./Charts/LineChartOne";
 import DonutChart from "./Charts/DonutChart";
 import { Typography, Box } from "@mui/material";
 import { analyticsData } from "./Data/AnalyticsData";
@@ -85,6 +85,10 @@ export default function FeaturePerformance() {
   const dropOff = analyticsData.featurePerformance.dropOffPerFeature.map(i => i.avgSessionDurationSec);
 
   // for donut → total usage count per client
+
+  const donutLabels = analyticsData.featurePerformance.featureUsageBreakdown.map(
+  i => i.client
+);
   const donutData = analyticsData.featurePerformance.featureUsageBreakdown.map(
     i => i.usage.generalChat + i.usage.storeInquiry + i.usage.productSuggestion
   );
@@ -97,12 +101,12 @@ export default function FeaturePerformance() {
 
       <Box sx={{ p: 3, border: "1px solid #E5E7EB", borderRadius: "10px", background: "#fff" }}>
         <Typography sx={{ fontWeight: 500, mb: 2 }}>Engagement Over Time</Typography>
-        <LineChart labels={labels} data={dropOff} title="Avg Session Duration (sec)"  />
+        <LineChartOne labels={labels} data={dropOff} title="Avg Session Duration (sec)"  />
       </Box>
         <Box sx={{ mt: 5 }}>
       <Box sx={{ p: 3, border: "1px solid #E5E7EB", borderRadius: "10px", background: "#fff" }}>
         <Typography sx={{ fontWeight: 500, mb: 2 }}>Engagement Over Time</Typography>
-        <DonutChart labels={labels} data={donutData} title="Feature Usage Breakdown"/>
+        <DonutChart labels={donutLabels} data={donutData} title="Feature Usage Breakdown"/>
       </Box>
       </Box>
     </Box>

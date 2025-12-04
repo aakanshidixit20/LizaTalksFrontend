@@ -16,8 +16,8 @@
 import React from "react";
 import Chart from "react-apexcharts";
 
-const BarChart = ({labels, latency}) => {
-  const series = [{ name: "Avg Latency (ms)", data: latency }];
+const BarChart = ({labels, data}) => {
+  const series = [{ name: "Avg Latency (ms)", data: [...data]}];
 
   const options = {
     chart: { type: "bar" },
