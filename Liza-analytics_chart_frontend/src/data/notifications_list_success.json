@@ -1,0 +1,364 @@
+{
+  "status": "success",
+  "message": "Notifications fetched successfully",
+  "client_id": "",
+  "data": {
+    "notifications": [
+      {
+        "id": "notif_001",
+        "title": "POS Sync Successful",
+        "message": "Dreamland Dispensary inventory was successfully synced at 3:02 PM.",
+        "client_store_id": "store_001",
+        "store_name": "Dreamland Dispensary",
+        "status": "unread",
+        "created_at": "2025-07-30T15:02:00Z",
+        "created_by": "client1"
+      },
+      {
+        "id": "notif_002",
+        "title": "Subscription Changed",
+        "message": "Bliss Botanicals upgraded from Starter to Pro on July 22.",
+        "client_store_id": "store_006",
+        "store_name": "Bliss Botanicals",
+        "status": "read",
+        "created_at": "2025-07-22T12:30:00Z",
+        "created_by": "client1"
+      },
+      {
+        "id": "notif_003",
+        "title": "Low Stock Alert",
+        "message": "GreenLeaf Wellness has less than 5 units of 'CBD Oil 500mg' remaining.",
+        "client_store_id": "store_004",
+        "store_name": "GreenLeaf Wellness",
+        "status": "unread",
+        "created_at": "2025-08-10T09:45:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_004",
+        "title": "POS Sync Failed",
+        "message": "Herbal Harmony sync failed due to API timeout. Please retry.",
+        "client_store_id": "store_007",
+        "store_name": "Herbal Harmony",
+        "status": "unread",
+        "created_at": "2025-08-12T16:18:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_005",
+        "title": "New User Added",
+        "message": "A new manager account was created for Bloomfield Naturals.",
+        "client_store_id": "store_009",
+        "store_name": "Bloomfield Naturals",
+        "status": "read",
+        "created_at": "2025-08-05T14:05:00Z",
+        "created_by": "client2"
+      },
+      {
+        "id": "notif_006",
+        "title": "Store Deactivated",
+        "message": "The account for Sunshine Organics has been deactivated due to non-payment.",
+        "client_store_id": "store_010",
+        "store_name": "Sunshine Organics",
+        "status": "unread",
+        "created_at": "2025-08-01T08:22:00Z",
+        "created_by": "admin"
+      },
+      {
+        "id": "notif_007",
+        "title": "Price Update Successful",
+        "message": "Price changes for 'Organic Hemp Gummies' at Nature’s Touch have been applied.",
+        "client_store_id": "store_011",
+        "store_name": "Nature’s Touch",
+        "status": "read",
+        "created_at": "2025-08-13T11:30:00Z",
+        "created_by": "client3"
+      },
+      {
+        "id": "notif_008",
+        "title": "Order Shipped",
+        "message": "Order #4451 from Herbal Harmony has been shipped to the customer.",
+        "client_store_id": "store_007",
+        "store_name": "Herbal Harmony",
+        "status": "read",
+        "created_at": "2025-08-09T18:14:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_009",
+        "title": "Refund Processed",
+        "message": "A refund of $125.50 was processed for order #4428 from Bliss Botanicals.",
+        "client_store_id": "store_006",
+        "store_name": "Bliss Botanicals",
+        "status": "unread",
+        "created_at": "2025-08-11T10:22:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_010",
+        "title": "Tax Report Available",
+        "message": "The July 2025 tax report for GreenLeaf Wellness is now available.",
+        "client_store_id": "store_004",
+        "store_name": "GreenLeaf Wellness",
+        "status": "read",
+        "created_at": "2025-08-03T06:45:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_011",
+        "title": "Payment Failed",
+        "message": "The subscription payment for Dreamland Dispensary failed. Please update your payment details.",
+        "client_store_id": "store_001",
+        "store_name": "Dreamland Dispensary",
+        "status": "unread",
+        "created_at": "2025-08-12T09:05:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_012",
+        "title": "Inventory Import Completed",
+        "message": "Bulk inventory import for Nature’s Touch completed successfully.",
+        "client_store_id": "store_011",
+        "store_name": "Nature’s Touch",
+        "status": "read",
+        "created_at": "2025-08-08T12:00:00Z",
+        "created_by": "client3"
+      },
+      {
+        "id": "notif_013",
+        "title": "System Maintenance Scheduled",
+        "message": "Planned maintenance will occur on August 20, 2025, from 1 AM to 3 AM UTC.",
+        "client_store_id": null,
+        "store_name": null,
+        "status": "unread",
+        "created_at": "2025-08-13T07:30:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_014",
+        "title": "Discount Campaign Activated",
+        "message": "'Summer Wellness Sale' has been activated for Sunshine Organics.",
+        "client_store_id": "store_010",
+        "store_name": "Sunshine Organics",
+        "status": "read",
+        "created_at": "2025-08-06T13:45:00Z",
+        "created_by": "client4"
+      },
+      {
+        "id": "notif_015",
+        "title": "POS Connection Lost",
+        "message": "Connection to POS for Herbal Harmony lost at 2:18 PM.",
+        "client_store_id": "store_007",
+        "store_name": "Herbal Harmony",
+        "status": "unread",
+        "created_at": "2025-08-11T14:18:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_016",
+        "title": "Customer Review Posted",
+        "message": "New 5-star review received for 'Full Spectrum CBD Oil' at Bliss Botanicals.",
+        "client_store_id": "store_006",
+        "store_name": "Bliss Botanicals",
+        "status": "read",
+        "created_at": "2025-08-07T19:15:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_017",
+        "title": "POS Update Required",
+        "message": "Please update your POS version to continue receiving sync updates.",
+        "client_store_id": "store_004",
+        "store_name": "GreenLeaf Wellness",
+        "status": "unread",
+        "created_at": "2025-08-02T11:50:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_018",
+        "title": "Daily Sales Summary",
+        "message": "Your store Sunshine Organics recorded $1,240 in sales yesterday.",
+        "client_store_id": "store_010",
+        "store_name": "Sunshine Organics",
+        "status": "read",
+        "created_at": "2025-08-13T05:05:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_019",
+        "title": "Inventory Sync Partial Success",
+        "message": "Some items failed to sync for Dreamland Dispensary. Check the error log.",
+        "client_store_id": "store_001",
+        "store_name": "Dreamland Dispensary",
+        "status": "unread",
+        "created_at": "2025-08-12T15:40:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_020",
+        "title": "Product Out of Stock",
+        "message": "'Hemp Body Lotion' is now out of stock at Nature’s Touch.",
+        "client_store_id": "store_011",
+        "store_name": "Nature’s Touch",
+        "status": "unread",
+        "created_at": "2025-08-13T16:55:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_021",
+        "title": "POS License Expiring",
+        "message": "The POS license for GreenLeaf Wellness will expire in 5 days.",
+        "client_store_id": "store_004",
+        "store_name": "GreenLeaf Wellness",
+        "status": "unread",
+        "created_at": "2025-08-14T08:00:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_022",
+        "title": "Order Cancelled",
+        "message": "Order #4520 from Sunshine Organics was cancelled by the customer.",
+        "client_store_id": "store_010",
+        "store_name": "Sunshine Organics",
+        "status": "read",
+        "created_at": "2025-08-12T12:15:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_023",
+        "title": "Bulk Price Update Failed",
+        "message": "Bulk price update for Bliss Botanicals failed due to invalid CSV format.",
+        "client_store_id": "store_006",
+        "store_name": "Bliss Botanicals",
+        "status": "unread",
+        "created_at": "2025-08-11T09:40:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_024",
+        "title": "Tax ID Missing",
+        "message": "Tax ID for Bloomfield Naturals is missing. Please update store details.",
+        "client_store_id": "store_009",
+        "store_name": "Bloomfield Naturals",
+        "status": "unread",
+        "created_at": "2025-08-10T10:10:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_025",
+        "title": "New Product Added",
+        "message": "'Lavender Relaxation Tea' was added to GreenLeaf Wellness catalog.",
+        "client_store_id": "store_004",
+        "store_name": "GreenLeaf Wellness",
+        "status": "read",
+        "created_at": "2025-08-09T14:50:00Z",
+        "created_by": "client5"
+      },
+      {
+        "id": "notif_026",
+        "title": "Store Reactivated",
+        "message": "Sunshine Organics has been reactivated after resolving payment issues.",
+        "client_store_id": "store_010",
+        "store_name": "Sunshine Organics",
+        "status": "read",
+        "created_at": "2025-08-08T09:00:00Z",
+        "created_by": "admin"
+      },
+      {
+        "id": "notif_027",
+        "title": "Inventory Export Ready",
+        "message": "The requested inventory export for Bliss Botanicals is now ready for download.",
+        "client_store_id": "store_006",
+        "store_name": "Bliss Botanicals",
+        "status": "read",
+        "created_at": "2025-08-07T15:25:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_028",
+        "title": "Store Details Updated",
+        "message": "Nature’s Touch updated their store contact number.",
+        "client_store_id": "store_011",
+        "store_name": "Nature’s Touch",
+        "status": "read",
+        "created_at": "2025-08-06T10:05:00Z",
+        "created_by": "client3"
+      },
+      {
+        "id": "notif_029",
+        "title": "POS Reconnected",
+        "message": "POS for Herbal Harmony was successfully reconnected after outage.",
+        "client_store_id": "store_007",
+        "store_name": "Herbal Harmony",
+        "status": "read",
+        "created_at": "2025-08-05T16:20:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_030",
+        "title": "Subscription Renewed",
+        "message": "Bliss Botanicals renewed their Pro subscription.",
+        "client_store_id": "store_006",
+        "store_name": "Bliss Botanicals",
+        "status": "read",
+        "created_at": "2025-08-04T08:15:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_031",
+        "title": "Login Attempt Failed",
+        "message": "Multiple failed login attempts detected for Sunshine Organics admin account.",
+        "client_store_id": "store_010",
+        "store_name": "Sunshine Organics",
+        "status": "unread",
+        "created_at": "2025-08-03T22:40:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_032",
+        "title": "Order Ready for Pickup",
+        "message": "Order #4602 from GreenLeaf Wellness is ready for customer pickup.",
+        "client_store_id": "store_004",
+        "store_name": "GreenLeaf Wellness",
+        "status": "read",
+        "created_at": "2025-08-02T11:25:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_033",
+        "title": "POS Data Corruption Detected",
+        "message": "Corruption detected in Herbal Harmony POS data. Backup initiated.",
+        "client_store_id": "store_007",
+        "store_name": "Herbal Harmony",
+        "status": "unread",
+        "created_at": "2025-08-01T09:55:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_034",
+        "title": "Customer Account Created",
+        "message": "New customer account registered on Nature’s Touch online store.",
+        "client_store_id": "store_011",
+        "store_name": "Nature’s Touch",
+        "status": "read",
+        "created_at": "2025-07-31T17:05:00Z",
+        "created_by": "system"
+      },
+      {
+        "id": "notif_035",
+        "title": "Promotion Ended",
+        "message": "'Wellness Weekend' promotion for Bliss Botanicals has ended.",
+        "client_store_id": "store_006",
+        "store_name": "Bliss Botanicals",
+        "status": "read",
+        "created_at": "2025-07-30T20:10:00Z",
+        "created_by": "system"
+      }
+    ]
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

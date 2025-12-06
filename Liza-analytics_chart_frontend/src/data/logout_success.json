@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Logout fetched successfully",
+  "data": {},
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

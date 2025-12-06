@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "message": "Feedback submitted successfully",
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

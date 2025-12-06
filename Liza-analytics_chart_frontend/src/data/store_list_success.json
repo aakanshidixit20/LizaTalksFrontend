@@ -1,0 +1,107 @@
+{
+  "success": true,
+  "message": "Stores fetched successfully.",
+  "data": [
+    {
+      "client_store_id": "ST-001",
+      "store_name": "Green Haven Dispensary",
+      "chatbot_name": "ZenBuddy",
+      "modified_date": "2025-07-01",
+      "numLocations": 3,
+      "plan": "Pro",
+      "billingCycle": "monthly",
+      "welcome_message": "Welcome to Green Haven! How can I assist you today?",
+      "disclaimer": "Products are for recreational use only. Please consume responsibly.",
+      "branding": {
+        "font": "Roboto",
+        "color": "#4CAF50",
+        "logo": "/images/greenhaven-logo.png"
+      },
+      "locations": [
+        {
+          "location_id": "GH-LOC-1",
+          "location_name": "Downtown Branch",
+          "store_type": "Recreational",
+          "address": "123 Main St, Springfield, IL",
+          "zip_code": "62701"
+        },
+        {
+          "location_id": "GH-LOC-2",
+          "location_name": "Uptown Branch",
+          "store_type": "Recreational",
+          "address": "456 Elm St, Springfield, IL",
+          "zip_code": "62704"
+        },
+        {
+          "location_id": "GH-LOC-3",
+          "location_name": "Airport Kiosk",
+          "store_type": "Recreational",
+          "address": "789 Airport Rd, Springfield, IL",
+          "zip_code": "62707"
+        }
+      ]
+    },
+    {
+      "client_store_id": "ST-002",
+      "store_name": "ChillTree Canna Co.",
+      "chatbot_name": "ChatterLeaf",
+      "modified_date": "2025-07-05",
+      "numLocations": 2,
+      "plan": "Premium",
+      "billingCycle": "annual",
+      "welcome_message": "Hello! I'm ChatterLeaf, here to guide your wellness journey.",
+      "disclaimer": "Medical products require prescription. Verify eligibility before purchase.",
+      "branding": {
+        "font": "Poppins",
+        "color": "#3F51B5",
+        "logo": "/images/chilltree-logo.png"
+      },
+      "locations": [
+        {
+          "location_id": "CT-LOC-1",
+          "location_name": "Central Hub",
+          "store_type": "Medical",
+          "address": "22 Wellness Ave, Riverdale, NJ",
+          "zip_code": "07457"
+        },
+        {
+          "location_id": "CT-LOC-2",
+          "location_name": "Westside Branch",
+          "store_type": "Medical",
+          "address": "77 Health St, Riverdale, NJ",
+          "zip_code": "07457"
+        }
+      ]
+    },
+    {
+      "client_store_id": "ST-003",
+      "store_name": "Elevate Wellness",
+      "chatbot_name": "Calmly",
+      "modified_date": "2025-07-10",
+      "numLocations": 1,
+      "plan": "Basic",
+      "billingCycle": "quarterly",
+      "welcome_message": "Welcome to Elevate Wellness. How can Calmly assist you?",
+      "disclaimer": "For Virginia residents only. Medical license required.",
+      "branding": {
+        "font": "Open Sans",
+        "color": "#FF5722",
+        "logo": "/images/elevatewellness-logo.png"
+      },
+      "locations": [
+        {
+          "location_id": "EW-LOC-1",
+          "location_name": "Virginia HQ",
+          "store_type": "Medical-only Virginia",
+          "address": "900 Capitol Rd, Richmond, VA",
+          "zip_code": "23219"
+        }
+      ]
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

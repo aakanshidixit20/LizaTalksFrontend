@@ -1,0 +1,289 @@
+{
+  "status": "success",
+  "message": "Billing history fetched successfully",
+  "data": {
+    "billing_history": [
+      {
+        "store_name": "Green Haven Dispensary",
+        "invoice_number": "acbbbgh1737",
+        "billing_date": "2025-06-25",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 100,
+        "due_date": "2025-09-25"
+      },
+      {
+        "store_name": "ChillTree Canna Co.",
+        "invoice_number": "acbbbgh1738",
+        "billing_date": "2025-06-25",
+        "payment_status": "Paid",
+        "subscription": "Pro",
+        "total_amount": 300,
+        "due_date": "2025-12-25"
+      },
+      {
+        "store_name": "Nature's Touch",
+        "invoice_number": "acbbbgh1739",
+        "billing_date": "2025-07-01",
+        "payment_status": "Pending",
+        "subscription": "Pro",
+        "total_amount": 280,
+        "due_date": "2025-10-01"
+      },
+      {
+        "store_name": "Sunshine Organics",
+        "invoice_number": "acbbbgh1740",
+        "billing_date": "2025-07-05",
+        "payment_status": "Overdue",
+        "subscription": "Basic",
+        "total_amount": 120,
+        "due_date": "2025-07-20"
+      },
+      {
+        "store_name": "Bliss Botanicals",
+        "invoice_number": "acbbbgh1741",
+        "billing_date": "2025-07-10",
+        "payment_status": "Paid",
+        "subscription": "Enterprise",
+        "total_amount": 500,
+        "due_date": "2025-10-10"
+      },
+      {
+        "store_name": "Dreamland Dispensary",
+        "invoice_number": "acbbbgh1742",
+        "billing_date": "2025-07-15",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 100,
+        "due_date": "2025-10-15"
+      },
+      {
+        "store_name": "GreenLeaf Wellness",
+        "invoice_number": "acbbbgh1743",
+        "billing_date": "2025-07-18",
+        "payment_status": "Pending",
+        "subscription": "Pro",
+        "total_amount": 200,
+        "due_date": "2025-10-18"
+      },
+      {
+        "store_name": "Herbal Harmony",
+        "invoice_number": "acbbbgh1744",
+        "billing_date": "2025-07-20",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 150,
+        "due_date": "2025-10-20"
+      },
+      {
+        "store_name": "Nature's Bloom",
+        "invoice_number": "acbbbgh1745",
+        "billing_date": "2025-07-22",
+        "payment_status": "Overdue",
+        "subscription": "Enterprise",
+        "total_amount": 600,
+        "due_date": "2025-07-30"
+      },
+      {
+        "store_name": "Wellness Roots",
+        "invoice_number": "acbbbgh1746",
+        "billing_date": "2025-07-25",
+        "payment_status": "Paid",
+        "subscription": "Pro",
+        "total_amount": 150,
+        "due_date": "2025-10-25"
+      },
+      {
+        "store_name": "CannaCare Co.",
+        "invoice_number": "acbbbgh1747",
+        "billing_date": "2025-07-28",
+        "payment_status": "Pending",
+        "subscription": "Basic",
+        "total_amount": 130,
+        "due_date": "2025-10-28"
+      },
+      {
+        "store_name": "Evergreen Botanics",
+        "invoice_number": "acbbbgh1748",
+        "billing_date": "2025-07-30",
+        "payment_status": "Paid",
+        "subscription": "Enterprise",
+        "total_amount": 550,
+        "due_date": "2025-10-30"
+      },
+      {
+        "store_name": "Pure Relief Co.",
+        "invoice_number": "acbbbgh1749",
+        "billing_date": "2025-08-01",
+        "payment_status": "Paid",
+        "subscription": "Pro",
+        "total_amount": 280,
+        "due_date": "2025-11-01"
+      },
+      {
+        "store_name": "Healing Hands Dispensary",
+        "invoice_number": "acbbbgh1750",
+        "billing_date": "2025-08-03",
+        "payment_status": "Overdue",
+        "subscription": "Basic",
+        "total_amount": 100,
+        "due_date": "2025-08-20"
+      },
+      {
+        "store_name": "Botanical Bliss Co.",
+        "invoice_number": "acbbbgh1751",
+        "billing_date": "2025-08-05",
+        "payment_status": "Paid",
+        "subscription": "Pro",
+        "total_amount": 300,
+        "due_date": "2025-11-05"
+      },
+      {
+        "store_name": "Green Horizon",
+        "invoice_number": "acbbbgh1752",
+        "billing_date": "2025-08-07",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 110,
+        "due_date": "2025-11-07"
+      },
+      {
+        "store_name": "Canna Glow",
+        "invoice_number": "acbbbgh1753",
+        "billing_date": "2025-08-09",
+        "payment_status": "Pending",
+        "subscription": "Enterprise",
+        "total_amount": 600,
+        "due_date": "2025-11-09"
+      },
+      {
+        "store_name": "Flora Wellness",
+        "invoice_number": "acbbbgh1754",
+        "billing_date": "2025-08-11",
+        "payment_status": "Paid",
+        "subscription": "Pro",
+        "total_amount": 290,
+        "due_date": "2025-11-11"
+      },
+      {
+        "store_name": "Zen Botanics",
+        "invoice_number": "acbbbgh1755",
+        "billing_date": "2025-08-13",
+        "payment_status": "Overdue",
+        "subscription": "Basic",
+        "total_amount": 200,
+        "due_date": "2025-08-28"
+      },
+      {
+        "store_name": "Nature's Essence",
+        "invoice_number": "acbbbgh1756",
+        "billing_date": "2025-08-15",
+        "payment_status": "Paid",
+        "subscription": "Enterprise",
+        "total_amount": 650,
+        "due_date": "2025-11-15"
+      },
+      {
+        "store_name": "Earthly Wellness",
+        "invoice_number": "acbbbgh1757",
+        "billing_date": "2025-08-17",
+        "payment_status": "Pending",
+        "subscription": "Pro",
+        "total_amount": 320,
+        "due_date": "2025-11-17"
+      },
+      {
+        "store_name": "Golden Leaf Dispensary",
+        "invoice_number": "acbbbgh1758",
+        "billing_date": "2025-08-19",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 150,
+        "due_date": "2025-11-19"
+      },
+      {
+        "store_name": "Tranquil Greens",
+        "invoice_number": "acbbbgh1759",
+        "billing_date": "2025-08-21",
+        "payment_status": "Overdue",
+        "subscription": "Pro",
+        "total_amount": 300,
+        "due_date": "2025-08-30"
+      },
+      {
+        "store_name": "Hemp Harmony",
+        "invoice_number": "acbbbgh1760",
+        "billing_date": "2025-08-23",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 140,
+        "due_date": "2025-11-23"
+      },
+      {
+        "store_name": "Leaf & Co.",
+        "invoice_number": "acbbbgh1761",
+        "billing_date": "2025-08-25",
+        "payment_status": "Paid",
+        "subscription": "Enterprise",
+        "total_amount": 700,
+        "due_date": "2025-11-25"
+      },
+      {
+        "store_name": "Calm Roots Dispensary",
+        "invoice_number": "acbbbgh1762",
+        "billing_date": "2025-08-27",
+        "payment_status": "Pending",
+        "subscription": "Pro",
+        "total_amount": 280,
+        "due_date": "2025-11-27"
+      },
+      {
+        "store_name": "Serenity Botanics",
+        "invoice_number": "acbbbgh1763",
+        "billing_date": "2025-08-29",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 100,
+        "due_date": "2025-11-29"
+      },
+      {
+        "store_name": "Vital Bloom",
+        "invoice_number": "acbbbgh1764",
+        "billing_date": "2025-08-31",
+        "payment_status": "Overdue",
+        "subscription": "Enterprise",
+        "total_amount": 650,
+        "due_date": "2025-09-10"
+      },
+      {
+        "store_name": "Everwell Naturals",
+        "invoice_number": "acbbbgh1765",
+        "billing_date": "2025-09-02",
+        "payment_status": "Paid",
+        "subscription": "Pro",
+        "total_amount": 300,
+        "due_date": "2025-12-02"
+      },
+      {
+        "store_name": "Fresh Leaf Organics",
+        "invoice_number": "acbbbgh1766",
+        "billing_date": "2025-09-04",
+        "payment_status": "Paid",
+        "subscription": "Basic",
+        "total_amount": 100,
+        "due_date": "2025-12-04"
+      }
+    ]
+  },
+  "meta": {
+    "page": 1,
+    "limit": 30,
+    "total_records": 30,
+    "total_pages": 1
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

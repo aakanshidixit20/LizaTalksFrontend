@@ -1,0 +1,91 @@
+[dir=rtl] table th, [dir=rtl] table td {
+  text-align: right;
+}
+[dir=rtl] .MuiTimeline-root .MuiTypography-root {
+  text-align: right;
+}
+[dir=rtl] .-mr-4 {
+  margin-right: 0;
+  margin-left: -4px;
+}
+[dir=rtl] .apexcharts-canvas {
+  direction: ltr;
+}
+[dir=rtl] .apexcharts-canvas .apexcharts-tooltip {
+  direction: rtl;
+}
+[dir=rtl] .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-marker {
+  margin-right: 0;
+  margin-left: 6px;
+}
+[dir=rtl] .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-series-group {
+  justify-content: start;
+}
+[dir=rtl] .apexcharts-canvas .apexcharts-legend-series {
+  direction: rtl;
+}
+[dir=rtl] .apexcharts-canvas .apexcharts-legend-series .apexcharts-legend-marker {
+  left: auto !important;
+  right: -2px;
+  margin-right: 0;
+  margin-left: 3px;
+}
+[dir=rtl] .apexcharts-canvas .apexcharts-legend-series .apexcharts-legend-text {
+  padding-left: 0;
+  padding-right: 15px;
+  margin-left: 0;
+  margin-right: -15px;
+}
+[dir=rtl] .crm-ap, [dir=rtl] .crm-to, [dir=rtl] .crm-lc, [dir=rtl] .crm-rg {
+  right: auto;
+  left: -9px;
+}
+[dir=rtl] .MuiAvatarGroup-root .MuiAvatar-root {
+  margin-left: 0;
+  margin-right: -8px;
+}
+[dir=rtl] .MuiAvatarGroup-root .MuiAvatar-root:last-child {
+  margin-right: 0;
+}
+[dir=rtl] .MuiAccordion-root .MuiAccordionSummary-expandIconWrapper {
+  margin-left: 10px;
+}
+[dir=rtl] .MuiChip-root {
+  padding: 5px 10px;
+}
+[dir=rtl] .MuiChip-root .MuiChip-label {
+  padding: 0;
+}
+[dir=rtl] .MuiAlert-root .MuiAlert-icon {
+  margin-right: 0;
+  margin-left: 12px;
+}
+[dir=rtl] .MuiCard-root .MuiCardHeader-root {
+  margin-right: 0;
+  margin-left: 16px;
+}
+[dir=rtl] .MuiStep-horizontal .MuiStepLabel-iconContainer {
+  padding-right: 0;
+  padding-left: 8px;
+}
+[dir=rtl] .MuiStep-vertical .MuiStepLabel-root {
+  text-align: right;
+}
+[dir=rtl] .MuiStep-vertical .MuiStepLabel-iconContainer {
+  padding-right: 0;
+  padding-left: 8px;
+}
+[dir=rtl] .nft-slide .swiper-button-prev {
+  left: auto;
+  right: 0;
+}
+[dir=rtl] .nft-slide .swiper-button-next {
+  right: auto;
+  left: 0;
+}
+[dir=rtl] .tc-slide .swiper-pagination {
+  text-align: right;
+}
+[dir=rtl] .rp-slide .swiper-pagination {
+  text-align: right;
+}/*# sourceMappingURL=rtl.css.map */

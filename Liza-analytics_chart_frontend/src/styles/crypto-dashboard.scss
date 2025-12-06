@@ -1,0 +1,80 @@
+// watchlist-slider
+.watchlist-slider {
+  .swiper-pagination {
+    position: initial;
+    margin-top: 10px;
+
+    .swiper-pagination-bullet {
+      &.swiper-pagination-bullet-active {
+        background-color: var(--primaryColor);
+      }
+    }
+  }
+}
+
+// statistics-buttons-list
+.statistics-buttons-list {
+  button {
+    border-radius: 0;
+    margin-left: -1px;
+    padding: 2.5px 11px;
+    min-width: auto;
+    border-color: var(--borderColor);
+    color: var(--bodyColor);
+
+    &:first-child {
+      border-radius: 5px 0px 0px 5px;
+    }
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+
+.th-badge {
+  background-color: #ecf0ff;
+  color: var(--primaryColor);
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: capitalize;
+
+  &.buy, &.Buy {
+    background-color: #d8ffc8;
+    color: var(--successColor);
+  }
+  &.sell, &.Sell {
+    background-color: #ffe1dd;
+    color: var(--dangerColor);
+  }
+}
+ 
+// dark-theme
+.dark-theme {
+  .watchlist-card {
+    background-color: var(--darkBodyBg);
+  }
+
+  // statistics-buttons-list
+  .statistics-buttons-list {
+    button {
+      border-color: var(--darkBodyColor);
+    }
+  }
+}
+
+// rtl Style 
+[dir="rtl"] {
+  .statistics-buttons-list {
+    button {
+      &:first-child {
+        border-radius: 0 5px 5px 0;
+      }
+      &:last-child {
+        border-radius: 5px 0 0 5px;
+      }
+    }
+  }
+}

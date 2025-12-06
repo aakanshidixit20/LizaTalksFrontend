@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "message": "Products fetched successfully",
+  "data": 
+    {
+      "product_code": "P1001",
+      "product_name": "Organic Green Tea",
+      "product_price": "$15.99",
+      "category": "Beverages",
+      "in_stock": true,
+      "last_sync_date": "2025-10-01",
+      "image_url": "/images/products/green-tea.jpg",
+
+  "product_description": "A soothing organic green tea sourced from the pristine Himalayan foothills, carefully handpicked to preserve its freshness and natural essence. Rich in antioxidants and packed with beneficial nutrients, this tea not only rejuvenates the body but also calms the mind with every sip. Its delicate aroma carries hints of wild Himalayan herbs, offering a refreshing and earthy flavor profile that lingers pleasantly on the palate. Free from artificial additives and cultivated through sustainable farming practices, this green tea is a perfect companion for your wellness routine. Whether enjoyed hot on a quiet morning or chilled as a cooling afternoon drink, it brings balance, relaxation, and a touch of nature’s purity into your daily life.",     "product_effects": "Boosts metabolism, improves focus, reduces stress."
+    }
+  ,
+  "meta": {
+    "page": 1,
+    "limit": 10,
+    "total_records": 50,
+    "total_pages": 5
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

@@ -1,0 +1,1002 @@
+.left-sidebar-menu {
+    overflow: hidden;
+    position: fixed;
+    height: 100vh;
+    width: 260px;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    transition: var(--transition);
+    z-index: 999;
+    
+    .logo {
+        border-bottom: 1px solid #ECF0FF;
+        padding: 18px 25px 16px;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        
+        a {
+            transition: unset;
+            display: flex;
+            align-items: center;
+            position: relative;
+            text-decoration: none;
+         
+            span {
+                margin-left: 8px;
+                font-size: 24px;
+                top: 1px;
+                font-weight: bold;
+                position: relative;
+                color: var(--blackColor); 
+            }
+        }
+    }
+    .burger-menu {
+        top: 23px;
+        z-index: 3; 
+        right: 25px;
+        cursor: pointer;
+        position: absolute; 
+
+        span {
+            height: 1px;
+            width: 25px;
+            margin: 6px 0;
+
+            transition: var(--transition);
+            display: block;
+            background-color: var(--blackColor);
+        
+            &.top-bar {
+                transform: rotate(45deg);
+                transform-origin: 10% 10%;
+            }
+            &.middle-bar {
+                opacity: 0;
+            }
+            &.bottom-bar {
+                transform: rotate(-45deg);
+                transform-origin: 10% 90%;
+                margin-top: 5px;
+            }
+        }
+    }
+    .sidebar-inner {
+        padding: {
+            top: 90px;
+            left: 25px;
+            right: 25px;
+            bottom: 20px;
+        };
+        min-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+
+        /* width */
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #fff; 
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #c5c5c5; 
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #888; 
+        }
+
+        .sidebar-menu {
+            .sub-title {
+                font-size: 12px;
+                color: #8695AA;
+                margin-bottom: 10px;
+
+                &:not(:first-child) {
+                    margin-top: 23px;
+                }
+            }
+            .mat-accordion {
+                border: none;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .mat-summary {
+                    border-radius: 7px;
+                    color: var(--blackColor);
+                    font: {
+                        size: var(--fontSize);
+                        weight: 500;
+                    };
+                    box-sizing: unset; 
+                    background-color: transparent;
+                    margin: {
+                        top: 0;
+                        bottom: 5px;
+                    };
+                    padding: {
+                        bottom: 9px;
+                        right: 10px;
+                        left: 10px;
+                        top: 9px;
+                    };
+                    min-height: auto;
+                    position: relative;
+                    width: 91%;
+                    white-space: nowrap;
+  
+                    &.Mui-expanded {
+                        background-color: #f6f7f9;
+                    }
+                    &:hover {
+                        background-color: #f6f7f9;
+                    }
+
+                    .MuiAccordionSummary-content {
+                        margin: 0;
+
+                        .title {
+                            font: {
+                                size: var(--fontSize);
+                                weight: 500;
+                            };
+                        }
+                        i {
+                            transition: var(--transition); 
+                            color: var(--bodyColor); 
+                            font-size: 22px;
+                            line-height: 1; 
+                            margin-right: 7px;
+                        }
+                    }
+                    .MuiAccordionSummary-expandIconWrapper {
+                        position: absolute;
+                        right: 10px;
+                    }
+                    .MuiAccordionSummary-content {
+                        .trezo-badge {
+                            top: 50%;
+                            padding: 0;
+                            right: 34px;
+                            width: 20px;
+                            height: 20px;
+                            font-size: 11px;
+                            color: #FD5812;
+                            line-height: 20px;
+                            position: absolute;
+                            transform: translateY(-50%);
+                            background-color: #FFF5ED;
+                            display: inline-block;
+                            font-weight: 500;
+                            text-align: center;
+                            border-radius: 100%;
+                        
+                            &.style-two {
+                                color: #00b69b;
+                                background: rgba(0, 182, 155, 0.07);
+                            }
+                            &.style-three {
+                                color: #ee368c;
+                                background: rgba(238, 54, 140, 0.1);
+                            }
+                        }
+                        &:hover {
+                            color: var(--blackColor);
+                            background-color: #F6F7F9;
+
+                            i {
+                                color: var(--blackColor);
+                            }
+                        }
+                    } 
+                }
+                .mat-details {
+                    padding: 0;
+                    border: none;
+     
+                    .sidebar-sub-menu {
+                        padding-left: 0;
+                        list-style-type: none;
+                        margin: {
+                            top: 0;
+                            bottom: 0;
+                        };
+
+                        .sidemenu-item {
+                            margin-bottom: 4px;
+                            white-space: nowrap;
+
+                            .sidemenu-link {
+                                display: block;
+                                position: relative;
+                                border-radius: 7px;
+                                color: var(--bodyColor);
+                                transition: var(--transition);
+                                text-decoration: none;
+                                font: {
+                                    size: var(--fontSize);
+                                    weight: 500;
+                                };
+                                padding: {
+                                    bottom: 9.5px;
+                                    right: 10px;
+                                    left: 38px;
+                                    top: 9.5px;
+                                };
+                                &::after {
+                                    top: 50%;
+                                    left: 18px;
+                                    width: 10px;
+                                    content: '';
+                                    height: 10px;
+                                    transition: .3s;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    transform: translateY(-50%);
+                                    border: 1px solid var(--bodyColor);
+                                }
+                                &:hover, &.active {
+                                    background-color: #ECF0FF;
+                                    color: var(--primaryColor);
+    
+                                    &::after {
+                                        border-color: var(--primaryColor);
+                                    }
+                                }
+                                .trezo-badge {
+                                    top: -1px;
+                                    color: #FD5812;
+                                    padding: 2px 6px;
+                                    margin-left: 9px;
+                                    border-radius: 3px;
+                                    line-height: initial;
+                                    background-color: #FFE8D4;
+                                    font: {
+                                        size: 10px;
+                                        weight: normal;
+                                    };
+                                    display: inline-block;
+                                    position: relative;
+                                    &::before {
+                                        top: 50%;
+                                        left: -3px;
+                                        width: 6px;
+                                        height: 6px;
+                                        content: '';
+                                        position: absolute;
+                                        background: #FFE8D4;
+                                        transform: translateY(-50%) rotate(45deg);
+                                    }
+                                    &.style-two {
+                                        color: #25B003;
+                                        background-color: #D8FFC8;
+                                        
+                                        &::before {
+                                            background: #D8FFC8;
+                                        }
+                                    }
+                                }
+                            }
+                        
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .sidebar-menu-link {
+                white-space: nowrap;
+                transition: var(--transition);
+                color: var(--blackColor);
+                margin-bottom: 5px;
+                position: relative;
+                border-radius: 7px;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                text-decoration: none;
+                padding: {
+                    bottom: 9px;
+                    right: 10px;
+                    top: 9px;
+                    left: 10px;
+                };
+                font: {
+                    size: var(--fontSize);
+                    weight: 500;
+                };
+                span {
+                    font-weight: 500;
+                }
+                i {
+                    transition: var(--transition);
+                    color: var(--bodyColor);
+                    font-size: 22px;
+                    line-height: 1; 
+                }
+                &:hover, &.active {
+                    color: var(--primaryColor);
+                    background-color: #F6F7F9;
+
+                    i {
+                        color: var(--primaryColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// dark-theme style
+.dark-theme {
+    .left-sidebar-menu {
+        .burger-menu {
+            span {
+                background-color: #fff;
+            }
+        }
+
+        .sidebar-inner {
+            background-color: var(--darkCardBg);
+
+            .MuiAccordion-root {
+                background-color: var(--darkCardBg);
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #15203c; 
+            }
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #888; 
+            }
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #999; 
+            }
+
+            .sidebar-menu {
+                .mat-accordion {
+                    .mat-summary {
+                        .MuiAccordionSummary-expandIconWrapper {
+                            color: var(--darkBodyColor);
+                        }
+                        .MuiAccordionSummary-content {
+                            .title {
+                                color: var(--whiteColor);
+                            }
+                        }
+                        .MuiAccordionSummary-content {
+                            .trezo-badge {
+                                background-color: rgba(255, 255, 255, 0.08); 
+                            }
+                        }
+                        &.Mui-expanded {
+                            background-color: #15203c;
+
+                            i {
+                                color: var(--whiteColor);
+                            }
+                            .MuiAccordionSummary-expandIconWrapper {
+                                color: var(--whiteColor);
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #15203c;
+
+                            .MuiAccordionSummary-content {
+                                i {
+                                    color: var(--whiteColor);
+                                }
+                            }
+                            .MuiAccordionSummary-expandIconWrapper {
+                                color: var(--whiteColor);
+                            }
+                        }
+                        .MuiAccordionSummary-content {
+                            &:hover { 
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                    .mat-details {
+                        .sidebar-sub-menu {
+                            .sidemenu-item {
+                                .sidemenu-link {
+                                    color: var(--darkBodyColor);
+
+                                    &::after {
+                                        border: 1px solid var(--darkBodyColor);
+                                    }
+
+                                    &.active, &:hover {
+                                        background-color: #15203c;
+                                        color: var(--primaryColor);
+
+                                        &::after {
+                                            border: 1px solid var(--primaryColor);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .sidebar-menu-link {
+                    color: var(--whiteColor);
+
+                    .title {
+                        color: var(--whiteColor);
+                    }
+                    i {
+                        color: var(--darkBodyColor);
+                    }
+                    &.active, &:hover {
+                        background-color: #15203c;
+                        color: var(--primaryColor);
+
+                        i {
+                            color: var(--primaryColor);
+                        }
+
+                        &::after {
+                            border: 1px solid var(--primaryColor);
+                        }
+                    }
+                }
+            }
+        }
+        .logo {
+            background-color: var(--darkCardBg);
+            border-bottom: 1px solid var(--darkBorder);
+
+            a {
+                span {
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+}
+
+// RTL Style
+[dir="rtl"] {
+    .left-sidebar-menu {
+        left: auto;
+        right: 0;
+
+        .logo {
+            a {
+                span {
+                    margin-left: 0;
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .burger-menu {
+            right: auto;
+            left: 25px;
+        }
+
+        .sidebar-inner {
+            .sidebar-menu {
+                .mat-accordion {
+                    .mat-summary {
+                        .MuiAccordionSummary-content {
+                            i {
+                                margin-right: 0;
+                                margin-left: 7px;
+                            }
+                            .trezo-badge {
+                                right: auto;
+                                left: 34px;
+                            }
+                        }
+                        .MuiAccordionSummary-expandIconWrapper {
+                            right: auto;
+                            left: 10px;
+                            margin-left: 0;
+                        }
+                    }
+                    .mat-details {
+                        .sidebar-sub-menu {
+                            padding: 0;
+
+                            .sidemenu-item {
+                                .sidemenu-link {
+                                    padding-right: 38px;
+                                    padding-left: 10px;
+
+                                    &::after {
+                                        left: auto;
+                                        right: 18px;
+                                    }
+
+                                    .trezo-badge {
+                                        margin-left: 0;
+                                        margin-right: 9px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+ 
+}
+
+/* Max width 1199px */
+@media (max-width: 1199px) {
+    .left-sidebar-menu {
+        left: -100%; 
+        border-right: 1px solid #ECF0FF;
+        
+        .logo {
+            padding: 15px 18px;
+        }
+
+        .sidebar-inner {
+            padding-top: 85px;
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-bottom: 15px;
+
+            .sidebar-menu {
+                .mat-accordion {
+                    .mat-summary { 
+                        .MuiAccordionSummary-content {
+                            i {
+                                font-size: 18px;
+                            }
+                            .title {
+                                font-size: 13px; 
+                            } 
+                        }
+                    }
+                    .mat-details {
+                        .sidebar-sub-menu {
+                            .sidemenu-item {
+                                .sidemenu-link {
+                                    font-size: 13px;
+                                    padding-left: 35px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sidebar-menu-link {
+                    i {
+                        font-size: 18px;
+                    }
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    .main-wrapper-content {
+        &.active {
+            .left-sidebar-menu {
+                left: 0;  
+            }
+        }
+    }
+
+    // RTL Style
+    [dir="rtl"] {
+        .left-sidebar-menu {
+            left: auto; 
+            right: -100%; 
+            border-left: 1px solid #ECF0FF;
+        }
+    
+        .main-wrapper-content {
+            &.active {
+                .left-sidebar-menu {
+                    left: auto;  
+                    right: 0;  
+                }
+            }
+        }
+    }
+}
+
+/* Min width 1200px */
+@media (min-width: 1200px) {
+    .left-sidebar-menu {
+        .burger-menu {
+            display: none;
+        }
+    }
+    .main-wrapper-content {
+        &.active {
+            .left-sidebar-menu {
+                width: 65px;
+
+                .burger-menu {
+                    display: inline-block;
+                }
+
+                .logo {
+                    padding-left: 12px;
+                    padding-right: 12px;
+
+                    a {
+                        justify-content: center;
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+                .burger-menu {
+                    display: none;
+                }
+                .sidebar-inner {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 75px;
+
+                    .sidebar-menu {
+                        .sub-title {
+                            display: none;
+                        }
+                        .mat-accordion {
+                            .mat-summary { 
+                                padding-bottom: 10px;
+                                padding-right: 10px;
+                                padding-left: 10px;
+                                padding-top: 10px;
+                                width: 20px;
+
+                                .MuiAccordionSummary-content {
+                                    .title, .trezo-badge {
+                                        display: none;
+                                    }
+                                }
+                                .MuiAccordionSummary-expandIconWrapper {
+                                    display: none;
+                                }
+                                .MuiAccordionSummary-content {
+                                    i { 
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                            .MuiCollapse-entered {
+                                display: none;
+                            }
+                        }
+                        .sidebar-menu-link {
+                            .title {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    width: 260px;
+
+                    .burger-menu {
+                        display: inline-block;
+                    }
+
+                    .logo {
+                        padding: 18px 25px 16px; 
+    
+                        a {
+                            justify-content: flex-start;
+    
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    .burger-menu {
+                        display: inline-block;
+                    }
+                    .sidebar-inner {
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        padding-top: 90px;
+    
+                        .sidebar-menu {
+                            .sub-title {
+                                display: inline-block;
+                            }
+                            .mat-accordion {
+                                .mat-summary { 
+                                    width: 91%;
+
+                                    .MuiAccordionSummary-content {
+                                        i { 
+                                            margin-right: 7px;
+                                        }
+                                        .title, .trezo-badge {
+                                            display: inline-block;
+                                        }
+                                    }
+                                    .MuiAccordionSummary-expandIconWrapper {
+                                        display: inline-block;
+                                    } 
+                                }
+                                .MuiCollapse-entered {
+                                    display: block;
+                                }
+                            }
+
+                            .sidebar-menu-link {
+                                .title {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // compact-sidebar
+        &.compact-sidebar {
+            padding-left: 85px;
+
+            .top-navbar {
+                left: 90px !important;
+
+                .top-burger {
+                    display: none;
+                }
+            }
+
+            .left-sidebar-menu {
+                width: 65px;
+
+                .burger-menu {
+                    display: none !important;
+                }
+                .logo {
+                    padding-left: 12px;
+                    padding-right: 12px;
+
+                    a {
+                        justify-content: center;
+
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+                .burger-menu {
+                    display: none;
+                }
+                .sidebar-inner {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-top: 75px;
+
+                    .sidebar-menu {
+                        .sub-title {
+                            display: none;
+                        }
+                        .mat-accordion {
+                            .mat-summary { 
+                                padding-bottom: 10px;
+                                padding-right: 10px;
+                                padding-left: 10px;
+                                padding-top: 10px;
+                                width: 20px;
+
+                                .MuiAccordionSummary-content {
+                                    .title, .trezo-badge {
+                                        display: none;
+                                    }
+                                }
+                                .MuiAccordionSummary-expandIconWrapper {
+                                    display: none;
+                                }
+                                .MuiAccordionSummary-content {
+                                    i { 
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                            .MuiCollapse-entered {
+                                display: none;
+                            }
+                        }
+                        .sidebar-menu-link {
+                            .title {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    width: 260px;
+
+                    .burger-menu {
+                        display: none !important;
+                    }
+
+                    .logo {
+                        padding: 18px 25px 16px; 
+    
+                        a {
+                            justify-content: flex-start;
+    
+                            span {
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    .burger-menu {
+                        display: inline-block;
+                    }
+                    .sidebar-inner {
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        padding-top: 90px;
+    
+                        .sidebar-menu {
+                            .sub-title {
+                                display: inline-block;
+                            }
+                            .mat-accordion {
+                                .mat-summary { 
+                                    width: 91%;
+
+                                    .MuiAccordionSummary-content {
+                                        i { 
+                                            margin-right: 7px;
+                                        }
+                                        .title, .trezo-badge {
+                                            display: inline-block;
+                                        }
+                                    }
+                                    .MuiAccordionSummary-expandIconWrapper {
+                                        display: inline-block;
+                                    } 
+                                }
+                                .MuiCollapse-entered {
+                                    display: block;
+                                }
+                            }
+
+                            .sidebar-menu-link {
+                                .title {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        } 
+    }
+
+    // RTL Style
+    [dir="rtl"] {
+        .main-wrapper-content {
+            &.active {
+                .left-sidebar-menu {
+                    .sidebar-inner {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        padding-top: 75px;
+
+                        .sidebar-menu {
+                            .sub-title {
+                                display: none;
+                            }
+                            .mat-accordion {
+                                .mat-summary { 
+                                    .MuiAccordionSummary-content {
+                                        i {  
+                                            margin-left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .sidebar-inner {
+                            .sidebar-menu {
+                                .mat-accordion {
+                                    .mat-summary { 
+                                        .MuiAccordionSummary-content {
+                                            i { 
+                                                margin-left: 7px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // compact-sidebar
+            &.compact-sidebar {
+                padding-right: 85px;
+                padding-left: 25px;
+
+                .top-navbar {
+                    left: 25px !important;
+                    right: 90px !important;
+                }
+
+                .left-sidebar-menu {
+                    .sidebar-inner {
+                        .sidebar-menu {
+                            .mat-accordion {
+                                .mat-summary {
+                                    .MuiAccordionSummary-content i {
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        .sidebar-inner {
+                            .sidebar-menu {
+                                .mat-accordion {
+                                    .mat-summary { 
+                                        .MuiAccordionSummary-content {
+                                            i { 
+                                                margin-left: 7px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+}
+ 

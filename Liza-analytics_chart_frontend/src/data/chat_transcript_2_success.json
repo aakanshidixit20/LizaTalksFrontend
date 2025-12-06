@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "message": "Chat transcripts fetched successfully.",
+  "data": {
+    "customer": {
+      "customer_id": "2003",
+      "name": "Miguel Alvarez",
+      "last_visit": "2025-08-12T16:20:00Z",
+      "last_purchased": "MellowMint Tea",
+      "feedback_submitted": true,
+      "bot_notes": {
+        "mood_trends": {
+          "Top 3 mood tags": [
+            "Sleepy (1 time)",
+            "Relaxed (1 time)"
+          ],
+          "Latest mood submitted": "Relaxed"
+        },
+        "usage_summary": {
+          "Total credits used": 68,
+          "Number of sessions": 2,
+          "Average credits per session": 34,
+          "Longest session": "40 credits (Jul 15)"
+        },
+        "product_engagement": {
+          "Top clicked products": [
+            "MellowMint Tea (2 clicks)",
+            "Zen Drops (1 click)",
+            "Energy Blast Gummies (1 click)"
+          ],
+          "Most viewed product type": "Teas",
+          "Most common effect searched": "Energy & Relaxation",
+          "Total product clicks": 4
+        }
+      }
+    },
+    "chat_sessions": [
+      {
+        "session_id": "223456",
+        "timestamp": "2025-07-15T10:00:00Z",
+        "mood_selected": "Sleepy",
+        "purchased_product": "MellowMint Tea",
+        "feedback_submitted": true,
+        "messages": [
+          {
+            "sender": "bot",
+            "message": "Hey Miguel, still feeling a bit sleepy today?",
+            "timestamp": "2025-07-15T10:00:01Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Morning Mojo Tea",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/morning-mojo-tea",
+            "timestamp": "2025-07-15T10:00:02Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Energy Blast Gummies",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/energy-blast-gummies",
+            "timestamp": "2025-07-15T10:00:03Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Disclaimer: For general wellness only, not a replacement for rest.",
+            "type": "disclaimer",
+            "timestamp": "2025-07-15T10:00:04Z"
+          }
+        ]
+      },
+      {
+        "session_id": "223457",
+        "timestamp": "2025-07-25T18:30:00Z",
+        "mood_selected": "Relaxed",
+        "purchased_product": "Zen Drops",
+        "feedback_submitted": false,
+        "messages": [
+          {
+            "sender": "bot",
+            "message": "Hi Miguel! Sounds like you’re feeling relaxed today.",
+            "timestamp": "2025-07-25T18:30:01Z"
+          },
+          {
+            "sender": "bot",
+            "message": "MellowMint Tea",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/mellowmint-tea",
+            "timestamp": "2025-07-25T18:30:02Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Zen Drops",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/zen-drops",
+            "timestamp": "2025-07-25T18:30:03Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Disclaimer: Product suggestions are for general wellness purposes only.",
+            "type": "disclaimer",
+            "timestamp": "2025-07-25T18:30:04Z"
+          }
+        ]
+      }
+    ]
+  }
+}

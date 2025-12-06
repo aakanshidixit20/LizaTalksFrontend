@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "message": "Store document details fetched",
+  "data": [
+    {
+      "document_id": "doc_101",
+      "document_title": "Inventory Management SOP",
+      "document_type": "PDF",
+      "category": "Operations",
+      "chat_enabled": true,
+      "uploaded_date": "2025-06-28",
+      "last_modified": "2025-07-02"
+    },
+    {
+      "document_id": "doc_102",
+      "document_title": "Customer Service Guidelines",
+      "document_type": "DOCX",
+      "category": "Training",
+      "chat_enabled": false,
+      "uploaded_date": "2025-07-01",
+      "last_modified": "2025-07-08"
+    },
+    {
+      "document_id": "doc_103",
+      "document_title": "Store Marketing Strategy Q3",
+      "document_type": "PDF",
+      "category": "Marketing",
+      "chat_enabled": true,
+      "uploaded_date": "2025-07-05",
+      "last_modified": "2025-07-15"
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "message": "Chat details fetched successfully",
+  "data": {
+    "order_id": "ORD-20250728-001",
+    "client_store_id": "ST-001",
+    "store_name": "Green Haven Dispensary",
+    "session_id": "sess-789456",
+    "chat_date": "2025-07-28",
+    "customer_name": "Sarah Jones",
+    "conversation": [
+      {
+        "timestamp": "2025-07-28T10:00:12Z",
+        "from": "Bot",
+        "message": "Hi, I am Liza. I’ll be assisting you here today."
+      },
+      {
+        "timestamp": "2025-07-28T10:00:35Z",
+        "from": "Customer",
+        "message": "Last time I felt anxious. Is that still the case?"
+      },
+      {
+        "timestamp": "2025-07-28T10:00:50Z",
+        "from": "Bot",
+        "message": "We have products for your case: Dreamland Gummies, MellowMint Tea."
+      }
+    ]
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

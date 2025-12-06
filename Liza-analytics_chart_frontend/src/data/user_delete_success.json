@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "message": "User deleted successfully.",
+  "data": {
+    "user_id": "u_103"
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

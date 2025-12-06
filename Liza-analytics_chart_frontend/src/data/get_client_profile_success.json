@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "message": "Client profile fetched successfully.",
+  "data": {
+    "client_id": "clt-001",
+    "user_id": "u_456",
+    "name": "GreenLife Dispensary",
+    "email": "client@example.com",
+    "organization_name": "Green Haven Dispensary",
+    "profile_picture": "https://cdn.app.com/profile/u_456.jpg",
+    "created_at": "2024-10-10T10:00:00Z",
+    "last_login": "2025-07-30T09:32:00Z"
+  },
+  "error": null
+}

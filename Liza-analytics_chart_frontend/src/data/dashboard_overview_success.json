@@ -1,0 +1,72 @@
+{
+  "data": {
+    "total_conversations": 1245,
+    "total_revenue": 8200,
+    "last_pos_sync": "2 hours ago",
+    "top_moods": ["Sleep", "Anxiety", "Relax", "Energy"],
+    "store_credits": 1250,
+    "bot_health": "stable",
+    "avg_response_time": 1.8,
+    "unique_users": 980,
+    "product_clicks": 356,
+    
+    "customer_intents": [
+      { "intent": "Sleep", "percentage": 35 },
+      { "intent": "Anxiety", "percentage": 25 },
+      { "intent": "Relax", "percentage": 20 },
+      { "intent": "Energy Boost", "percentage": 20 }
+    ],
+    
+    "peak_chat_times": [
+      { "hour": "9AM", "interactions": 30 },
+      { "hour": "11AM", "interactions": 40 },
+      { "hour": "1PM", "interactions": 35 },
+      { "hour": "3PM", "interactions": 50 },
+      { "hour": "5PM", "interactions": 49 },
+      { "hour": "7PM", "interactions": 60 },
+      { "hour": "9PM", "interactions": 70 }
+    ],
+    
+    "top_products": [
+      { "name": "Calm Kush Oil", "clicks": 212 },
+      { "name": "Sleep Tincture", "clicks": 187 },
+      { "name": "Anxiety Relief", "clicks": 156 },
+      { "name": "Energy Boost", "clicks": 134 }
+    ],
+    
+    "missed_opportunities": [
+      { "name": "Dreamland 3.5g", "requests": 27, "since": "Sep 20" },
+      { "name": "Relax Capsules", "requests": 15, "since": "Sep 22" },
+      { "name": "Sleep Gummies", "requests": 12, "since": "Sep 25" }
+    ],
+    
+    "conversation_trends": [
+      { "month": "Jan", "count": 30 },
+      { "month": "Feb", "count": 40 },
+      { "month": "Mar", "count": 35 },
+      { "month": "Apr", "count": 50 },
+      { "month": "May", "count": 49 },
+      { "month": "Jun", "count": 60 }
+    ],
+    
+    "user_distribution": [
+      { "type": "Returning Users", "percentage": 65 },
+      { "type": "New Users", "percentage": 35 }
+    ],
+    
+    "daily_revenue_chart": [
+      { "date": "2024-09-01", "revenue": 1200 },
+      { "date": "2024-09-02", "revenue": 1800 },
+      { "date": "2024-09-03", "revenue": 1500 }
+    ],
+    
+    "monthly_conversation_chart": [
+      { "month": "Jan", "count": 450 },
+      { "month": "Feb", "count": 520 },
+      { "month": "Mar", "count": 480 },
+      { "month": "Apr", "count": 610 },
+      { "month": "May", "count": 590 },
+      { "month": "Jun", "count": 720 }
+    ]
+  }
+}

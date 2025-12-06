@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --blackColor: #3A4252;
+  --whiteColor: #ffffff;
+  --bodyColor: #64748B;
+  --transition: .5s;
+  --fontSize: 14px;
+  --primaryColor: #605DFF;
+  --secondaryColor: #3584FC;
+  --successColor: #25B003;
+  --dangerColor: #FF4023;
+  --warningColor: #ffc107;
+  --infoColor: #0dcaf0;
+  --lightColor: #f8f9fa;
+  --darkColor: #212529;
+  --purpleColor: #AD63F6;
+  --orangeColor: #FD5812;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-wrapper-content {
+  overflow: hidden;
+  min-height: 100vh;
+  padding-top: 95px;
+  padding-left: 285px;
+  padding-right: 25px;
+}/*# sourceMappingURL=global.css.map */

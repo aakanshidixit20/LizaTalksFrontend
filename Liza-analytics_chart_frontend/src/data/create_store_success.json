@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "message": "Store created successfully.",
+  "data": {
+    "client_store_id": "ST-101",
+    "subscription_id": "Basic",
+    "subscription_status": "active",
+    "payment_status": "Completed",
+    "chatbot_snippet": "...code",
+    "created_at": "2025-07-29T14:32:00Z",
+    "last_modified": "2025-07-05"
+  },
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

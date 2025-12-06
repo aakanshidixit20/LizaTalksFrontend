@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "message": "Users fetched successfully.",
+  "data": [
+    {
+      "user_id": "u_101",
+      "username": "Ritika Sharma",
+      "email_id": "ritika.sharma@floexample.com",
+      "phone_number": "+91-6876543210",
+      "last_login": "2025-08-01"
+    },
+    {
+      "user_id": "u_102",
+      "username": "Aarav Mehta",
+      "email_id": "aarav.mehta@example.com",
+      "phone_number": "+91-9123456789",
+      "last_login": "2025-07-05"
+    },
+    {
+      "user_id": "u_103",
+      "username": "Sonal Verma",
+      "email_id": "sonal.verma@example.com",
+      "phone_number": "+91-9688776655",
+      "last_login": "2025-07-10"
+    },
+    {
+      "user_id": "u_104",
+      "username": "Vikram Kapoor",
+      "email_id": "vikram.kapoor@example.com",
+      "phone_number": "+91-9812345678",
+      "last_login": "2025-07-25"
+    },
+    {
+      "user_id": "u_105",
+      "username": "Neha Reddy",
+      "email_id": "neha.reddy@example.com",
+      "phone_number": "+91-9955667788",
+      "last_login": "2025-06-30"
+    },
+    {
+      "user_id": "u_106",
+      "username": "Kabir Sinha",
+      "email_id": "kabir.sinha@example.com",
+      "phone_number": "+91-9988776655",
+      "last_login": "2025-07-15"
+    },
+    {
+      "user_id": "u_107",
+      "username": "Priya Iyer",
+      "email_id": "priya.iyer@example.com",
+      "phone_number": "+91-9123001122",
+      "last_login": "2025-08-05"
+    },
+    {
+      "user_id": "u_108",
+      "username": "Rohan Desai",
+      "email_id": "rohan.desai@example.com",
+      "phone_number": "+91-9234567890",
+      "last_login": "2025-07-20"
+    }
+  ],
+  "error": {
+    "code": null,
+    "details": null,
+    "retryable": false
+  }
+}

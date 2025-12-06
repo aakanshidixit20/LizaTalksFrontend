@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "message": "Chat transcripts fetched successfully.",
+  "data": {
+    "customer": {
+      "customer_id": "2004",
+      "name": "Ava Thompson",
+      "last_visit": "2025-08-14T19:45:00Z",
+      "last_purchased": "CalmBreeze Oil",
+      "feedback_submitted": false,
+      "bot_notes": {
+        "mood_trends": {
+          "Top 3 mood tags": [
+            "Stressed (1 time)",
+            "Can't Sleep (1 time)"
+          ],
+          "Latest mood submitted": "Can't Sleep"
+        },
+        "usage_summary": {
+          "Total credits used": 88,
+          "Number of sessions": 2,
+          "Average credits per session": 44,
+          "Longest session": "50 credits (Jul 20)"
+        },
+        "product_engagement": {
+          "Top clicked products": [
+            "CalmBreeze Oil (2 clicks)",
+            "MellowMint Tea (1 click)",
+            "Dreamland Gummies (1 click)"
+          ],
+          "Most viewed product type": "Oils",
+          "Most common effect searched": "Relaxation & Sleep aid",
+          "Total product clicks": 4
+        }
+      }
+    },
+    "chat_sessions": [
+      {
+        "session_id": "323456",
+        "timestamp": "2025-07-20T09:15:00Z",
+        "mood_selected": "Stressed",
+        "purchased_product": "CalmBreeze Oil",
+        "feedback_submitted": false,
+        "messages": [
+          {
+            "sender": "bot",
+            "message": "Good morning Ava, you mentioned feeling stressed last time. Is that still true?",
+            "timestamp": "2025-07-20T09:15:01Z"
+          },
+          {
+            "sender": "bot",
+            "message": "CalmBreeze Oil",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/calmbreeze-oil",
+            "timestamp": "2025-07-20T09:15:02Z"
+          },
+          {
+            "sender": "bot",
+            "message": "MellowMint Tea",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/mellowmint-tea",
+            "timestamp": "2025-07-20T09:15:03Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Disclaimer: Products are for general relaxation purposes only.",
+            "type": "disclaimer",
+            "timestamp": "2025-07-20T09:15:04Z"
+          }
+        ]
+      },
+      {
+        "session_id": "323457",
+        "timestamp": "2025-08-02T13:40:00Z",
+        "mood_selected": "Can't Sleep",
+        "purchased_product": "Dreamland Gummies",
+        "feedback_submitted": true,
+        "messages": [
+          {
+            "sender": "bot",
+            "message": "Hey Ava, having trouble sleeping again?",
+            "timestamp": "2025-08-02T13:40:01Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Dreamland Gummies",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/dreamland-gummies",
+            "timestamp": "2025-08-02T13:40:02Z"
+          },
+          {
+            "sender": "bot",
+            "message": "CalmBreeze Oil",
+            "type": "product_suggestion",
+            "link": "https://clientsite.com/product/calmbreeze-oil",
+            "timestamp": "2025-08-02T13:40:03Z"
+          },
+          {
+            "sender": "bot",
+            "message": "Disclaimer: Always consult a healthcare provider for persistent issues.",
+            "type": "disclaimer",
+            "timestamp": "2025-08-02T13:40:04Z"
+          }
+        ]
+      }
+    ]
+  }
+}
