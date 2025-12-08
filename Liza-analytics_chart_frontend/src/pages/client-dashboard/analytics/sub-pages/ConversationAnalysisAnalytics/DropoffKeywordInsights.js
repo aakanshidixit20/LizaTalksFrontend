@@ -710,9 +710,9 @@ const DropoffDetailsPage = () => {
 
       {/* Header row */}
       <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
-        <Typography variant="h5" fontWeight={700}>
+        {/* <Typography variant="h5" fontWeight={700}>
           Drop-off Keyword Insights
-        </Typography>
+        </Typography> */}
 
         {/* <TextField
           select

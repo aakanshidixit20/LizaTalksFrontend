@@ -10,7 +10,7 @@ export default function FilterDropdown({ onChange }) {
   };
  
   return (
-    <Box sx={{ minWidth: 140 }}>
+    <Box sx={{ minWidth: 140 , mb:0}}>
       <Select value={value} onChange={handleChange} size="small">
         <MenuItem value="week">This Week</MenuItem>
         <MenuItem value="month">This Month</MenuItem>

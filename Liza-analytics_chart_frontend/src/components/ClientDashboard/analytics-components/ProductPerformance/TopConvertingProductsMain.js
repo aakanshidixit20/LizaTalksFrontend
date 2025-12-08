@@ -183,12 +183,12 @@ const TopConvertingProductsMain = () => {
 
   return (
     <Box p={3}>
-      <Breadcrumbs sx={{ mb: 2, fontSize: "14px" }}>
+      {/* <Breadcrumbs sx={{ mb: 2, fontSize: "14px" }}>
         <Link underline="hover" color="inherit" sx={{ cursor: "pointer" }} onClick={() => navigate("/analytics")}>
           Analytics
         </Link>
         <Typography color="textPrimary">Top Converting Products</Typography>
-      </Breadcrumbs>
+      </Breadcrumbs> */}
 
       <Card sx={{ borderRadius: 3, boxShadow: 3, mb: 3 }}>
         <CardContent>

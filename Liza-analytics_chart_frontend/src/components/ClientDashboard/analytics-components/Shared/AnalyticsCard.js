@@ -19,7 +19,7 @@ export default function AnalyticsCard({ title, children, details, redirection })
     <Paper
       sx={{
         p: 3,
-        mb: 3,
+        // mb: 3,
         borderRadius: "14px",
         border: "1px solid #EAE8FF",
         boxShadow: "0 4px 18px rgba(109,93,210,0.05)",

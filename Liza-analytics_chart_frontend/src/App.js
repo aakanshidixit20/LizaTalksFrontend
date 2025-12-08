@@ -508,8 +508,18 @@ import MostRecommendedCategoriesDetails from "./components/ClientDashboard/analy
 import DropoffKeywordInsights from "./pages/client-dashboard/analytics/sub-pages/ConversationAnalysisAnalytics/DropoffKeywordInsights";
 import ConversationAnalysisAnalyticsIndex from "./pages/client-dashboard/analytics/sub-pages/ConversationAnalysisAnalytics/ConversationAnalysisAnalyticsIndex";
 import MostRepeatedUserQueries from "./pages/client-dashboard/analytics/sub-pages/ConversationAnalysisAnalytics/MostRepeatedUserQueries";
-
-
+import UserAcquisitionAndRetentionTrends from "./pages/client-dashboard/analytics/sub-pages/ConversationAnalysisAnalytics/UserAcquisitionAndRetentionTrends";
+// sales and convertion insight
+// new
+ 
+import ProductRecommendationPurchaseFunnel from "./components/ClientDashboard/analytics-components/SalesAndConversionInsight/ProductRecommendationPurchaseFunnel";
+import ProductRecommendationFunnelDetails from "./components/ClientDashboard/analytics-components/SalesAndConversionInsight/ProductRecommendationFunnelDetails";
+ 
+import RevenueDrivenbyAIChatbot from "./components/ClientDashboard/analytics-components/SalesAndConversionInsight/RevenueDrivenbyAIChatbot";
+import RevenueDrivenbyAIChatbotDetail from "./components/ClientDashboard/analytics-components/SalesAndConversionInsight/RevenueDrivenbyAIChatbotDetail";
+ 
+import AnalyticsChartsPage from "./components/ClientDashboard/analytics-components/SalesAndConversionInsight/AnalyticsChartsPage";
+ 
 
 const App = () => {
   const [active, setActive] = useState(false);
@@ -604,7 +614,7 @@ const App = () => {
               path="product-purchase-funnel"
               element={<ProductPurchaseFunnelAnalytics />}
             /> */}
-            <Route
+            {/* <Route
                   index
                   element={<ConversationAnalysisAnalyticsIndex />}
                 />
@@ -615,7 +625,7 @@ const App = () => {
                 <Route
                   path="most-repeated-user-queries"
                   element={<MostRepeatedUserQueries />}
-                />
+                /> */}
 
             {/* Store Management */}
             <Route
@@ -652,7 +662,15 @@ const App = () => {
             
             <Route path="/analytics/most-recommended" element={<MostRecommendedCategories />} />
             <Route path="/analytics/most-recommended/details" element={<MostRecommendedCategoriesDetails />} />
-
+            {/* new  */}
+            {/* sales and conversion insight */}
+            <Route path="/analytics/product-funnel" element={<ProductRecommendationPurchaseFunnel />} />
+            <Route path="/analytics/product-funnel/details" element={<ProductRecommendationFunnelDetails />} />
+ 
+            <Route path="/revenue-ai" element={<RevenueDrivenbyAIChatbot />} />
+            <Route path="/revenue-ai-detail" element={<RevenueDrivenbyAIChatbotDetail />} />
+ 
+            <Route path="/analytics/charts" element={<AnalyticsChartsPage />} />
             <Route
               path="/store-management/pricing"
               element={
@@ -821,10 +839,34 @@ const App = () => {
           <Route path="mood-trend" element={<MoodAndEffectTrendsAnalytics />} />
           <Route path="mood-trend/details" element={<MoodEffectDetails />} />
 
-          <Route
+          {/* <Route
             path="conversation-analytics"
             element={<ConversationAnalysisAnalytics />}
-          />
+          /> */}
+
+          <Route
+                path="conversation-analytics"
+                element={<ConversationAnalysisAnalytics />}
+              >
+                <Route
+                  index
+                  element={<ConversationAnalysisAnalyticsIndex />}
+                />
+                <Route
+                  path="drop-off-keyword-insights"
+                  element={<DropoffKeywordInsights />}
+                />
+                <Route
+                  path="most-repeated-user-queries"
+                  element={<MostRepeatedUserQueries />}
+                />
+                <Route
+                  path="user-acquisition-retention-trends"
+                  element={<UserAcquisitionAndRetentionTrends />}
+                />
+              </Route>
+
+
           <Route
             path="sales-insight"
             element={<SalesAndConversionInsightAnalytics />}

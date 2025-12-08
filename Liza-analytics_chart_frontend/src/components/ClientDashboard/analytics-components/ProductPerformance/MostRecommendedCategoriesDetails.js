@@ -274,7 +274,7 @@ const MostRecommendedCategoriesDetails = () => {
   return (
     <Box p={3}>
       {/* Breadcrumbs */}
-      <Breadcrumbs sx={{ mb: 2, fontSize: "14px" }}>
+      {/* <Breadcrumbs sx={{ mb: 2, fontSize: "14px" }}>
         <Link underline="hover" sx={{ cursor: "pointer" }} onClick={() => navigate("/analytics")}>
           Analytics
         </Link>
@@ -282,7 +282,7 @@ const MostRecommendedCategoriesDetails = () => {
           Most Recommended Categories
         </Link>
         <Typography color={"text.primary"}>Details</Typography>
-      </Breadcrumbs>
+      </Breadcrumbs> */}
 
       {/* Back Button */}
       <Button variant="outlined" onClick={() => navigate("/analytics")} sx={{ mb: 2, borderRadius: 2 }}>

@@ -234,7 +234,7 @@ const TopConvertingProductsDetails = () => {
 
   return (
     <Box p={3}>
-      <Breadcrumbs sx={{ mb: 2, fontSize: "14px" }}>
+      {/* <Breadcrumbs sx={{ mb: 2, fontSize: "14px" }}>
         <Link underline="hover" sx={{ cursor: "pointer" }} onClick={() => navigate("/analytics")}>
           Analytics
         </Link>
@@ -242,7 +242,7 @@ const TopConvertingProductsDetails = () => {
           Top Converting Products
         </Link>
         <Typography color="textPrimary">Details</Typography>
-      </Breadcrumbs>
+      </Breadcrumbs> */}
 
       {/* Back Button */}
       <Box mb={2}>
