@@ -27,6 +27,8 @@
     "react": "^19.1.0",
     "react-apexcharts": "^1.9.0",
     "react-colorful": "^5.6.1",
+    "react-csv": "^2.2.2",
+    "react-data-table-component": "^7.7.0",
     "react-datetime-picker": "^6.0.1",
     "react-dom": "^19.1.0",
     "react-dropzone": "^14.3.8",
