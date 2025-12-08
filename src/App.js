@@ -360,6 +360,9 @@ import FeatureDropoffDetails from "./components/AdminDashboard/Analytics/Feature
 import FeatureUsageDetails from "./components/AdminDashboard/Analytics/FeatureUsageDetails";
 >>>>>>> 17a8032 (Added data and health filter functionality, updated the feature performance and conversion rate per client)
 
+// new BotEffectiveness
+
+import BotEffectivenessTablePage from "./components/AdminDashboard/Analytics/BotEffectivenessTablePage";
 const App = () => {
   const [active, setActive] = useState(false);
   const [pathname, setPathname] = useState("");
@@ -430,6 +433,7 @@ const App = () => {
                 <Route path="/client-stores" element={<ClientStores />} />
                 <Route path="/store_id/:store_id" element={<ViewStorePage />} />
 
+<<<<<<< Updated upstream
                 {/* Analytics Routing */}
                 <Route path="/analytics" element={<Analytics />}>
                   <Route index element={<BotEffectiveness />} />
@@ -444,16 +448,68 @@ const App = () => {
                     element={<TrainingPerformanceDetailsPage />}
                   />
                   <Route
+=======
+                {/* <Route path="/analytics/*" element={<Analytics />} /> */}
+                {/* ----------------------------------------------------------------------------------F */}
+                {/* <Route path="/analytics" element={<Analytics />}> */}
+                  {/* <Route index element={<BotEffectiveness />} /> */}
+                  {/* <Route
+                    path="bot-effectiveness"
+                    element={<BotEffectiveness />}
+                  /> */}
+
+                  {/* <Routes>
+                    <Route path="/bot-effectiveness" element={<BotEffectiveness />} />
+                    <Route path="/bot-effectiveness/details" element={<BotEffectivenessTablePage />} />
+                  </Routes> */}
+                  {/* <Route path="table-page" element={<BotEffectivenessTablePage />} /> */}
+
+                  {/* <Route
+                    path="training-performance"
+                    element={<TrainingAndPerformance />}
+                  /> */}
+                  {/* <Route
+>>>>>>> Stashed changes
                     path="data-health-reliability"
                     element={<DataHealthAndReliability />}
-                  />
-                  <Route
+                  /> */}
+                  {/* <Route
                     path="feature-performance"
                     element={<FeaturePerformance />}
+<<<<<<< Updated upstream
                   />
                 </Route>
 
                 {/* Products */}
+=======
+                  /> */}
+                {/* </Route> */}
+
+                {/* ---------------------------------------------------------------------------------- */}
+<Route path="/analytics" element={<Analytics />}>
+  <Route index element={<BotEffectiveness />} />
+
+  <Route path="bot-effectiveness" element={<BotEffectiveness />} />
+  <Route path="bot-effectiveness/details" element={<BotEffectivenessTablePage />} />
+
+  <Route
+    path="training-performance"
+    element={<TrainingAndPerformance />}
+  />
+  <Route
+    path="data-health-reliability"
+    element={<DataHealthAndReliability />}
+  />
+  <Route
+    path="feature-performance"
+    element={<FeaturePerformance />}
+  />
+</Route>
+{/* ---------------------------------------------------------------------------------- */}
+
+                console.log("Analytics Routes Loaded");
+                {/* ---------------------------------------------------------------------------------- */}
+>>>>>>> Stashed changes
                 <Route path="/products" element={<Products />} />
 
                 {/* Feedback */}
