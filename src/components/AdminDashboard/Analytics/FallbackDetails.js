@@ -1,30 +1,29 @@
 import React, { useState } from "react";
 import { Box, Typography, Button, TextField, MenuItem, Select } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import BarChartGradient from "./Charts/BarChartGradient";
+import HorizontalBar from "./Charts/HorizontalBar";
 import DataTable from "react-data-table-component";
 import { analyticsData } from "./Data/AnalyticsData";
 import DateFilter from "./DateFilter";
-export default function BotEffectivenessDetails() {
+export default function FallbackDetails() {
   
   const navigate = useNavigate();
 
   const labels = analyticsData.clients;
-  const conversionData = analyticsData.botEffectiveness.conversionRatePerClient;
+  const fallbackData = analyticsData.botEffectiveness.fallbackErrorRatePerClient;
 
-  // ---------- Table Formatting with Status Colors ----------
-  const tableRows = conversionData.map(item => {
+  const tableRows = fallbackData.map(item => {
     let status = "";
     let style = {};
 
-    if (item.conversionRate > 12) {
-      status = "Excellent";
+    if (item.errorCount < 30) {
+      status = "Stable";
       style = { bg: "#E8F9F0", border: "#10B981", text: "#065F46" };
-    } else if (item.conversionRate > 7) {
-      status = "Average";
+    } else if (item.errorCount < 60) {
+      status = "Warning";
       style = { bg: "#FFF4CC", border: "#F59E0B", text: "#B45309" };
     } else {
-      status = "Poor";
+      status = "Critical";
       style = { bg: "#FFE6E6", border: "#EF4444", text: "#B91C1C" };
     }
 
@@ -45,11 +44,10 @@ export default function BotEffectivenessDetails() {
   const totalPages = Math.ceil(filtered.length / rowsPerPage);
   const paginatedData = filtered.slice((page - 1) * rowsPerPage, page * rowsPerPage);
 
-  // ---------- CSV Export ----------
   const exportCSV = () => {
     const rows = filtered.map(row => ({
       Client: row.client,
-      "Conversion Rate (%)": row.conversionRate,
+      "Error Count": row.errorCount,
       Status: row.status
     }));
 
@@ -61,13 +59,14 @@ export default function BotEffectivenessDetails() {
     const blob = new Blob([file], { type: "text/csv;charset=utf-8;" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = "ConversionRate_Table.csv";
+    a.download = "Fallback_Error_Table.csv";
     a.click();
   };
 
   const columns = [
     { name: "Client", selector: row => row.client, sortable: true },
-    { name: "Conversion Rate (%)", selector: row => row.conversionRate, sortable: true },
+    { name: "Error Count", selector: row => row.errorCount, sortable: true },
+
     {
       name: "Status",
       cell: (row) => (
@@ -92,7 +91,6 @@ export default function BotEffectivenessDetails() {
   return (
     <Box sx={{ p: 3 }}>
 
-      {/* BACK BUTTON */}
       <Box
     sx={{
       display: "flex",
@@ -124,19 +122,16 @@ export default function BotEffectivenessDetails() {
 
 
       <Typography variant="h6" sx={{ fontWeight: 600, mb: 3 }}>
-        Conversion Rate — Detailed View
+        Fallback/Error Rate — Detailed View
       </Typography>
 
-      {/* CHART */}
       <Box sx={{ p: 3, background: "#fff", borderRadius: "10px", mb: 4, border: "1px solid #E5E7EB" }}>
-        <Typography sx={{ mb: 2, fontWeight: 600 }}>Conversion Chart Overview</Typography>
-        <BarChartGradient labels={labels} data={conversionData.map(i => i.conversionRate)} title="Conversion Rate (%)" />
+        <Typography sx={{ mb: 2, fontWeight: 600 }}>Error Rate Chart Overview</Typography>
+        <HorizontalBar labels={labels} data={fallbackData.map(i => i.errorCount)} title="Fallback/Error Rate" />
       </Box>
 
-      {/* TABLE */}
       <Box sx={{ p: 3, background: "#fff", borderRadius: "10px", border: "1px solid #E5E7EB" }}>
 
-        {/* Filters */}
         <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
           
           <Box sx={{ display: "flex", gap: 2 }}>
@@ -144,20 +139,19 @@ export default function BotEffectivenessDetails() {
 
             <Select size="small" sx={{ width: "140px" }} value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
               <MenuItem value="All">All</MenuItem>
-              <MenuItem value="Excellent">Excellent</MenuItem>
-              <MenuItem value="Average">Average</MenuItem>
-              <MenuItem value="Poor">Poor</MenuItem>
+              <MenuItem value="Stable">Stable</MenuItem>
+              <MenuItem value="Warning">Warning</MenuItem>
+              <MenuItem value="Critical">Critical</MenuItem>
             </Select>
           </Box>
 
-          {/* 🔥 Styled Export Button */}
+          {/* 🔥 Only this button style updated */}
           <Button
             variant="contained"
             sx={{
               textTransform: "none",
-              background: "#8B5CF6",
-              boxShadow: "0px 4px 12px rgba(139,92,246,0.25)",
-              "&:hover": { background: "#7C3AED" }
+              background: "#6A5BFF",
+              "&:hover": { background: "#0F6CD6" },
             }}
             onClick={exportCSV}
           >
@@ -167,15 +161,14 @@ export default function BotEffectivenessDetails() {
 
         <DataTable columns={columns} data={paginatedData} highlightOnHover />
 
-        {/* Pagination */}
         <Box sx={{ display: "flex", justifyContent: "center", mt: 2, gap: 2 }}>
           <Button disabled={page === 1} onClick={() => setPage(page - 1)}>⬅ Prev</Button>
           <Typography>Page {page} / {totalPages}</Typography>
           <Button disabled={page === totalPages} onClick={() => setPage(page + 1)}>Next ➡</Button>
         </Box>
-        
 
       </Box>
+
     </Box>
   );
 }

@@ -142,6 +142,7 @@ import React, { useEffect } from "react";
 import AnalyticsLayout from "./AnalyticsLayout";
 import BarChart from "./Charts/BarChart";
 import { Typography, Box, Button } from "@mui/material";
+import DateFilter from "./DateFilter";
 import { analyticsData } from "./Data/AnalyticsData";
 import { Link as RouterLink } from "react-router-dom";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -160,9 +161,29 @@ export default function TrainingAndPerformance() {
   return (
     <>
       {/* Page title */}
-      <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
-        API Response Latency
-      </Typography>
+    <Box
+  sx={{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    mb: 3,
+  }}
+>
+  <Typography
+    variant="h6"
+    sx={{
+      fontWeight: 600,
+      width: "fit-content",
+      whiteSpace: "nowrap",
+    }}
+  >
+    {/* 🔥 Apna heading name yaha change karna */}
+    API Response Latency
+  </Typography>
+
+  <DateFilter />
+</Box>
+
 
       {/* Card wrapper */}
       <Box

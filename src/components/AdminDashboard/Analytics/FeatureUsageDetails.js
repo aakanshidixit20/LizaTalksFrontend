@@ -4,7 +4,7 @@ import DonutChart from "./Charts/DonutChart";
 import { analyticsData } from "./Data/AnalyticsData";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
-
+import DateFilter from "./DateFilter";
 export default function FeatureUsageDetails() {
 
   const navigate = useNavigate();
@@ -102,30 +102,43 @@ export default function FeatureUsageDetails() {
   ];
 
   return (
-    <Box sx={{ p: 3 }}>
+    
+<Box sx={{ p: 3 }}>
 
-      {/* Back Button */}
-      <Button
-        variant="outlined"
-        onClick={() => navigate(-1)}
-        sx={{
-          mb: 2,
-          px: 2.5,
-          py: 1,
-          fontWeight: 600,
-          borderRadius: "8px",
-          textTransform: "none",
-          borderColor: "#6A5BFF",
-          color: "#6A5BFF",
-          "&:hover": { background: "#6A5BFF", color: "#fff" },
-        }}
-      >
-        ← Back
-      </Button>
+  {/* Back Button + Date Filter Row */}
+  <Box
+    sx={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      mb: 2,
+    }}
+  >
+    <Button
+            variant="outlined"
+            onClick={() => navigate(-1)}
+            sx={{
+              mb: 2,
+              px: 2.5,
+              py: 1,
+              fontWeight: 600,
+              borderRadius: "8px",
+              textTransform: "none",
+              borderColor: "#6A5BFF",
+              color: "#6A5BFF",
+              "&:hover": { background: "#6A5BFF", color: "#fff" },
+            }}
+          >
+             Back
+          </Button>
+    
+    <DateFilter />
+  </Box>
 
-      <Typography variant="h6" sx={{ fontWeight: 600, mb: 3 }}>
-        Feature Usage — Detailed View
-      </Typography>
+  {/* Heading */}
+  <Typography variant="h6" sx={{ fontWeight: 600, mb: 3, width: "fit-content", whiteSpace: "nowrap" }}>
+    Feature Usage — Detailed View
+  </Typography>
 
       {/* Chart */}
       <Box sx={{ p: 3, background: "#fff", borderRadius: "10px", mb: 4, border: "1px solid #E5E7EB" }}>

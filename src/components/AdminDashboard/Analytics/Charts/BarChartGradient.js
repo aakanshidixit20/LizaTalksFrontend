@@ -27,13 +27,13 @@ export default function BarChartGradient({ labels, data, title }) {
         style: { fontSize: "13px", fontWeight: 500 },
       }
     },
-    colors: ["#8B5CF6"], // Base color
+    colors: ["#6A5BFF"], // Base color
     fill: {
       type: "gradient",
       gradient: {
         shade: "light",
         type: "vertical",
-        gradientToColors: ["#C084FC"], // Ending lighter shade
+        gradientToColors: ["#6A5BFF"], // Ending lighter shade
         stops: [0, 100],
         opacityFrom: 0.9,
         opacityTo: 0.3

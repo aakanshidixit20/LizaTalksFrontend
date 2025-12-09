@@ -25,10 +25,12 @@ import ReportProblem from "./pages/admin-dashboard/report-problem";
 import ViewStorePage from "./pages/admin-dashboard/client-store/view-store";
 
 // Analytics Layout and Pages
+
 import AnalyticsLayout from "./components/AdminDashboard/Analytics/AnalyticsLayout";
 import BotEffectiveness from "./components/AdminDashboard/Analytics/BotEffectiveness";
 import BotEffectivenessDetails from "./components/AdminDashboard/Analytics/BotEffectivenessDetails";
 import BotEffectivenessTablePage from "./components/AdminDashboard/Analytics/BotEffectivenessTablePage";
+import FallbackDetails from "./components/AdminDashboard/Analytics/FallbackDetails";
 
 import TrainingAndPerformance from "./components/AdminDashboard/Analytics/TrainingAndPerformance";
 import TrainingPerformanceDetailsPage from "./components/AdminDashboard/Analytics/TrainingPerformanceDetailsPage";
@@ -39,6 +41,7 @@ import DataHealthviewdetails from "./components/AdminDashboard/Analytics/DataHea
 import FeaturePerformance from "./components/AdminDashboard/Analytics/FeaturePerformance";
 import FeatureDropoffDetails from "./components/AdminDashboard/Analytics/FeatureDropoffDetails";
 import FeatureUsageDetails from "./components/AdminDashboard/Analytics/FeatureUsageDetails";
+
 
 const App = () => {
   const [active, setActive] = useState(false);
@@ -114,10 +117,12 @@ const App = () => {
             {/* ---------------------- ANALYTICS ROUTES ---------------------- */}
             <Route path="/analytics" element={<AnalyticsLayout />}>
               {/* Main */}
+              <Route path="/analytics" element={<AnalyticsLayout />}></Route>
               <Route index element={<BotEffectiveness />} />
               <Route path="bot-effectiveness" element={<BotEffectiveness />} />
               <Route path="bot-effectiveness/details" element={<BotEffectivenessDetails />} />
               <Route path="bot-effectiveness/table" element={<BotEffectivenessTablePage />} />
+               <Route path="bot-effectiveness/fallback-details" element={<FallbackDetails />} />
 
               {/* Training */}
               <Route path="training-performance" element={<TrainingAndPerformance />} />

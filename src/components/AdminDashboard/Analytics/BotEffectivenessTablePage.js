@@ -213,7 +213,7 @@ import Papa from "papaparse";
 
 import BarChart from "../Analytics/Charts/BarChart";
 import { analyticsData } from "../Analytics/Data/AnalyticsData";
-
+import DateFilter from "./DateFilter";
 export default function BotEffectivenessTablePage() {
   const navigate = useNavigate();
 
@@ -274,22 +274,34 @@ export default function BotEffectivenessTablePage() {
     <Box sx={{ maxWidth: "1100px", m: "0 auto", p: 3 }}>
 
       {/* BACK BUTTON */}
-      <Button
-        onClick={() => navigate(-1)}
-        startIcon={<ArrowBackIosNewIcon />}
-        sx={{
-          mb: 2,
-          textTransform: "none",
-          borderRadius: "8px",
-          background: "#F0E9FF",
-          color: "#5C45FF",
-          fontWeight: 600,
-          "&:hover": { background: "#E4DDFF" },
-        }}
-      >
-        Back
-      </Button>
-
+      <Box
+    sx={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      mb: 2,
+    }}
+  >
+    <Button
+            variant="outlined"
+            onClick={() => navigate(-1)}
+            sx={{
+              mb: 2,
+              px: 2.5,
+              py: 1,
+              fontWeight: 600,
+              borderRadius: "8px",
+              textTransform: "none",
+              borderColor: "#6A5BFF",
+              color: "#6A5BFF",
+              "&:hover": { background: "#6A5BFF", color: "#fff" },
+            }}
+          >
+             Back
+          </Button>
+    
+    <DateFilter />
+  </Box>
       {/* PAGE TITLE */}
       {/* <Typography fontWeight={700} fontSize="22px" sx={{ mb: 1 }}>
         Engagement Rate per Client
@@ -307,7 +319,7 @@ export default function BotEffectivenessTablePage() {
 
         <BarChart labels={labels} data={engagementRate} title="Engagement Rate (%)" />
       </Paper> */}
-
+     {/* -------- TOP CHART -------- */}
       <Box sx={{ mb: 1.5 }}>
         <Typography fontWeight={600} fontSize="18px" sx={{ color: "#000" }}>
           Engagement Rate per Client
@@ -413,7 +425,7 @@ export default function BotEffectivenessTablePage() {
                 <Typography
                   fontSize="15px"
                   fontWeight={600}
-                  color="#6559F5"
+                  color="grey"
                   textAlign="right"
                 >
                   {item.creditsSpent.toLocaleString()}
@@ -435,7 +447,7 @@ export default function BotEffectivenessTablePage() {
             <Typography
               fontSize="15px"
               fontWeight={800}
-              color="#4A3EF5"
+              color="grey"
               textAlign="right"
             >
               {totalCredits.toLocaleString()}
@@ -457,6 +469,14 @@ export default function BotEffectivenessTablePage() {
             mb: 2,
           }}
         >
+          {/* search */}
+          <TextField
+            placeholder="Search client..."
+            size="small"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            sx={{ flexGrow: 1, maxWidth: 300 }}
+          />
           
           {/* FILTER DROPDOWN */}
           <TextField
@@ -475,19 +495,35 @@ export default function BotEffectivenessTablePage() {
           
 
           {/* EXPORT CSV BUTTON */}
-          <Button
-            onClick={exportCSV}
-            startIcon={<DownloadIcon />}
+        <Box
+    sx={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      mb: 2,
+    }}
+  >
+    {/* <Button
+            variant="outlined"
+            onClick={() => navigate(-1)}
             sx={{
-              textTransform: "none",
-              border: "1px solid #D0D5DD",
+              mb: 2,
+              px: 2.5,
+              py: 1,
+              fontWeight: 600,
               borderRadius: "8px",
-              px: 2,
-              whiteSpace: "nowrap",
+              textTransform: "none",
+              borderColor: "#6A5BFF",
+              color: "#6A5BFF",
+              "&:hover": { background: "#6A5BFF", color: "#fff" },
             }}
           >
-            Export CSV
-          </Button>
+             Back
+          </Button> */}
+    
+   
+  </Box>
+
         </Box>
 
 
@@ -526,7 +562,7 @@ export default function BotEffectivenessTablePage() {
                     sx={{
                       textAlign: "right",
                       fontWeight: 600,
-                      color: "#6559F5",
+                      color: "#000",
                     }}
                   >
                     {row.creditsSpent.toLocaleString()}

@@ -3,6 +3,7 @@ import HorizontalBarOne from "./Charts/HorizontalBarOne";
 import { Typography, Box, Button } from "@mui/material";
 import { analyticsData } from "./Data/AnalyticsData";
 import { useNavigate } from "react-router-dom";
+import DateFilter from "./DateFilter";
 
 export default function DataHealthAndReliability() {
 
@@ -16,9 +17,28 @@ export default function DataHealthAndReliability() {
 
   return (
     <>
-      <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
-        Product Sync Frequency
-      </Typography>
+    <Box
+  sx={{
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    mb: 3,
+  }}
+>
+  <Typography
+    variant="h6"
+    sx={{
+      fontWeight: 600,
+      width: "fit-content",
+      whiteSpace: "nowrap",
+    }}
+  >
+    {/* 🔥 Apna heading name yaha change karna */}
+    Product Sync Frequency
+  </Typography>
+
+  <DateFilter />
+</Box>
 
       <Box
         sx={{

@@ -4,7 +4,7 @@ import HorizontalBarOne from "./Charts/HorizontalBarOne";
 import { analyticsData } from "./Data/AnalyticsData";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
-
+import DateFilter from "./DateFilter";
 export default function DataHealthviewdetails() {
 
   const navigate = useNavigate();
@@ -93,23 +93,34 @@ export default function DataHealthviewdetails() {
     <Box sx={{ p: 3 }}>
 
       {/* 🔙 Back button outside top-left */}
-      <Button
-        variant="outlined"
-        onClick={() => navigate(-1)}
-        sx={{
-          mb: 3,
-          px: 3,
-          py: 1,
-          fontWeight: 600,
-          borderRadius: "8px",
-          textTransform: "none",
-          borderColor: "#6A5BFF",
-          color: "#6A5BFF",
-          "&:hover": { background: "#6A5BFF", color: "#fff" },
-        }}
-      >
-        ← Back
-      </Button>
+      <Box
+    sx={{
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      mb: 2,
+    }}
+  >
+    <Button
+            variant="outlined"
+            onClick={() => navigate(-1)}
+            sx={{
+              mb: 2,
+              px: 2.5,
+              py: 1,
+              fontWeight: 600,
+              borderRadius: "8px",
+              textTransform: "none",
+              borderColor: "#6A5BFF",
+              color: "#6A5BFF",
+              "&:hover": { background: "#6A5BFF", color: "#fff" },
+            }}
+          >
+             Back
+          </Button>
+    
+    <DateFilter />
+  </Box>
 
 
       {/* ------------ CHART SECTION ------------- */}
