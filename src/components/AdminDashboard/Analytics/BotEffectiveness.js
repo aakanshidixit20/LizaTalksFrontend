@@ -709,20 +709,51 @@ export default function BotEffectiveness() {
               textTransform: "none",
               fontWeight: 600,
               fontSize: "13px",
-              color: "#6559F5",
-              borderRadius: "50px",
+              color: "white",
+              borderRadius: "8px",
               px: 2,
               py: "6px",
               border: "1px solid #CBC4FF",
-              background: "#F7F6FF",
+              background: "#6A5BFF",
               "&:hover": {
-                background: "#EDEBFF",
-                borderColor: "#8B82FF",
+                // // background: "#5444ff",
+                // borderColor: "#8B82FF",
               },
             }}
           >
             View Details →
           </Button>
+          {/* <Button
+          variant="contained"
+          onClick={() => navigate("/analytics/bot-effectiveness/details")}
+          sx={{
+            position: "absolute",
+            right: 20,
+            top: 20,
+            background: "#6A5BFF",
+            borderRadius: "8px",
+            fontWeight: 600,
+            textTransform: "none",
+          }}
+        >
+          View Details →
+        </Button> */}
+          {/* <Button
+                    variant="contained"
+                    sx={{
+                      position: "absolute",
+                      right: 20,
+                      top: 20,
+                      background: "#6A5BFF",
+                      borderRadius: "8px",
+                      fontWeight: 600,
+                      textTransform: "none",
+                      "&:hover": { background: "#5444ff" },
+                    }}
+                    onClick={() => navigate("/analytics/bot-effectiveness/table")}
+                  >
+                    View Details →
+                  </Button> */}
         </Box>
 
         {/* Table Header */}
@@ -815,9 +846,10 @@ export default function BotEffectiveness() {
             position: "absolute",
             right: 20,
             top: 20,
-            background: "#8B5CF6",
-            textTransform: "none",
+            background: "#6A5BFF",
             borderRadius: "8px",
+            fontWeight: 600,
+            textTransform: "none",
           }}
         >
           View Details →

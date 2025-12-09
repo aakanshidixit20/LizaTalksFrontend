@@ -161,6 +161,7 @@ export default function BotEffectivenessDetails() {
           <Typography>Page {page} / {totalPages}</Typography>
           <Button disabled={page === totalPages} onClick={() => setPage(page + 1)}>Next ➡</Button>
         </Box>
+        
 
       </Box>
     </Box>
