@@ -339,7 +339,8 @@ const DropoffDetailsPage = () => {
   };
 
   return (
-    <Box sx={{ p: 3 }}>
+<Box sx={{ px: 3, pt: 1.2, pb: 3 }}>
+
       
       {/* Updated Back Button Matching Theme */}
       <Button
@@ -347,6 +348,7 @@ const DropoffDetailsPage = () => {
         startIcon={<ArrowBackIcon sx={{ fontSize: "18px", color: "#4F46E5" }} />}
         sx={{
           mb: 2,
+           mt: -1,     
           border: "1px solid #D4D7E2",
           textTransform: "uppercase",
           fontSize: "12px",

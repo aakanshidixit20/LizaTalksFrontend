@@ -1,3 +1,85 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import ReactApexChart from "react-apexcharts";
+import { Box, Typography } from "@mui/material";
+
+// ⭐ Reusable ViewDetailsBtn
+import ViewDetailsBtn from "../ViewDetailsBtn/ViewDetailsBtn";
+
+const MostRecommendedCategories = () => {
+  const navigate = useNavigate();
+
+  const chartState = {
+    series: [{ data: [400, 380, 348, 270, 240] }],
+    options: {
+      chart: {
+        type: "bar",
+        height: 350,
+        toolbar: { show: false },
+        fontFamily: "Inter, sans-serif",
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 6,
+          horizontal: true,
+          endingShape: "rounded",
+        },
+      },
+      dataLabels: { enabled: false },
+      colors: ["#6f42c1"],
+      xaxis: {
+        categories: ["Edibles", "Flower", "Vapes", "Topicals", "Tinctures"],
+        labels: { style: { colors: "#495057", fontSize: "14px" } },
+      },
+      yaxis: {
+        labels: { style: { colors: "#495057", fontSize: "14px" } },
+      },
+      tooltip: { theme: "dark" },
+      grid: {
+        show: true,
+        borderColor: "#e9ecef",
+        row: { colors: ["transparent"], opacity: 0.5 },
+      },
+    },
+  };
+
+  return (
+    <Box p={3}>
+      {/* Header */}
+      <Box display="flex" alignItems="center" mb={2}>
+        <Typography
+          variant="h6"
+          fontWeight="600"
+          sx={{
+            flexGrow: 1,           
+            whiteSpace: "nowrap", 
+            flexShrink: 0,          
+          }}
+        >
+          Most Recommended Categories
+        </Typography>
+
+      
+        <ViewDetailsBtn
+          redirectTo="/analytics/most-recommended/details"
+          align="right"
+        />
+      </Box>
+
+  
+      <ReactApexChart
+        options={chartState.options}
+        series={chartState.series}
+        type="bar"
+        height={350}
+      />
+    </Box>
+  );
+};
+
+export default MostRecommendedCategories;
+
+
 // // MostRecommendedCategories.js
 // import React from "react";
 // import { useState } from "react";
@@ -104,75 +186,75 @@
 
 
 
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import ReactApexChart from "react-apexcharts";
-import { Box, Button, Typography } from "@mui/material";
+// import React from "react";
+// import { useNavigate } from "react-router-dom";
+// import ReactApexChart from "react-apexcharts";
+// import { Box, Button, Typography } from "@mui/material";
 
-const MostRecommendedCategories = () => {
-  const navigate = useNavigate();
+// const MostRecommendedCategories = () => {
+//   const navigate = useNavigate();
 
-  const chartState = {
-    series: [{ data: [400, 380, 348, 270, 240] }],
-    options: {
-      chart: {
-        type: "bar",
-        height: 350,
-        toolbar: { show: false },
-        fontFamily: 'Inter, sans-serif',
-      },
-      plotOptions: {
-        bar: {
-          borderRadius: 6,
-          horizontal: true,
-          endingShape: "rounded",
-        },
-      },
-      dataLabels: { enabled: false },
-      colors: ["#6f42c1"], // Trezo purple
-      xaxis: {
-        categories: ["Edibles", "Flower", "Vapes", "Topicals", "Tinctures"],
-        labels: { style: { colors: "#495057", fontSize: '14px' } },
-      },
-      yaxis: {
-        labels: { style: { colors: "#495057", fontSize: '14px' } },
-      },
-      tooltip: { theme: 'dark' },
-      grid: {
-        show: true,
-        borderColor: "#e9ecef",
-        row: { colors: ["transparent"], opacity: 0.5 },
-      },
-    },
-  };
+//   const chartState = {
+//     series: [{ data: [400, 380, 348, 270, 240] }],
+//     options: {
+//       chart: {
+//         type: "bar",
+//         height: 350,
+//         toolbar: { show: false },
+//         fontFamily: 'Inter, sans-serif',
+//       },
+//       plotOptions: {
+//         bar: {
+//           borderRadius: 6,
+//           horizontal: true,
+//           endingShape: "rounded",
+//         },
+//       },
+//       dataLabels: { enabled: false },
+//       colors: ["#6f42c1"], // Trezo purple
+//       xaxis: {
+//         categories: ["Edibles", "Flower", "Vapes", "Topicals", "Tinctures"],
+//         labels: { style: { colors: "#495057", fontSize: '14px' } },
+//       },
+//       yaxis: {
+//         labels: { style: { colors: "#495057", fontSize: '14px' } },
+//       },
+//       tooltip: { theme: 'dark' },
+//       grid: {
+//         show: true,
+//         borderColor: "#e9ecef",
+//         row: { colors: ["transparent"], opacity: 0.5 },
+//       },
+//     },
+//   };
 
-  return (
-    <Box p={3}>
-      {/* Header with title and button */}
-      <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-        <Typography variant="h6" fontWeight="600">
-          Most Recommended Categories
-        </Typography>
+//   return (
+//     <Box p={3}>
+//       {/* Header with title and button */}
+//       <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
+//         <Typography variant="h6" fontWeight="600">
+//           Most Recommended Categories
+//         </Typography>
 
-        <Button
-          variant="contained"
-          size="small"
-          onClick={() => navigate("/analytics/most-recommended/details")}
-          sx={{ borderRadius: "8px", textTransform: "none" }}
-        >
-          View Details →
-        </Button>
-      </Box>
+//         <Button
+//           variant="contained"
+//           size="small"
+//           onClick={() => navigate("/analytics/most-recommended/details")}
+//           sx={{ borderRadius: "8px", textTransform: "none" }}
+//         >
+//           View Details →
+//         </Button>
+//       </Box>
 
-      {/* Chart */}
-      <ReactApexChart
-        options={chartState.options}
-        series={chartState.series}
-        type="bar"
-        height={350}
-      />
-    </Box>
-  );
-};
+//       {/* Chart */}
+//       <ReactApexChart
+//         options={chartState.options}
+//         series={chartState.series}
+//         type="bar"
+//         height={350}
+//       />
+//     </Box>
+//   );
+// };
 
-export default MostRecommendedCategories;
+// export default MostRecommendedCategories;

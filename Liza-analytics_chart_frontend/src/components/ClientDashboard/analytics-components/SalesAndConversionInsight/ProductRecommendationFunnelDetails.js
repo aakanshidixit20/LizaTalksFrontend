@@ -151,13 +151,7 @@ const ProductRecommendationFunnelDetails = () => {
  
   return (
     <Box p={3}>
-      <Breadcrumbs sx={{ mb: 2, fontSize: "14px" }}>
-        <Link underline="hover" sx={{ cursor: "pointer" }} onClick={() => navigate("/analytics")}>
-          Analytics
-        </Link>
-        <Typography color="textPrimary">Product Funnel Details</Typography>
-      </Breadcrumbs>
- 
+     
       {/* Back */}
       <Box mb={2}>
         <Button

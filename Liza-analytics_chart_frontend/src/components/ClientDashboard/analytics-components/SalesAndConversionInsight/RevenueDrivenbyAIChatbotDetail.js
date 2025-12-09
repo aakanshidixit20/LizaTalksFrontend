@@ -14,11 +14,11 @@ import {
   TableBody,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
- 
+
 const RevenueDrivenbyAIChatbotDetail = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
- 
+
   const graphState = {
     series: [44, 55, 13, 33],
     options: {
@@ -27,30 +27,30 @@ const RevenueDrivenbyAIChatbotDetail = () => {
       legend: { position: "right" },
     },
   };
- 
+
   const tableData = [
     { product: "Product A", revenue: "$4,500" },
     { product: "Product B", revenue: "$3,200" },
     { product: "Product C", revenue: "$1,800" },
     { product: "Product D", revenue: "$1,200" },
   ];
- 
+
   return (
     <Box width="100%" p={2}>
+
+      <Box mb={2}>
+        <Button variant="outlined" onClick={() => navigate(-1)} sx={{ borderRadius: 2 }}>
+          ← Back
+        </Button>
+      </Box>
+
       <Card sx={{ width: "100%", borderRadius: 3, boxShadow: 3, mb: 3 }}>
         <CardContent>
- 
-          {/* Back Button */}
-          <Box mb={2}>
-            <Button variant="outlined" onClick={() => navigate(-1)} sx={{ borderRadius: 2 }}>
-              ← Back
-            </Button>
-          </Box>
- 
+
           <Typography variant="h5" fontWeight={600} mb={2}>
             Revenue Driven by AI Chatbot — Details
           </Typography>
- 
+
           {/* Graph */}
           <Box display="flex" justifyContent="center" mb={4}>
             <ReactApexChart
@@ -60,7 +60,7 @@ const RevenueDrivenbyAIChatbotDetail = () => {
               width={400}
             />
           </Box>
- 
+
           {/* Search + Additional Button (Export or Filter) */}
           <Box display="flex" justifyContent="space-between" alignItems="center" mb={2} flexWrap="wrap" gap={2}>
             <TextField
@@ -69,7 +69,7 @@ const RevenueDrivenbyAIChatbotDetail = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
- 
+
             <Box display="flex" gap={2}>
               <Button variant="contained" color="primary">
                 Export
@@ -80,7 +80,7 @@ const RevenueDrivenbyAIChatbotDetail = () => {
               </Button>
             </Box>
           </Box>
- 
+
           {/* Table */}
           <Table>
             <TableHead>
@@ -89,7 +89,7 @@ const RevenueDrivenbyAIChatbotDetail = () => {
                 <TableCell><strong>Revenue</strong></TableCell>
               </TableRow>
             </TableHead>
- 
+
             <TableBody>
               {tableData
                 .filter((item) =>
@@ -103,11 +103,11 @@ const RevenueDrivenbyAIChatbotDetail = () => {
                 ))}
             </TableBody>
           </Table>
- 
+
         </CardContent>
       </Card>
     </Box>
   );
 };
- 
+
 export default RevenueDrivenbyAIChatbotDetail;

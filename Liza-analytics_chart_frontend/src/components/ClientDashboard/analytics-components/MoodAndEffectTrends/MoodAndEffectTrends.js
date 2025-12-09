@@ -1,3 +1,62 @@
+ import React from "react";
+import ReactApexChart from "react-apexcharts";
+import { Box, Typography } from "@mui/material";
+import ViewDetailsBtn from "../ViewDetailsBtn/ViewDetailsBtn";
+
+const MoodAndEffectTrends = ({ hideButton }) => {
+  const state = {
+    series: [32, 25.6, 23.8, 9.9, 8.7],
+    options: {
+      chart: { type: "donut" },
+      labels: ["Happy", "Neutral", "Calm", "Sad", "Stressed"],
+      colors: ["#6366F1", "#22C55E", "#818CF8", "#F59E0B", "#EF4444"],
+      legend: { position: "right" },
+    },
+  };
+
+  return (
+    <Box sx={{ width: "100%", maxWidth: "100%" }}>
+      
+      <Box 
+        display="flex" 
+        alignItems="center"
+        justifyContent="space-between"
+        mb={1}
+      >
+        <Typography
+          variant="h6"
+          fontWeight="600"
+          sx={{
+            flexGrow: 1,
+            whiteSpace: "nowrap",
+            flexShrink: 0,
+          }}
+        >
+          Mood & Effect Trends
+        </Typography>
+
+        {!hideButton && (
+          <ViewDetailsBtn 
+            redirectTo="/analytics/mood-and-effect/details"
+            align="right"
+          />
+        )}
+      </Box>
+
+   
+      <ReactApexChart
+        options={state.options}
+        series={state.series}
+        type="donut"
+        height={350}
+      />
+    </Box>
+  );
+};
+
+export default MoodAndEffectTrends;
+
+
 // import React from "react";
 // import { useState } from "react";
 // import ReactApexChart from "react-apexcharts";
@@ -85,37 +144,41 @@
 // export default MoodAndEffectTrends;
 
 
-import React from "react";
-import ReactApexChart from "react-apexcharts";
+// import React from "react";
+// import ReactApexChart from "react-apexcharts";
+// import ViewDetailsBtn from "../ViewDetailsBtn/ViewDetailsBtn";
 
-const MoodAndEffectTrends = ({ hideButton }) => {
-  const state = {
-    series: [32, 25.6, 23.8, 9.9, 8.7],
-    options: {
-      chart: { type: "donut" },
-      labels: ["Happy", "Neutral", "Calm", "Sad", "Stressed"],
-      colors: ["#6366F1", "#22C55E", "#818CF8", "#F59E0B", "#EF4444"],
-      legend: { position: "right" },
-    },
-  };
+// const MoodAndEffectTrends = ({ hideButton }) => {
+//   const state = {
+//     series: [32, 25.6, 23.8, 9.9, 8.7],
+//     options: {
+//       chart: { type: "donut" },
+//       labels: ["Happy", "Neutral", "Calm", "Sad", "Stressed"],
+//       colors: ["#6366F1", "#22C55E", "#818CF8", "#F59E0B", "#EF4444"],
+//       legend: { position: "right" },
+//     },
+//   };
 
-  return (
-    <div style={{ width: "400px" }}>
-      <ReactApexChart
-        options={state.options}
-        series={state.series}
-        type="donut"
-        height={350}
-      />
+//   return (
+//     <div style={{ width: "400px" }}>
+//       <ReactApexChart
+//         options={state.options}
+//         series={state.series}
+//         type="donut"
+//         height={350}
+//       />
 
-      {!hideButton && (
-        <button style={{ marginTop: "15px", display: "block" }}>
-          View Details →
-        </button>
-      )}
-    </div>
-  );
-};
+//       {!hideButton && (
+//         <button style={{ marginTop: "15px", display: "block" }}>
+//           View Details →
+//         </button>
+//       )}
+//     </div>
+//   );
+// };
 
-export default MoodAndEffectTrends;
+// export default MoodAndEffectTrends;
+
+
+
 

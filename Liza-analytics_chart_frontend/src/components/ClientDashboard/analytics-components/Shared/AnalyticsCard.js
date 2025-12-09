@@ -3,8 +3,8 @@ import { Paper, Typography, Button, Collapse, Divider, Box } from "@mui/material
 import { useNavigate } from "react-router-dom";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
  
-const PRIMARY_PURPLE = "#6D5DD2";
-const PURPLE_HOVER = "#5645c0";
+const PRIMARY_PURPLE = "#5757e9ff";
+const PURPLE_HOVER = "#423596ff";
  
 export default function AnalyticsCard({ title, children, details, redirection }) {
   const navigate = useNavigate();
@@ -39,13 +39,15 @@ export default function AnalyticsCard({ title, children, details, redirection })
             onClick={handleRedirection}
             sx={{
               textTransform: "none",
-              backgroundColor: PRIMARY_PURPLE,
-              fontWeight: 600,
-              fontSize: "14px",
-              padding: "6px 16px",
-              borderRadius: "10px", // pill shape
-              "&:hover": {
-                backgroundColor: PURPLE_HOVER,
+          backgroundColor: PRIMARY_PURPLE,
+          fontWeight: 600,
+          fontSize: "12px",         
+          padding: "2px 10px",      
+          minHeight: "26px",         
+          borderRadius: "6px",
+          transition: "0.2s ease-in-out",
+          "&:hover": {
+            backgroundColor: PURPLE_HOVER,
               },
             }}
           >

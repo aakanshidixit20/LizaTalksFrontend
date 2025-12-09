@@ -189,7 +189,7 @@ const DropoffKeywordInsights = ({ filter, preview, full }) => {
   };
  
   return (
-    <div style={{ paddingTop: full ? "10px" : "0px" }}>
+    <div style={{ paddingTop: full ? "4px" : "0px" }}>
       {full && (
         <>
           <h3 style={{ color: PRIMARY_PURPLE, marginBottom: "4px" }}>

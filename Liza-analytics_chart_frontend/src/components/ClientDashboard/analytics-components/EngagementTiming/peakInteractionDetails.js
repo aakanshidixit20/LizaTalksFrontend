@@ -714,7 +714,7 @@ const PeakInteractionDetails = () => {
   };
 
   return (
-    <Box p={3}>
+    <Box  px={3} pt={1.5} pb={3} >
       
       {/* -------- COMMENTED BREADCRUMB SECTION --------
       <Breadcrumbs sx={{ mb: 2, fontSize: "14px" }}>
@@ -734,7 +734,7 @@ const PeakInteractionDetails = () => {
       </Breadcrumbs>
       ------------------------------------------------ */}
       
-      <Button variant="outlined" onClick={() => navigate(-1)} sx={{ mb: 3, borderRadius: 2 }}>
+      <Button variant="outlined" onClick={() => navigate(-1)} sx={{ mb: 1, mt: -2.5, borderRadius: 2 }}>
         ← Back
       </Button>
 
