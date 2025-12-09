@@ -132,8 +132,25 @@ const UserAcquisitionRetentionDetails = () => {
 
   return (
     <Box sx={{ p: 3 }}>
-
-      {/* 🔙 Back button */}
+    {/* Updated Back Button Matching Theme */}
+      <Button
+        onClick={() => window.history.back()}
+        startIcon={<ArrowBackIcon sx={{ fontSize: "18px", color: "#4F46E5" }} />}
+        sx={{
+          mb: 2,
+          border: "1px solid #D4D7E2",
+          textTransform: "uppercase",
+          fontSize: "12px",
+          borderRadius: "6px",
+          background: "#F8F9FF",
+          color: "#4F46E5",
+          "&:hover": { background: "#EEF2FF" },
+          paddingX: "14px",
+        }}
+      >
+        Back
+      </Button>
+      {/* 🔙 Back button
       <Button
         variant="contained"
         sx={{
@@ -146,13 +163,13 @@ const UserAcquisitionRetentionDetails = () => {
         onClick={() => window.history.back()}
       >
         Back
-      </Button>
+      </Button> */}
 
       {/* Title + Filter row */}
       <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
-        <Typography variant="h5" fontWeight={700}>
-          User Acquisition & Retention Trends
-        </Typography>
+          {/* <Typography variant="h5" fontWeight={700}>
+            User Acquisition & Retention Trends
+          </Typography> */}
 
         <Box sx={{ display: "flex", gap: 2 }}>
           {/* Filter */}
@@ -176,7 +193,7 @@ const UserAcquisitionRetentionDetails = () => {
             <MenuItem value="3months">Last 3 Months</MenuItem>
           </TextField> */}
 
-          {/* Export */}
+          {/* Export
           <Button
             variant="outlined"
             startIcon={<DownloadIcon />}
@@ -188,7 +205,7 @@ const UserAcquisitionRetentionDetails = () => {
             onClick={exportCSV}
           >
             Export CSV
-          </Button>
+          </Button> */}
         </Box>
       </Box>
 

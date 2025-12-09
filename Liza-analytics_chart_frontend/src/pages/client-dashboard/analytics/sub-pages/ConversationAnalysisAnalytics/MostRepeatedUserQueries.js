@@ -110,8 +110,25 @@ const MostRepeatedQueriesDetails = () => {
 
   return (
     <Box sx={{ p: 3 }}>
-
-      {/* 🔙 Back Button */}
+    {/* Updated Back Button Matching Theme */}
+      <Button
+        onClick={() => window.history.back()}
+        startIcon={<ArrowBackIcon sx={{ fontSize: "18px", color: "#4F46E5" }} />}
+        sx={{
+          mb: 2,
+          border: "1px solid #D4D7E2",
+          textTransform: "uppercase",
+          fontSize: "12px",
+          borderRadius: "6px",
+          background: "#F8F9FF",
+          color: "#4F46E5",
+          "&:hover": { background: "#EEF2FF" },
+          paddingX: "14px",
+        }}
+      >
+        Back
+      </Button>  
+      {/* 🔙 Back Button
       <Button
         variant="contained"
         sx={{
@@ -124,7 +141,7 @@ const MostRepeatedQueriesDetails = () => {
         onClick={() => window.history.back()}
       >
         Back
-      </Button>
+      </Button> */}
 
       {/* Title + Controls */}
       <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
