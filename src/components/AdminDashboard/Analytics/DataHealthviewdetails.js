@@ -1,127 +1,133 @@
 import React, { useState } from "react";
-import { Box, Typography, Button, TextField, MenuItem, Select } from "@mui/material";
+import { Box, Typography, Button, TextField } from "@mui/material";
 import HorizontalBarOne from "./Charts/HorizontalBarOne";
 import { analyticsData } from "./Data/AnalyticsData";
 import DataTable from "react-data-table-component";
 import { useNavigate } from "react-router-dom";
 import DateFilter from "./DateFilter";
-export default function DataHealthviewdetails() {
 
+export default function DataHealthviewdetails() {
   const navigate = useNavigate();
 
-  // ---------- Chart Data ----------
-  const labels = analyticsData.clients;
-  const latency = analyticsData.trainingPerformanceInsights.apiResponseLatency.map(item => item.avgLatencyMs);
+  // ---------- CHART DATA: use sync frequency instead of latency ----------
+  const syncData =
+    analyticsData?.dataHealthReliability?.productSyncFrequency || [];
 
-  // ---------- Table + Status Logic ----------
-  const tableData = analyticsData.trainingPerformanceInsights.apiResponseLatency.map(item => {
-    
-    let status = "";
-    let style = {};
+  const labels = syncData.map((item) => item.storeName);
+  const syncCounts = syncData.map((item) => item.syncPerMonth);
 
-    if (item.avgLatencyMs > 3000) {
-      status = "Critical";
-      style = { bg: "#FFE6E6", border: "#EF4444", text: "#B91C1C" };
-    } else if (item.avgLatencyMs > 2000) {
-      status = "Slow";
-      style = { bg: "#FFF4CC", border: "#F59E0B", text: "#B45309" };
-    } else {
-      status = "Healthy";
-      style = { bg: "#E8F9F0", border: "#10B981", text: "#065F46" };
-    }
+  // ---------- TABLE DATA: dataHealthReliability.productSyncFrequency ----------
+  const tableData = syncData;
 
-    return { ...item, status, style };
+  // ---------- SEARCH ----------
+  const [search, setSearch] = useState("");
+
+  const filteredTable = tableData.filter((row) => {
+    if (!search) return true;
+    const s = search.toLowerCase();
+
+    return (
+      row.client.toLowerCase().includes(s) ||
+      row.storeName.toLowerCase().includes(s) ||
+      String(row.syncPerMonth).toLowerCase().includes(s)
+    );
   });
 
-  const [search, setSearch] = useState("");
-  const [statusFilter, setStatusFilter] = useState("All");
-
-  const filteredTable = tableData.filter(row =>
-    row.client.toLowerCase().includes(search.toLowerCase()) &&
-    (statusFilter === "All" || row.status === statusFilter)
-  );
-
+  // ---------- PAGINATION ----------
   const [page, setPage] = useState(1);
   const rowsPerPage = 5;
-  const totalPages = Math.ceil(filteredTable.length / rowsPerPage);
-  const paginatedData = filteredTable.slice((page - 1) * rowsPerPage, page * rowsPerPage);
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredTable.length / rowsPerPage)
+  );
 
+  const paginatedData = filteredTable.slice(
+    (page - 1) * rowsPerPage,
+    page * rowsPerPage
+  );
+
+  // ---------- COLUMNS ----------
+  const columns = [
+    {
+      name: "Client Name",
+      selector: (row) => row.client,
+      sortable: true,
+    },
+    {
+      name: "Store Name",
+      selector: (row) => row.storeName,
+      sortable: true,
+    },
+    {
+      name: "Sync Count / Month",
+      selector: (row) => row.syncPerMonth,
+      sortable: true,
+    },
+  ];
+
+  // ---------- EXPORT CSV ----------
   const exportCSV = () => {
-    const rows = filteredTable.map(row => ({
-      Client: row.client,
-      "Latency (ms)": row.avgLatencyMs,
-      Status: row.status
+    if (!filteredTable.length) return;
+
+    const rows = filteredTable.map((row) => ({
+      "Client Name": row.client,
+      "Store Name": row.storeName,
+      "Sync Count / Month": row.syncPerMonth,
     }));
 
-    const file = [
-      Object.keys(rows[0]).join(","),
-      ...rows.map(r => Object.values(r).join(","))
+    const headers = Object.keys(rows[0]);
+
+    const csv = [
+      headers.join(","), // header line
+      ...rows.map((row) =>
+        headers
+          .map((key) => {
+            const cell = row[key] ?? "";
+            const safe = String(cell).replace(/"/g, '""');
+            return `"${safe}"`;
+          })
+          .join(",")
+      ),
     ].join("\n");
 
-    const blob = new Blob([file], { type: "text/csv;charset=utf-8;" });
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
     link.download = "DataHealth_Table.csv";
     link.click();
   };
 
-  const columns = [
-    { name: "Client", selector: (row) => row.client, sortable: true },
-    { name: "Latency (ms)", selector: (row) => row.avgLatencyMs, sortable: true },
-    {
-      name: "Status",
-      cell: (row) => (
-        <span
-          style={{
-            background: row.style.bg,
-            color: row.style.text,
-            border: `1.5px solid ${row.style.border}`,
-            padding: "6px 14px",
-            borderRadius: "18px",
-            fontWeight: 600,
-            fontSize: "13px",
-          }}
-        >
-          {row.status}
-        </span>
-      ),
-    },
-  ];
-
-
   return (
     <Box sx={{ p: 3 }}>
-
-      {/* 🔙 Back button outside top-left */}
+      {/* 🔙 Back + DateFilter row */}
       <Box
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      mb: 2,
-    }}
-  >
-    <Button
-            variant="outlined"
-            onClick={() => navigate(-1)}
-            sx={{
-              mb: 2,
-              px: 2.5,
-              py: 1,
-              fontWeight: 600,
-              borderRadius: "8px",
-              textTransform: "none",
-              borderColor: "#6A5BFF",
-              color: "#6A5BFF",
-              "&:hover": { background: "#6A5BFF", color: "#fff" },
-            }}
-          >
-             Back
-          </Button>
-    
-    <DateFilter />
-  </Box>
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          mb: 2,
+        }}
+      >
+        <Button
+          variant="outlined"
+          onClick={() => navigate(-1)}
+          sx={{
+            mb: 2,
+            px: 2.5,
+            py: 1,
+            fontWeight: 600,
+            borderRadius: "8px",
+            textTransform: "none",
+            borderColor: "#6A5BFF",
+            color: "#6A5BFF",
+            "&:hover": { background: "#6A5BFF", color: "#fff" },
+          }}
+        >
+          Back
+        </Button>
 
+        <DateFilter />
+      </Box>
 
       {/* ------------ CHART SECTION ------------- */}
       <Box
@@ -134,39 +140,75 @@ export default function DataHealthviewdetails() {
         }}
       >
         <Typography sx={{ fontWeight: 600, mb: 2 }}>
-          Performance Overview
+          Product Sync Frequency Overview
         </Typography>
 
-        <HorizontalBarOne labels={labels} latency={latency} title="Avg Latency (ms)" />
+        <HorizontalBarOne
+          labels={labels}
+          latency={syncCounts}          // 👈 yaha ab sync count ja raha hai
+          title="Sync Count / Month"   // 👈 title bhi change
+        />
       </Box>
 
-
       {/* ------------ TABLE SECTION ------------- */}
-      <Box sx={{ p: 3, borderRadius: "10px", border: "1px solid #E5E7EB", background: "#fff" }}>
-
-        <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
-          
+      <Box
+        sx={{
+          p: 3,
+          borderRadius: "10px",
+          border: "1px solid #E5E7EB",
+          background: "#fff",
+        }}
+      >
+        {/* Search + Export */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            mb: 2,
+          }}
+        >
           <Box sx={{ display: "flex", gap: 2 }}>
-            <TextField size="small" label="Search..." value={search} onChange={(e) => setSearch(e.target.value)} />
-            <Select size="small" value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)} sx={{ width: "140px" }}>
-              <MenuItem value="All">All Status</MenuItem>
-              <MenuItem value="Healthy">Healthy</MenuItem>
-              <MenuItem value="Slow">Slow</MenuItem>
-              <MenuItem value="Critical">Critical</MenuItem>
-            </Select>
+            <TextField
+              size="small"
+              label="Search..."
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setPage(1); // search par page reset
+              }}
+            />
           </Box>
 
-          <Button variant="contained" onClick={exportCSV}>Export CSV</Button>
+          <Button variant="contained" onClick={exportCSV}>
+            Export CSV
+          </Button>
         </Box>
 
         <DataTable columns={columns} data={paginatedData} highlightOnHover />
 
-        <Box sx={{ display: "flex", justifyContent: "center", mt: 2, gap: 2 }}>
-          <Button disabled={page === 1} onClick={() => setPage(page - 1)}>⬅ Prev</Button>
-          <Typography>Page {page} / {totalPages}</Typography>
-          <Button disabled={page === totalPages} onClick={() => setPage(page + 1)}>Next ➡</Button>
+        {/* Pagination */}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mt: 2,
+            gap: 2,
+            alignItems: "center",
+          }}
+        >
+          <Button disabled={page === 1} onClick={() => setPage(page - 1)}>
+            ⬅ Prev
+          </Button>
+          <Typography>
+            Page {page} / {totalPages}
+          </Typography>
+          <Button
+            disabled={page === totalPages}
+            onClick={() => setPage(page + 1)}
+          >
+            Next ➡
+          </Button>
         </Box>
-
       </Box>
     </Box>
   );

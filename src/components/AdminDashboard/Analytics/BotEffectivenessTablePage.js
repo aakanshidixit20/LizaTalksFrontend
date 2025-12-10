@@ -1,194 +1,5 @@
-// // BotEffectivenessTablePage.js
-// import React from "react";
-// import { Box, Paper, Typography, Grid } from "@mui/material";
-
-// import BarChart from "./Charts/BarChart"; // your existing chart
-// import { analyticsData } from "./Data/AnalyticsData";
-
-// export default function BotEffectivenessTablePage() {
-//   const labels = analyticsData.clients;
-
-//   const engagementRate = analyticsData.botEffectiveness.engagementRatePerClient.map(
-//     (i) => i.engagementRate
-//   );
-
-//   const tableData = analyticsData.botEffectiveness.engagementRatePerClient;
-
-//   const totalCredits = tableData.reduce((sum, item) => sum + item.creditsSpent, 0);
-
-//   return (
-//     <Box sx={{ p: 3 }}>
-
-//       {/* ---------------------- TOP GRAPH ---------------------- */}
-//       <Paper sx={{ p: 3, mb: 3, borderRadius: 3 }}>
-//         <Typography fontWeight={600} fontSize="18px" sx={{ mb: 2 }}>
-//           Engagement Rate per Client
-//         </Typography>
-
-//         <BarChart
-//           labels={labels}
-//           data={engagementRate}
-//           title="Engagement Rate (%)"
-//         />
-//       </Paper>
-
-//       {/* ---------------------- BOTTOM TABLE ---------------------- */}
-//       <Paper sx={{ p: 3, borderRadius: 3 }}>
-//         <Typography fontWeight={600} fontSize="18px" sx={{ mb: 2 }}>
-//           Credits Spent Per Client
-//         </Typography>
-
-//         {/* Table Header */}
-//         <Grid container sx={{ fontWeight: 600, color: "text.secondary", mb: 1 }}>
-//           <Grid item xs={6}>Client</Grid>
-//           <Grid item xs={6} textAlign="right">Credits</Grid>
-//         </Grid>
-
-//         {/* Table Rows */}
-//         {tableData.map((item, index) => (
-//           <Grid
-//             container
-//             key={index}
-//             sx={{
-//               py: 1.2,
-//               borderBottom: index !== tableData.length - 1 ? "1px solid #eee" : "none",
-//             }}
-//           >
-//             <Grid item xs={6}>
-//               <Typography fontSize="15px" fontWeight={500}>
-//                 {item.client}
-//               </Typography>
-//             </Grid>
-
-//             <Grid item xs={6} textAlign="right">
-//               <Typography
-//                 fontSize="15px"
-//                 fontWeight={600}
-//                 color="#6559F5"
-//               >
-//                 {item.creditsSpent.toLocaleString()}
-//               </Typography>
-//             </Grid>
-//           </Grid>
-//         ))}
-
-//         {/* TOTAL ROW */}
-//         <Grid container sx={{ py: 1.5, mt: 2, borderTop: "2px solid #ddd" }}>
-//           <Grid item xs={6}>
-//             <Typography fontSize="15px" fontWeight={700}>Total</Typography>
-//           </Grid>
-
-//           <Grid item xs={6} textAlign="right">
-//             <Typography
-//               fontSize="15px"
-//               fontWeight={800}
-//               color="#4a3ef5"
-//             >
-//               {totalCredits.toLocaleString()}
-//             </Typography>
-//           </Grid>
-//         </Grid>
-//       </Paper>
-
-//     </Box>
-//   );
-// }
-
-
-// BotEffectivenessTablePage.js
-// import React from "react";
-// import { Box, Paper, Typography, Grid } from "@mui/material";
-
-// import BarChart from "./Charts/BarChart"; 
-// import { analyticsData } from "../Analytics/Data/AnalyticsData";
-
-// export default function BotEffectivenessTablePage() {
-//   const labels = analyticsData.clients;
-
-//   const engagementRate = analyticsData.botEffectiveness.engagementRatePerClient.map(
-//     (i) => i.engagementRate
-//   );
-
-//   const tableData = analyticsData.botEffectiveness.engagementRatePerClient;
-
-//   const totalCredits = tableData.reduce(
-//     (sum, item) => sum + item.creditsSpent,
-//     0
-//   );
-
-//   return (
-//     <Box sx={{ p: 3 }}>
-//       {/* ---------------------- TOP GRAPH ---------------------- */}
-//       <Paper sx={{ p: 3, mb: 3, borderRadius: 3 }}>
-//         <Typography fontWeight={600} fontSize="18px" sx={{ mb: 2 }}>
-//           Engagement Rate per Client
-//         </Typography>
-
-//         <BarChart
-//           labels={labels}
-//           data={engagementRate}
-//           title="Engagement Rate (%)"
-//         />
-//       </Paper>
-
-//       {/* ---------------------- BOTTOM TABLE ---------------------- */}
-//       <Paper sx={{ p: 3, borderRadius: 3 }}>
-//         <Typography fontWeight={600} fontSize="18px" sx={{ mb: 2 }}>
-//           Credits Spent Per Client
-//         </Typography>
-
-//         {/* Table Header */}
-//         <Grid container sx={{ fontWeight: 600, color: "text.secondary", mb: 1 }}>
-//           <Grid item xs={6}>Client</Grid>
-//           <Grid item xs={6} textAlign="right">Credits</Grid>
-//         </Grid>
-
-//         {/* Table Rows */}
-//         {tableData.map((item, index) => (
-//           <Grid
-//             container
-//             key={index}
-//             sx={{
-//               py: 1.2,
-//               borderBottom:
-//                 index !== tableData.length - 1 ? "1px solid #eee" : "none",
-//             }}
-//           >
-//             <Grid item xs={6}>
-//               <Typography fontSize="15px" fontWeight={500}>
-//                 {item.client}
-//               </Typography>
-//             </Grid>
-
-//             <Grid item xs={6} textAlign="right">
-//               <Typography fontSize="15px" fontWeight={600} color="#6559F5">
-//                 {item.creditsSpent.toLocaleString()}
-//               </Typography>
-//             </Grid>
-//           </Grid>
-//         ))}
-
-//         {/* TOTAL ROW */}
-//         <Grid container sx={{ py: 1.5, mt: 2, borderTop: "2px solid #ddd" }}>
-//           <Grid item xs={6}>
-//             <Typography fontSize="15px" fontWeight={700}>
-//               Total
-//             </Typography>
-//           </Grid>
-
-//           <Grid item xs={6} textAlign="right">
-//             <Typography fontSize="15px" fontWeight={800} color="#4a3ef5">
-//               {totalCredits.toLocaleString()}
-//             </Typography>
-//           </Grid>
-//         </Grid>
-//       </Paper>
-//     </Box>
-//   );
-// }
-
-
 import React, { useState, useMemo } from "react";
+import DateFilter from "./DateFilter";
 import {
   Box,
   Paper,
@@ -203,37 +14,31 @@ import {
   MenuItem,
   Button,
   TablePagination,
-  IconButton,
-  Grid
+  Grid,
+  FormControl,
+  Select
 } from "@mui/material";
-import DownloadIcon from "@mui/icons-material/Download";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
 
-import BarChart from "../Analytics/Charts/BarChart";
 import { analyticsData } from "../Analytics/Data/AnalyticsData";
-import DateFilter from "./DateFilter";
+
 export default function BotEffectivenessTablePage() {
   const navigate = useNavigate();
 
-  const labels = analyticsData.clients;
-
-  const engagementRate = analyticsData.botEffectiveness.engagementRatePerClient.map(
-    (i) => i.engagementRate
-  );
-
   const rawData = analyticsData.botEffectiveness.engagementRatePerClient;
 
-  // ---------------- STATE ----------------
-  const [filter, setFilter] = useState("month");
+  const uniqueClients = [...new Set(rawData.map((item) => item.client))];
+
+  const [clientFilter, setClientFilter] = useState("");
+  const [creditsFilter, setCreditsFilter] = useState("");
+
   const [search, setSearch] = useState("");
   const [sortField, setSortField] = useState("creditsSpent");
   const [order, setOrder] = useState("desc");
   const [page, setPage] = useState(0);
   const rowsPerPage = 5;
 
-  // ---------------- FILTER + SEARCH + SORT ----------------
   const filteredRows = useMemo(() => {
     let result = [...rawData];
 
@@ -243,6 +48,20 @@ export default function BotEffectivenessTablePage() {
       );
     }
 
+    if (clientFilter) {
+      result = result.filter((row) => row.client === clientFilter);
+    }
+
+    if (creditsFilter === "high") {
+      result = result.filter((row) => row.creditsSpent >= 4000);
+    } else if (creditsFilter === "medium") {
+      result = result.filter(
+        (row) => row.creditsSpent >= 2500 && row.creditsSpent < 4000
+      );
+    } else if (creditsFilter === "low") {
+      result = result.filter((row) => row.creditsSpent < 2500);
+    }
+
     result.sort((a, b) => {
       const valA = a[sortField];
       const valB = b[sortField];
@@ -250,17 +69,18 @@ export default function BotEffectivenessTablePage() {
     });
 
     return result;
-  }, [search, sortField, order, rawData]);
+  }, [search, clientFilter, creditsFilter, sortField, order]);
 
-  // ---------------- PAGINATION ----------------
   const paginatedRows = filteredRows.slice(
     page * rowsPerPage,
     page * rowsPerPage + rowsPerPage
   );
 
-  const totalCredits = rawData.reduce((sum, item) => sum + item.creditsSpent, 0);
+  const totalCredits = rawData.reduce(
+    (sum, item) => sum + item.creditsSpent,
+    0
+  );
 
-  // ---------------- EXPORT CSV ----------------
   const exportCSV = () => {
     const csv = Papa.unparse(filteredRows);
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
@@ -271,55 +91,38 @@ export default function BotEffectivenessTablePage() {
   };
 
   return (
-    <Box sx={{ maxWidth: "1100px", m: "0 auto", p: 3 }}>
+    <Box sx={{ p: 3 }}>
 
-      {/* BACK BUTTON */}
+      {/* BACK & DATE FILTER */}
       <Box
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      mb: 2,
-    }}
-  >
-    <Button
-            variant="outlined"
-            onClick={() => navigate(-1)}
-            sx={{
-              mb: 2,
-              px: 2.5,
-              py: 1,
-              fontWeight: 600,
-              borderRadius: "8px",
-              textTransform: "none",
-              borderColor: "#6A5BFF",
-              color: "#6A5BFF",
-              "&:hover": { background: "#6A5BFF", color: "#fff" },
-            }}
-          >
-             Back
-          </Button>
-    
-    <DateFilter />
-  </Box>
-      {/* PAGE TITLE */}
-      {/* <Typography fontWeight={700} fontSize="22px" sx={{ mb: 1 }}>
-        Engagement Rate per Client
-      </Typography>
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          mb: 2
+        }}
+      >
+        <Button
+          variant="outlined"
+          onClick={() => navigate(-1)}
+          sx={{
+            px: 2.5,
+            py: 1,
+            fontWeight: 600,
+            borderRadius: "8px",
+            textTransform: "none",
+            borderColor: "#6A5BFF",
+            color: "#6A5BFF",
+            "&:hover": { background: "#6A5BFF", color: "#fff" }
+          }}
+        >
+          Back
+        </Button>
 
-      <Typography fontSize="14px" sx={{ mb: 3, color: "#696969" }}>
-        Credits spent per client
-      </Typography> */}
+        <DateFilter />
+      </Box>
 
-      {/* -------- TOP CHART -------- */}
-      {/* <Paper sx={{ p: 3, mb: 4, borderRadius: "12px" }}>
-        <Typography fontWeight={600} fontSize="18px" sx={{ mb: 2 }}>
-          Client Engagement Chart
-        </Typography>
-
-        <BarChart labels={labels} data={engagementRate} title="Engagement Rate (%)" />
-      </Paper> */}
-     {/* -------- TOP CHART -------- */}
+      {/* TITLE */}
       <Box sx={{ mb: 1.5 }}>
         <Typography fontWeight={600} fontSize="18px" sx={{ color: "#000" }}>
           Engagement Rate per Client
@@ -330,205 +133,160 @@ export default function BotEffectivenessTablePage() {
         </Typography>
       </Box>
 
+      {/* SUMMARY CARD */}
       <Paper
         sx={{
           p: 3,
           mb: 3,
           borderRadius: "12px",
-          boxShadow: "0px 4px 20px rgba(0,0,0,0.04)",
+          boxShadow: "0px 4px 20px rgba(0,0,0,0.04)"
         }}
       >
-        {/* Header Row inside Card */}
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            mb: 2,
-          }}
-        >
-          <Typography
-            fontWeight={600}
-            sx={{ fontSize: "15px", color: "#3B3B3B" }}
-          >
-            Client Credits Summary
-          </Typography>
-
-          {/* Purple View Details Button */}
-          {/* <Button
-            onClick={() => navigate("/analytics/bot-effectiveness/table")}
-            sx={{
-              textTransform: "none",
-              fontWeight: 600,
-              fontSize: "13px",
-              color: "#6559F5",
-              borderRadius: "50px",
-              px: 2,
-              py: "6px",
-              border: "1px solid #CBC4FF",
-              background: "#F7F6FF",
-              "&:hover": {
-                background: "#EDEBFF",
-                borderColor: "#8B82FF",
-              },
-            }}
-          >
-            View Details →
-          </Button> */}
-        </Box>
-
-        {/* Table Header */}
         <Grid
           container
           sx={{
             fontWeight: 600,
-            color: "text.secondary",
             mb: 1,
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: "space-between"
           }}
         >
-          <Grid item xs={6}>
-            Client
-          </Grid>
-          <Grid item xs={6} textAlign="right">
-            Credits
-          </Grid>
+          <Grid item>Client</Grid>
+          <Grid item>Credits</Grid>
         </Grid>
 
-        {/* Dynamic Data */}
-        {analyticsData.botEffectiveness.engagementRatePerClient.map(
-          (item, index) => (
-            <Grid
-              container
-              key={index}
-              sx={{
-                py: 1.3,
-                borderBottom:
-                  index !==
-                    analyticsData.botEffectiveness.engagementRatePerClient
-                      .length -
-                    1
-                    ? "1px solid #EEE"
-                    : "none",
-                display: "flex",
-                justifyContent: "space-between",
-              }}
-            >
-              <Grid item xs={6}>
-                <Typography fontSize="15px" fontWeight={500}>
-                  {item.client}
-                </Typography>
-              </Grid>
-
-              <Grid item xs={6}>
-                <Typography
-                  fontSize="15px"
-                  fontWeight={600}
-                  color="grey"
-                  textAlign="right"
-                >
-                  {item.creditsSpent.toLocaleString()}
-                </Typography>
-              </Grid>
-            </Grid>
-          )
-        )}
-
-        {/* Total */}
-        <Grid container sx={{ py: 1.5, mt: 1.5, borderTop: "2px solid #ddd", display: "flex", justifyContent: "space-between" }}>
-          <Grid item xs={6}>
-            <Typography fontSize="15px" fontWeight={700}>
-              Total
+        {rawData.map((item, index) => (
+          <Grid
+            container
+            key={index}
+            sx={{
+              py: 1.3,
+              borderBottom:
+                index !== rawData.length - 1 ? "1px solid #EEE" : "none",
+              display: "flex",
+              justifyContent: "space-between"
+            }}
+          >
+            <Typography fontSize="15px" fontWeight={500}>
+              {item.client}
             </Typography>
-          </Grid>
 
-          <Grid item xs={6}>
             <Typography
               fontSize="15px"
-              fontWeight={800}
+              fontWeight={600}
               color="grey"
               textAlign="right"
             >
-              {totalCredits.toLocaleString()}
+              {item.creditsSpent.toLocaleString()}
             </Typography>
           </Grid>
+        ))}
+
+        <Grid
+          container
+          sx={{
+            py: 1.5,
+            mt: 1.5,
+            borderTop: "2px solid #ddd",
+            display: "flex",
+            justifyContent: "space-between"
+          }}
+        >
+          <Typography fontSize="15px" fontWeight={700}>
+            Total
+          </Typography>
+
+          <Typography
+            fontSize="15px"
+            fontWeight={800}
+            color="#4A3EF5"
+            textAlign="right"
+          >
+            {totalCredits.toLocaleString()}
+          </Typography>
         </Grid>
       </Paper>
 
-      {/* -------- TABLE SECTION -------- */}
+      {/* FULL TABLE */}
       <Paper sx={{ p: 3, borderRadius: "12px" }}>
 
-        {/* TABLE ACTIONS */}
+        {/* FILTERS + EXPORT (FIXED LAYOUT) */}
         <Box
           sx={{
             display: "flex",
-            alignItems: "center",
             justifyContent: "space-between",
-            gap: 2,
-            mb: 2,
+            alignItems: "center",
+            mb: 2
           }}
         >
-          {/* search */}
-          <TextField
-            placeholder="Search client..."
-            size="small"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            sx={{ flexGrow: 1, maxWidth: 300 }}
-          />
-          
-          {/* FILTER DROPDOWN */}
-          <TextField
-            select
-            size="small"
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            sx={{ width: 160 }}
-            label="Filter by Client"
-          >
-            <MenuItem value="Gamma Styles">Gamma Styles</MenuItem>
-            <MenuItem value="Alpha Retail">Alpha Retail</MenuItem>
-            <MenuItem value="Epsilon Tech">Epsilon Tech</MenuItem>
-          </TextField>
+          {/* LEFT FILTERS */}
+          <Box sx={{ display: "flex", gap: 2 }}>
+            <TextField
+              placeholder="Search client..."
+              size="small"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setPage(0);
+              }}
+              sx={{ maxWidth: 240 }}
+            />
 
-          
+            <FormControl size="small" sx={{ minWidth: 150 }}>
+              <Select
+                displayEmpty
+                value={clientFilter}
+                onChange={(e) => {
+                  setClientFilter(e.target.value);
+                  setPage(0);
+                }}
+              >
+                <MenuItem value="">
+                  <em>Client Name</em>
+                </MenuItem>
 
-          {/* EXPORT CSV BUTTON */}
-        <Box
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      mb: 2,
-    }}
-  >
-    {/* <Button
-            variant="outlined"
-            onClick={() => navigate(-1)}
+                {uniqueClients.map((c) => (
+                  <MenuItem key={c} value={c}>
+                    {c}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            <FormControl size="small" sx={{ minWidth: 150 }}>
+              <Select
+                displayEmpty
+                value={creditsFilter}
+                onChange={(e) => {
+                  setCreditsFilter(e.target.value);
+                  setPage(0);
+                }}
+              >
+                <MenuItem value="">
+                  <em>Credits Filter</em>
+                </MenuItem>
+                <MenuItem value="high">High (≥ 4000)</MenuItem>
+                <MenuItem value="medium">Medium (2500–3999)</MenuItem>
+                <MenuItem value="low">Low (&lt; 2500)</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+
+          {/* RIGHT SIDE EXPORT BUTTON */}
+          <Button
+            variant="contained"
+            onClick={exportCSV}
             sx={{
-              mb: 2,
-              px: 2.5,
-              py: 1,
-              fontWeight: 600,
-              borderRadius: "8px",
               textTransform: "none",
-              borderColor: "#6A5BFF",
-              color: "#6A5BFF",
-              "&:hover": { background: "#6A5BFF", color: "#fff" },
+              background: "#6A5BFF",
+              borderRadius: "8px",
+              px: 2,
+              "&:hover": { background: "#5444ff" }
             }}
           >
-             Back
-          </Button> */}
-    
-   
-  </Box>
-
+            Export CSV
+          </Button>
         </Box>
-
-
-        {/* SEARCH */}
-
 
         {/* TABLE */}
         <TableContainer>
@@ -543,7 +301,11 @@ export default function BotEffectivenessTablePage() {
                 </TableCell>
 
                 <TableCell
-                  sx={{ fontWeight: 700, textAlign: "right", cursor: "pointer" }}
+                  sx={{
+                    fontWeight: 700,
+                    textAlign: "right",
+                    cursor: "pointer"
+                  }}
                   onClick={() => {
                     setSortField("creditsSpent");
                     setOrder(order === "asc" ? "desc" : "asc");
@@ -558,11 +320,12 @@ export default function BotEffectivenessTablePage() {
               {paginatedRows.map((row, index) => (
                 <TableRow key={index}>
                   <TableCell>{row.client}</TableCell>
+
                   <TableCell
                     sx={{
                       textAlign: "right",
                       fontWeight: 600,
-                      color: "#000",
+                      color: "#6A5BFF"
                     }}
                   >
                     {row.creditsSpent.toLocaleString()}

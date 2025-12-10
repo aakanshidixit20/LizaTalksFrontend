@@ -10,10 +10,11 @@ export default function DataHealthAndReliability() {
   // 🚀 Navigation hook (important)
   const navigate = useNavigate();
 
-  const labels = analyticsData.clients;
-  const latency = analyticsData.trainingPerformanceInsights.apiResponseLatency.map(
-    i => i.avgLatencyMs
-  );
+ const syncData = analyticsData.dataHealthReliability.productSyncFrequency;
+
+const labels = syncData.map(item => item.storeName); 
+const counts = syncData.map(item => item.syncPerMonth);
+
 
   return (
     <>
@@ -22,7 +23,7 @@ export default function DataHealthAndReliability() {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    mb: 3,
+    mb:1,
   }}
 >
   <Typography
@@ -75,11 +76,12 @@ export default function DataHealthAndReliability() {
         </Typography>
 
         {/* 🔹 Chart Component */}
-        <HorizontalBarOne
-          labels={labels}
-          latency={latency}
-          title="Avg Latency (ms)"
-        />
+     <HorizontalBarOne 
+  labels={labels} 
+  latency={counts} 
+  title="Sync Count / Month" 
+/>
+
       </Box>
     </>
   );

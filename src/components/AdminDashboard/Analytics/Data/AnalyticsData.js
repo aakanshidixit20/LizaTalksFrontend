@@ -51,22 +51,27 @@ export const analyticsData = {
     featureUsageBreakdown: [
       {
         client: "Alpha Retail",
+        storeName: "Alpha Main Store",
         usage: { generalChat: 430, storeInquiry: 210, productSuggestion: 350 }
       },
       {
         client: "Beta Corp",
+        storeName: "Beta Fashion Hub",
         usage: { generalChat: 330, storeInquiry: 190, productSuggestion: 270 }
       },
       {
         client: "Gamma Styles",
+        storeName: "Gamma Boutique",
         usage: { generalChat: 510, storeInquiry: 260, productSuggestion: 420 }
       },
       {
         client: "Delta Home",
+        storeName: "Delta Furnishings",
         usage: { generalChat: 260, storeInquiry: 150, productSuggestion: 180 }
       },
       {
         client: "Epsilon Tech",
+        storeName: "Epsilon Electronics",
         usage: { generalChat: 390, storeInquiry: 240, productSuggestion: 310 }
       }
     ],

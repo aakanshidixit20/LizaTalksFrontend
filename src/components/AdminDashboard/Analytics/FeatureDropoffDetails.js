@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Box, Typography, Button, TextField, MenuItem, Select } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Button,
+  TextField,
+  FormControl,
+  Select,
+  MenuItem,
+} from "@mui/material";
 import DropOffLineChart from "./Charts/DropOffLineChart";
 import { analyticsData } from "./Data/AnalyticsData";
 import DataTable from "react-data-table-component";
@@ -7,167 +15,238 @@ import { useNavigate } from "react-router-dom";
 import DateFilter from "./DateFilter";
 
 export default function FeatureDropoffDetails() {
-
   const navigate = useNavigate();
 
-  // -------- Line Chart Data --------
-  const labels = analyticsData.clients;
-  const dropoffValues = analyticsData.featurePerformance.dropOffPerFeature.map(i => i.avgSessionDurationSec);
+  // ---------- DROP-OFF LINE CHART DATA ----------
+  const dropoffData = analyticsData.featurePerformance.dropOffPerFeature || [];
+  const labels = dropoffData.map((i) => i.client);
+  const dropoffValues = dropoffData.map((i) => i.avgSessionDurationSec);
 
-  // -------- Table Data With Status Logic --------
-  const tableRows = analyticsData.featurePerformance.dropOffPerFeature.map(item => {
-    let status = "";
-    let style = {};
+  // ---------- TABLE DATA (MERGED) ----------
+  const usageData = analyticsData.featurePerformance.featureUsageBreakdown || [];
 
-    if (item.avgSessionDurationSec > 30) {
-      status = "Critical";
-      style = { bg: "#FFE6E6", border: "#EF4444", text: "#B91C1C" };
-    } else if (item.avgSessionDurationSec > 15) {
-      status = "Warning";
-      style = { bg: "#FFF4CC", border: "#F59E0B", text: "#B45309" };
-    } else {
-      status = "Stable";
-      style = { bg: "#E8F9F0", border: "#10B981", text: "#065F46" };
-    }
+  const tableRows = usageData.map((item) => {
+    const drop = dropoffData.find((d) => d.client === item.client);
 
-    return { ...item, status, style };
+    return {
+      client: item.client,
+      storeName: item.storeName || "N/A",
+      avgSession: drop ? drop.avgSessionDurationSec : "--",
+    };
   });
 
-  // -------- Filters + Pagination --------
+  // ---------- FILTERS ----------
   const [search, setSearch] = useState("");
-  const [statusFilter, setStatusFilter] = useState("All");
+  const [clientFilter, setClientFilter] = useState("");
+  const [storeFilter, setStoreFilter] = useState("");
 
-  const filteredTable = tableRows.filter(row =>
-    row.client.toLowerCase().includes(search.toLowerCase()) &&
-    (statusFilter === "All" || row.status === statusFilter)
-  );
+  const uniqueClients = [...new Set(tableRows.map((item) => item.client))];
+  const uniqueStores = [...new Set(tableRows.map((item) => item.storeName))];
 
+  const filteredTable = tableRows.filter((row) => {
+    const matchSearch =
+      !search ||
+      row.client.toLowerCase().includes(search.toLowerCase()) ||
+      row.storeName.toLowerCase().includes(search.toLowerCase());
+
+    return (
+      matchSearch &&
+      (!clientFilter || row.client === clientFilter) &&
+      (!storeFilter || row.storeName === storeFilter)
+    );
+  });
+
+  // ---------- PAGINATION ----------
   const [page, setPage] = useState(1);
   const rowsPerPage = 5;
-  const totalPages = Math.ceil(filteredTable.length / rowsPerPage);
-  const displayedData = filteredTable.slice((page - 1) * rowsPerPage, page * rowsPerPage);
+  const totalPages = Math.max(1, Math.ceil(filteredTable.length / rowsPerPage));
 
+  const displayedData = filteredTable.slice(
+    (page - 1) * rowsPerPage,
+    page * rowsPerPage
+  );
 
-  // -------- Export CSV --------
+  // ---------- EXPORT CSV ----------
   const exportCSV = () => {
-    const rows = filteredTable.map(row => ({
+    if (!filteredTable.length) return;
+
+    const rows = filteredTable.map((row) => ({
       Client: row.client,
-      "Drop-off Value": row.avgSessionDurationSec,
-      Status: row.status
+      "Store Name": row.storeName,
+      "Avg Session (sec)": row.avgSession,
     }));
 
     const csvContent = [
-      Object.keys(rows[0]).join(","), 
-      ...rows.map(r => Object.values(r).join(","))
+      Object.keys(rows[0]).join(","),
+      ...rows.map((r) => Object.values(r).join(",")),
     ].join("\n");
 
     const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "FeatureDropoff_Data.csv";
-    a.click();
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "Dropoff_Details.csv";
+    link.click();
   };
 
-
-  // -------- Table Columns --------
+  // ---------- TABLE COLUMNS (Client → Store → AvgSession) ----------
   const columns = [
-    { name: "Client", selector: row => row.client, sortable: true },
-    { name: "Drop-off Value", selector: row => row.avgSessionDurationSec, sortable: true },
+    { name: "Client", selector: (row) => row.client, sortable: true },
+    { name: "Store Name", selector: (row) => row.storeName, sortable: true },
     {
-      name: "Status",
-      cell: (row) => (
-        <span
-          style={{
-            background: row.style.bg,
-            color: row.style.text,
-            border: `1.5px solid ${row.style.border}`,
-            padding: "6px 14px",
-            borderRadius: "18px",
-            fontWeight: 600,
-            fontSize: "13px",
-            textTransform: "capitalize",
-          }}
-        >
-          {row.status}
-        </span>
-      ),
+      name: "Avg. Session Duration (sec)",
+      selector: (row) => row.avgSession,
+      sortable: true,
     },
   ];
 
-
   return (
     <Box sx={{ p: 3 }}>
-
-      {/* BACK BUTTON */}
+      {/* ----- BACK + FILTERS ----- */}
       <Box
-         sx={{
-           display: "flex",
-           justifyContent: "space-between",
-           alignItems: "center",
-           mb: 2,
-         }}
-       >
-         <Button
-                 variant="outlined"
-                 onClick={() => navigate(-1)}
-                 sx={{
-                   mb: 2,
-                   px: 2.5,
-                   py: 1,
-                   fontWeight: 600,
-                   borderRadius: "8px",
-                   textTransform: "none",
-                   borderColor: "#6A5BFF",
-                   color: "#6A5BFF",
-                   "&:hover": { background: "#6A5BFF", color: "#fff" },
-                 }}
-               >
-                  Back
-               </Button>
-         
-         <DateFilter />
-       </Box>
-     
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          mb: 2,
+        }}
+      >
+        <Button
+          variant="outlined"
+          onClick={() => navigate(-1)}
+          sx={{
+            mb: 2,
+            px: 2.5,
+            py: 1,
+            fontWeight: 600,
+            borderRadius: "8px",
+            textTransform: "none",
+            borderColor: "#6A5BFF",
+            color: "#6A5BFF",
+            "&:hover": { background: "#6A5BFF", color: "#fff" },
+          }}
+        >
+          Back
+        </Button>
 
+        <DateFilter />
+      </Box>
+
+      {/* ----- HEADING ----- */}
       <Typography variant="h6" sx={{ fontWeight: 600, mb: 3 }}>
         Feature Drop-off — Detailed View
       </Typography>
 
-
-      {/* -------- Chart Box -------- */}
-      <Box sx={{ p: 3, background: "#fff", borderRadius: "10px", mb: 4, border: "1px solid #E5E7EB" }}>
-        <Typography sx={{ mb: 2, fontWeight: 600 }}>Trend Overview</Typography>
+      {/* ----- CHART BOX ----- */}
+      <Box
+        sx={{
+          p: 3,
+          background: "#fff",
+          borderRadius: "10px",
+          mb: 4,
+          border: "1px solid #E5E7EB",
+        }}
+      >
+        <Typography sx={{ fontWeight: 600, mb: 2 }}>
+          Trend Overview
+        </Typography>
         <DropOffLineChart labels={labels} data={dropoffValues} />
       </Box>
 
-
-      {/* -------- Table Section -------- */}
-      <Box sx={{ p: 3, background: "#fff", borderRadius: "10px", border: "1px solid #E5E7EB" }}>
-
-        {/* Search + Filters + Export */}
+      {/* ----- TABLE BOX ----- */}
+      <Box
+        sx={{
+          p: 3,
+          background: "#fff",
+          borderRadius: "10px",
+          border: "1px solid #E5E7EB",
+        }}
+      >
+        {/* SEARCH + FILTERS */}
         <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
-          
           <Box sx={{ display: "flex", gap: 2 }}>
-            <TextField size="small" label="Search..." value={search} onChange={e => setSearch(e.target.value)} />
+            {/* Search Box */}
+            <TextField
+              size="small"
+              label="Search..."
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setPage(1);
+              }}
+            />
 
-            <Select size="small" sx={{ width: "140px" }} value={statusFilter} onChange={(e) => setStatusFilter(e.target.value)}>
-              <MenuItem value="All">All</MenuItem>
-              <MenuItem value="Stable">Stable</MenuItem>
-              <MenuItem value="Warning">Warning</MenuItem>
-              <MenuItem value="Critical">Critical</MenuItem>
-            </Select>
+            {/* ⭐ Client Filter */}
+            <FormControl size="small" sx={{ minWidth: 140 }}>
+              <Select
+                displayEmpty
+                value={clientFilter}
+                onChange={(e) => {
+                  setClientFilter(e.target.value);
+                  setPage(1);
+                }}
+              >
+                <MenuItem value="">
+                  <em>Client Name</em>
+                </MenuItem>
+                {uniqueClients.map((c) => (
+                  <MenuItem key={c} value={c}>
+                    {c}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            {/* ⭐ Store Filter */}
+            <FormControl size="small" sx={{ minWidth: 140 }}>
+              <Select
+                displayEmpty
+                value={storeFilter}
+                onChange={(e) => {
+                  setStoreFilter(e.target.value);
+                  setPage(1);
+                }}
+              >
+                <MenuItem value="">
+                  <em>Store Name</em>
+                </MenuItem>
+                {uniqueStores.map((s) => (
+                  <MenuItem key={s} value={s}>
+                    {s}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
           </Box>
 
-          <Button variant="contained" onClick={exportCSV}>Export CSV</Button>
+          <Button variant="contained" onClick={exportCSV}>
+            Export CSV
+          </Button>
         </Box>
 
+        {/* Table */}
         <DataTable columns={columns} data={displayedData} highlightOnHover />
 
         {/* Pagination */}
-        <Box sx={{ display: "flex", justifyContent: "center", mt: 2, gap: 2 }}>
-          <Button disabled={page === 1} onClick={() => setPage(page - 1)}>⬅ Prev</Button>
-          <Typography>Page {page} / {totalPages}</Typography>
-          <Button disabled={page === totalPages} onClick={() => setPage(page + 1)}>Next ➡</Button>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mt: 2,
+            gap: 2,
+          }}
+        >
+          <Button disabled={page === 1} onClick={() => setPage(page - 1)}>
+            ⬅ Prev
+          </Button>
+          <Typography>
+            Page {page} / {totalPages}
+          </Typography>
+          <Button
+            disabled={page === totalPages}
+            onClick={() => setPage(page + 1)}
+          >
+            Next ➡
+          </Button>
         </Box>
       </Box>
     </Box>

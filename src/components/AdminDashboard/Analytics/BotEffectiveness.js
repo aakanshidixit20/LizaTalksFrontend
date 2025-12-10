@@ -34,13 +34,13 @@ export default function BotEffectiveness() {
   const totalCredits = creditsSpent.reduce((a, b) => a + b, 0);
 
   return (
-    <Box sx={{ mt: 3 }}>
+    <Box >
      <Box
   sx={{
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    mb: 3,
+    
   }}
 >
   <Typography
