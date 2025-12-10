@@ -1,120 +1,27 @@
-// import React from 'react'
-
-
-// import ReactApexChart from "react-apexcharts";
-
-// const DropoffKeywordInsights = () => {
-//   const [state, setState] = React.useState({
-          
-//             series: [{
-//               name: 'Permanent Drop-off',
-//               data: [44, 55, 41, 37, 22, 43, 21]
-//             }, {
-//               name: 'Resumed Session',
-//               data: [53, 32, 33, 52, 13, 43, 32]
-//             }],
-//             options: {
-//               chart: {
-//                 type: 'bar',
-//                 height: 350,
-//                 stacked: true,
-//               },
-//               plotOptions: {
-//                 bar: {
-//                   horizontal: true,
-//                   dataLabels: {
-//                     total: {
-//                       enabled: true,
-//                       offsetX: 0,
-//                       style: {
-//                         fontSize: '13px',
-//                         fontWeight: 900
-//                       }
-//                     }
-//                   }
-//                 },
-//               },
-//               stroke: {
-//                 width: 1,
-//                 colors: ['#fff']
-//               },
-//               title: {
-//                 text: ''
-//               },
-//               xaxis: {
-//                 categories: ['Effects of Indica vs Sativa', 'CBD oil for anxiety dosage', 'Dispensary near me THC &CBD', 'Difference between THC &CBD', 'How to get a medical card', '[State] weed laws', 'Best vape pens 2024'],
-//                 labels: {
-//                   formatter: function (val) {
-//                     return val
-//                   }
-//                 }
-//               },
-//               yaxis: {
-//                 title: {
-//                   text: undefined
-//                 },
-//               },
-//               tooltip: {
-//                 y: {
-//                   formatter: function (val) {
-//                     return val + "K"
-//                   }
-//                 }
-//               },
-//               fill: {
-//                 opacity: 1
-//               },
-//               legend: {
-//                 position: 'top',
-//                 horizontalAlign: 'left',
-//                 offsetX: 40
-//               }
-//             },
-          
-          
-//         });
-
-        
-
-//         return (
-//           <div>
-//             <h3>Drop-off Keyword Insights</h3>
-//             <p>User Drop-offs vs. Resumed Sessions by Last Keyword</p>
-//             <div id="chart">
-//                 <ReactApexChart options={state.options} series={state.series} type="bar" height={350} />
-//               </div>
-//             <div id="html-dist"></div>
-//           </div>
-//         );
-// }
-
-// export default DropoffKeywordInsights
-
-
-
-
 import React from "react";
 import ReactApexChart from "react-apexcharts";
- 
+import { useNavigate } from "react-router-dom";
+
 const PRIMARY_PURPLE = "#6D5DD2";
 const SECONDARY_PURPLE = "#9B8BFF";
 const GREEN = "#33D6A6";
- 
+
 const DropoffKeywordInsights = ({ filter, preview, full }) => {
- 
-  // Mock dynamic dataset
+  const navigate = useNavigate();
+
+  // -- existing dataset code --
   const datasets = {
     week: [12, 20, 14, 10, 6, 18, 9],
     month: [44, 55, 41, 37, 22, 43, 21],
     "3months": [120, 140, 110, 98, 90, 130, 95],
   };
- 
+
   const resumedSessions = {
     week: [15, 18, 11, 17, 4, 14, 10],
     month: [53, 32, 33, 52, 13, 43, 32],
     "3months": [150, 130, 125, 160, 70, 140, 120],
   };
- 
+
   const labels = [
     "Effects of Indica vs Sativa",
     "CBD oil for anxiety dosage",
@@ -124,32 +31,26 @@ const DropoffKeywordInsights = ({ filter, preview, full }) => {
     "[State] weed laws",
     "Best vape pens 2024",
   ];
- 
+
   const chartData = datasets[filter] || datasets.month;
   const resumeData = resumedSessions[filter] || resumedSessions.month;
- 
+
   const series = [
     { name: "Permanent Drop-off", data: chartData },
     { name: "Resumed Session", data: resumeData },
   ];
- 
+
   const options = {
     chart: {
       stacked: true,
       toolbar: { show: false },
     },
-    colors: [PRIMARY_PURPLE, GREEN], // Purple + Green
+    colors: [PRIMARY_PURPLE, GREEN],
     plotOptions: {
       bar: {
         horizontal: true,
         barHeight: "60%",
         borderRadius: 1,
-        dataLabels: {
-          total: {
-            enabled: true,
-            style: { color: "#000", fontWeight: 600 },
-          },
-        },
       },
     },
     dataLabels: {
@@ -160,34 +61,9 @@ const DropoffKeywordInsights = ({ filter, preview, full }) => {
         colors: ["#fff"],
       },
     },
-    legend: {
-      position: "top",
-      horizontalAlign: "left",
-      labels: {
-        colors: "#4A4A4A",
-      },
-      markers: {
-        width: 12,
-        height: 12,
-        radius: 6,
-      },
-    },
-    xaxis: {
-      categories: labels,
-      labels: {
-        style: {
-          fontSize: "12px",
-          fontWeight: 500,
-          colors: "#6A6A6A",
-        },
-      },
-    },
-    grid: {
-      strokeDashArray: 4,
-      borderColor: "#E6E6E6",
-    },
+    xaxis: { categories: labels },
   };
- 
+
   return (
     <div style={{ paddingTop: full ? "4px" : "0px" }}>
       {full && (
@@ -196,11 +72,30 @@ const DropoffKeywordInsights = ({ filter, preview, full }) => {
             Drop-off Keyword Insights
           </h3>
           <p style={{ opacity: 0.6, marginTop: 0 }}>
-            User drop-offs vs resumed sessions by last message keyword.
+            User drop-offs vs resumed sessions by keyword.
           </p>
+
+          {/* ⭐ VIEW DETAILS BUTTON */}
+          <button
+            onClick={() =>
+              navigate("/analytics/conversation-analytics/drop-off-keyword-insights/details")
+            }
+            style={{
+              marginTop: "6px",
+              padding: "6px 12px",
+              background: PRIMARY_PURPLE,
+              color: "#fff",
+              border: "none",
+              borderRadius: "6px",
+              cursor: "pointer",
+              fontSize: "12px",
+            }}
+          >
+            View Details →
+          </button>
         </>
       )}
- 
+
       <ReactApexChart
         options={options}
         series={series}
@@ -210,5 +105,7 @@ const DropoffKeywordInsights = ({ filter, preview, full }) => {
     </div>
   );
 };
- 
+
 export default DropoffKeywordInsights;
+
+
